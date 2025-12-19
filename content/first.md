@@ -1,11 +1,11 @@
 ---
-title: "Setup Markcache Selesai"
+title: "Setup Markcache Selesai #1"
 description: "Ini adalah postingan pertama di sistem file-based CMS saya."
 date: "2024-06-20"
 tags: ["nuxt", "markdown", "tutorial"]
 ---
 
-# Halo Dunia!
+# Halo Dunia! #1
 
 Ini adalah konten **Markdown**. Karena kita menggunakan plugin typography, list di bawah ini akan terlihat rapi:
 
