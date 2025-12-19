@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { File } from "lucide-vue-next";
+import { File, Hash } from "lucide-vue-next";
 import {
   CommandDialog,
   CommandInput,
@@ -18,10 +18,57 @@ const emit = defineEmits<{
 }>();
 
 const router = useRouter();
+const search = ref("");
 
-const { data: results } = await useAsyncData("search", () =>
-  queryCollection("content").order("title", "ASC").select("title", "path").all()
+const { data: sections } = await useAsyncData("search", () =>
+  queryCollectionSearchSections("content")
 );
+
+interface SearchResult {
+  id: string;
+  title: string;
+  path: string;
+  type: "file" | "section";
+  subtitle?: string;
+}
+
+const defaultResults: SearchResult[] = [
+  {
+    id: "/docs",
+    title: "Docs",
+    path: "/docs",
+    type: "file",
+    subtitle: "Docs",
+  },
+  {
+    id: "/second/second",
+    title: "Example",
+    path: "/second/second",
+    type: "file",
+    subtitle: "second\'s example",
+  },
+];
+
+const filteredResults = computed(() => {
+  if (!search.value) return defaultResults;
+  if (!sections.value) return [];
+
+  const query = search.value.toLowerCase();
+  return sections.value
+    .filter((section) => {
+      return (
+        section.title?.toLowerCase().includes(query) ||
+        section.content?.toLowerCase().includes(query)
+      );
+    })
+    .map((section) => ({
+      id: section.id,
+      title: section.title,
+      path: section.id,
+      type: "section" as const,
+      subtitle: section.titles?.join(" > "),
+    }));
+});
 
 const handleSelect = (path: string) => {
   if (!path) return;
@@ -36,22 +83,23 @@ const handleSelect = (path: string) => {
     :open="props.state"
     @update:open="emit('update:state', $event)"
   >
-    <CommandInput placeholder="Type a command or search..." />
+    <CommandInput v-model="search" placeholder="Type a command or search..." />
     <CommandList>
       <CommandEmpty>No results found.</CommandEmpty>
-      <CommandGroup heading="Documentation">
+      <CommandGroup heading="Results">
         <CommandItem
-          v-for="item in results"
-          :key="item.path"
-          :value="item.title"
+          v-for="item in filteredResults"
+          :key="item.id"
+          :value="item.title + ' ' + search"
           @select="handleSelect(item.path)"
         >
           <div class="flex flex-col gap-0.5">
-            <span v-if="item.path" class="text-xs text-muted-foreground">
-              {{ item.path }}
+            <span v-if="item.subtitle" class="text-xs text-muted-foreground">
+              {{ item.subtitle }}
             </span>
             <div class="flex items-center">
-              <File class="mr-2 h-4 w-4" />
+              <File v-if="item.type === 'file'" class="mr-2 h-4 w-4" />
+              <Hash v-else class="mr-2 h-4 w-4" />
               <span>{{ item.title }}</span>
             </div>
           </div>
