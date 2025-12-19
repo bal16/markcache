@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import Header from "~/components/Header.vue";
-import Sidebar from "~/components/Sidebar.vue";
+import Footer from "~/components/Footer.vue";
 </script>
 
 <template>
-  <div class="flex min-h-screen flex-col bg-background text-foreground">
+  <div
+    class="grid min-h-screen grid-rows-[auto_1fr_auto] bg-background text-foreground"
+  >
     <!-- Header Component -->
     <Header />
     <slot />
+    <Footer />
   </div>
 </template>
