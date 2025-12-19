@@ -26,10 +26,10 @@ function scrollToTop() {
 </script>
 
 <template>
-  <div id="page-top" class="container max-w-5xl py-6 lg:py-8 border-2 relative">
+  <div id="page-top" class="container max-w-5xl py-6 lg:py-8 relative">
     <div class="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-10 p-6 w-full">
       <article
-        class="prose prose-sm dark:prose-invert max-w-none min-w-0 prose-headings:scroll-m-20 border-2"
+        class="prose prose-sm dark:prose-invert max-w-none min-w-0 prose-headings:scroll-m-20"
       >
         <template v-if="page">
           <h1>{{ page.title }}</h1>
@@ -44,10 +44,8 @@ function scrollToTop() {
         </div>
       </article>
 
-      <aside class="hidden lg:block h-full border-2">
-        <div
-          class="sticky top-20 h-[calc(100vh-10rem)] overflow-y-auto w-62.5 border-2"
-        >
+      <aside class="hidden lg:block h-full">
+        <div class="sticky top-20 h-[calc(100vh-10rem)] overflow-y-auto w-62.5">
           <div class="">
             <TableOfContents
               v-if="page?.body?.toc?.links"
