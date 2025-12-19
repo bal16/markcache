@@ -8,6 +8,7 @@ import {
   CommandGroup,
   CommandItem,
 } from "~/components/ui/command";
+import { defaultResults } from "~/const";
 
 const props = defineProps<{
   state: boolean;
@@ -23,31 +24,6 @@ const search = ref("");
 const { data: sections } = await useAsyncData("search", () =>
   queryCollectionSearchSections("content")
 );
-
-interface SearchResult {
-  id: string;
-  title: string;
-  path: string;
-  type: "file" | "section";
-  subtitle?: string;
-}
-
-const defaultResults: SearchResult[] = [
-  {
-    id: "/docs",
-    title: "Docs",
-    path: "/docs",
-    type: "file",
-    subtitle: "Docs",
-  },
-  {
-    id: "/second/second",
-    title: "Example",
-    path: "/second/second",
-    type: "file",
-    subtitle: "second\'s example",
-  },
-];
 
 const filteredResults = computed(() => {
   if (!search.value) return defaultResults;
