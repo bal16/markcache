@@ -1,6 +1,6 @@
 ---
-title: "#1 Docs"
-description: "Ini adalah postingan pertama di sistem file-based CMS saya."
+title: "Docs"
+description: "Documentation of MarkCache"
 date: "2025-12-19"
 tags: ["nuxt", "markdown", "tutorial"]
 ---
