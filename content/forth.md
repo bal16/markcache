@@ -1,21 +1,21 @@
 ---
-title: "Setup Markcache Selesai #4"
-description: "Ini adalah postingan pertama di sistem file-based CMS saya."
+title: "Forth Content In Root"
+description: "Forth Content In Root"
 date: "2024-06-20"
 tags: ["nuxt", "markdown", "tutorial"]
 ---
 
-# Halo Dunia! #4
+# Forth Content In Root
 
-Ini adalah konten **Markdown**. Karena kita menggunakan plugin typography, list di bawah ini akan terlihat rapi:
+_Lorem_ ipsum dolor sit amet **consectetur** adipisicing elit. Esse fugiat quo officia.
 
-1. Setup Nuxt
-2. Install Tailwind
-3. Deploy ke Vercel
+1. lorem
+2. ipsum
+3. dolores
 
 ## Mengapa Markdown? #4
 
-Karena cepat, portabel, dan _developer friendly_.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse fugiat `quo officia.`
 
 ## Mengapa Markdown? #5
 
