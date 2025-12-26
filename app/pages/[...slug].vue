@@ -8,6 +8,7 @@ const { data: page } = await useAsyncData(route.path, async () => {
   return await queryCollection("content").path(route.path).first();
 });
 
+
 definePageMeta({
   layout: "docs",
 });
@@ -49,7 +50,7 @@ function scrollToTop() {
           <div class="">
             <TableOfContents
               v-if="page?.body?.toc?.links"
-              :links="page.body.toc.links"
+              :toc="page.body.toc"
             />
           </div>
           <div class="mt-6 border-t pt-4">
