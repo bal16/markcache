@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { GITHUB_URL } from "~/config";
+
+</script>
 <template>
   <footer class="py-6 md:px-8 md:py-0 border-t">
     <div
@@ -7,19 +11,19 @@
         class="text-balance text-center text-sm leading-loose text-muted-foreground md:text-left"
       >
         Built by
-        <a
-          href="https://github.com"
+        <NuxtLink
+          :href="GITHUB_URL.split('/').slice(0, 4).join('/')"
           target="_blank"
           rel="noreferrer"
           class="font-medium underline underline-offset-4"
-          >MarkCache Team</a
+          >MarkCache Team</NuxtLink
         >. The source code is available on
-        <a
-          href="https://github.com"
+        <NuxtLink
+          :href="GITHUB_URL"
           target="_blank"
           rel="noreferrer"
           class="font-medium underline underline-offset-4"
-          >GitHub</a
+          >GitHub</NuxtLink
         >.
       </p>
     </div>

@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "~/components/ui/card";
+import { GITHUB_URL } from "~/config";
 
 useSeoMeta({
   title: "MarkCache - Home",
@@ -36,7 +37,7 @@ useSeoMeta({
           </NuxtLink>
         </Button>
         <Button variant="outline" as-child class="px-8">
-          <NuxtLink to="https://github.com" target="_blank">
+          <NuxtLink :href="GITHUB_URL" target="_blank">
             <Github class="mr-2 h-4 w-4" />
             GitHub
           </NuxtLink>
