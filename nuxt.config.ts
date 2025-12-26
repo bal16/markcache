@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     preset: "vercel",
   },
   compatibilityDate: "2025-07-15",
+  ssr: true,
   devtools: { enabled: true },
   css: ["@/assets/main.css"],
   vite: { plugins: [tailwindcss()] },
