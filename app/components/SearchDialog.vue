@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { File, Hash } from "lucide-vue-next";
+import { Sun, Moon, Laptop } from "lucide-vue-next";
 import {
   CommandDialog,
   CommandInput,
@@ -7,78 +7,123 @@ import {
   CommandEmpty,
   CommandGroup,
   CommandItem,
+  CommandSeparator,
 } from "~/components/ui/command";
-import { defaultResults } from "~/const";
 
-const props = defineProps<{
-  state: boolean;
-}>();
-
-const emit = defineEmits<{
-  (e: "update:state", value: boolean): void;
-}>();
+const props = defineProps<{ state: boolean }>();
+const emit = defineEmits<{ (e: "update:state", value: boolean): void }>();
 
 const router = useRouter();
-const search = ref("");
+const colorMode = useColorMode();
 
-const { data: sections } = await useAsyncData("search", () =>
-  queryCollectionSearchSections("content")
-);
-
-const filteredResults = computed(() => {
-  if (!search.value) return defaultResults;
-  if (!sections.value) return [];
-
-  const query = search.value.toLowerCase();
-  return sections.value
-    .filter((section) => {
-      return (
-        section.title?.toLowerCase().includes(query) ||
-        section.content?.toLowerCase().includes(query)
-      );
-    })
-    .map((section) => ({
-      id: section.id,
-      title: section.title,
-      path: section.id,
-      type: "section" as const,
-      subtitle: section.titles?.join(" > "),
-    }));
-});
+const { search, groupedResults, showThemeOptions, getHighlightSnippet } =
+  useCommandSearch();
 
 const handleSelect = (path: string) => {
-  if (!path) return;
   emit("update:state", false);
   router.push(path);
+};
+
+const handleThemeChange = (theme: "light" | "dark" | "system") => {
+  colorMode.preference = theme;
+  // emit("update:state", false);
 };
 </script>
 
 <template>
-  <!-- forward two-way binding -->
   <CommandDialog
     :open="props.state"
     @update:open="emit('update:state', $event)"
   >
-    <CommandInput v-model="search" placeholder="Type a command or search..." />
+    <CommandInput
+      v-model="search"
+      placeholder="Type to search documentation..."
+    />
+
     <CommandList>
-      <CommandEmpty>No results found.</CommandEmpty>
-      <CommandGroup heading="Results">
+      <div
+        v-if="!search"
+        class="py-6 text-center text-sm text-muted-foreground"
+      >
+        Type something to search...
+      </div>
+
+      <CommandEmpty
+        v-if="search && groupedResults?.total === 0 && !showThemeOptions"
+      >
+        No results found.
+      </CommandEmpty>
+
+      <CommandGroup v-if="groupedResults?.files.length" heading="Pages">
         <CommandItem
-          v-for="item in filteredResults"
+          v-for="item in groupedResults.files"
           :key="item.id"
-          :value="item.title + ' ' + search"
-          @select="handleSelect(item.path)"
+          :value="item.title"
+          @select="handleSelect(item.id)"
+          class="cursor-pointer"
+        >
+          <component :is="item.icon" class="mr-2 h-4 w-4 opacity-70" />
+          <span class="font-medium">{{ item.title }}</span>
+        </CommandItem>
+      </CommandGroup>
+
+      <CommandSeparator
+        v-if="groupedResults?.files.length && groupedResults?.parts.length"
+      />
+
+      <CommandGroup v-if="groupedResults?.parts.length" heading="Sections">
+        <CommandItem
+          v-for="item in groupedResults.parts"
+          :key="item.id"
+          :value="item.title + item.content"
+          @select="handleSelect(item.id)"
+          class="cursor-pointer"
         >
           <div class="flex flex-col gap-0.5">
-            <span v-if="item.subtitle" class="text-xs text-muted-foreground">
+            <span
+              v-if="item.subtitle"
+              class="text-[10px] uppercase tracking-wider text-muted-foreground"
+            >
               {{ item.subtitle }}
             </span>
             <div class="flex items-center">
-              <File v-if="item.type === 'file'" class="mr-2 h-4 w-4" />
-              <Hash v-else class="mr-2 h-4 w-4" />
-              <span>{{ item.title }}</span>
+              <component
+                :is="item.icon"
+                class="mr-2 h-4 w-4 text-muted-foreground shrink-0"
+              />
+              <span class="font-medium">{{ item.title }}</span>
             </div>
+            <span
+              class="text-xs text-muted-foreground ml-6 line-clamp-1 break-all"
+            >
+              {{ getHighlightSnippet(item.content, item.matches) }}
+            </span>
           </div>
+        </CommandItem>
+      </CommandGroup>
+
+      <CommandSeparator v-if="showThemeOptions && groupedResults?.total" />
+      <CommandGroup v-if="showThemeOptions" heading="Theme">
+        <CommandItem
+          value="light"
+          @select="handleThemeChange('light')"
+          class="cursor-pointer"
+        >
+          <Sun class="mr-2 h-4 w-4" /> <span>Light Mode</span>
+        </CommandItem>
+        <CommandItem
+          value="dark"
+          @select="handleThemeChange('dark')"
+          class="cursor-pointer"
+        >
+          <Moon class="mr-2 h-4 w-4" /> <span>Dark Mode</span>
+        </CommandItem>
+        <CommandItem
+          value="system"
+          @select="handleThemeChange('system')"
+          class="cursor-pointer"
+        >
+          <Laptop class="mr-2 h-4 w-4" /> <span>System</span>
         </CommandItem>
       </CommandGroup>
     </CommandList>
