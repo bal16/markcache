@@ -12,9 +12,7 @@ import {
   SheetTrigger,
 } from "./ui/sheet";
 
-const { data: navigation } = await useAsyncData("navigation", () => {
-  return queryCollectionNavigation("content").order("title", "ASC");
-});
+const { navigation } = await useNavigationItem();
 </script>
 <template>
   <Sheet>
