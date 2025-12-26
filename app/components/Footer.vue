@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { GITHUB_URL } from "~/config";
+import { GITHUB_URL } from "~/const";
 
 </script>
 <template>

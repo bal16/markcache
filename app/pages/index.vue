@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "~/components/ui/card";
-import { GITHUB_URL } from "~/config";
+import { GITHUB_URL } from "~/const";
 
 useSeoMeta({
   title: "MarkCache - Home",
