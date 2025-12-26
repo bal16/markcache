@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { Icon } from "@iconify/vue";
 import SidebarItem from "./SidebarItem.vue";
 import { Button } from "./ui/button";
 import { ScrollArea } from "./ui/scroll-area";
@@ -18,7 +19,9 @@ const { data: navigation } = await useAsyncData("navigation", () => {
 <template>
   <Sheet>
     <SheetTrigger as-child>
-      <Button variant="ghost"> Menu </Button>
+      <Button variant="ghost">
+        <Icon icon="radix-icons:text-align-left" width="15" height="15" /> Menu
+      </Button>
     </SheetTrigger>
     <SheetContent side="left">
       <SheetHeader>

@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { Icon } from "@iconify/vue";
 import TableOfContents from "./TableOfContents.vue";
 import { Button } from "./ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
@@ -11,7 +12,9 @@ const { data: page } = await useAsyncData(route.path, async () => {
 <template>
   <Popover>
     <PopoverTrigger as-child>
-      <Button variant="ghost"> On This Page </Button>
+      <Button variant="ghost">
+        On This Page <Icon icon="radix-icons:pin-right" width="15" height="15"
+      /></Button>
     </PopoverTrigger>
     <PopoverContent class="w-80" side="bottom" align="end">
       <TableOfContents
