@@ -30,4 +30,8 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: "",
   },
+
+  routeRules: {
+    "/**": { prerender: true },
+  },
 });
