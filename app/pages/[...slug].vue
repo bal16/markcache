@@ -4,8 +4,8 @@ import TableOfContents from "~/components/TableOfContents.vue";
 import { Button } from "~/components/ui/button";
 
 const route = useRoute();
-const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection("content").path(route.path).first();
+const { data: page } = await useAsyncData(route.path, async () => {
+  return await queryCollection("content").path(route.path).first();
 });
 
 definePageMeta({
