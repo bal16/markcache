@@ -1,13 +1,8 @@
 <script setup lang="ts">
-import { ArrowUp } from "lucide-vue-next";
+import GoToTop from "~/components/GoToTop.vue";
 import TableOfContents from "~/components/TableOfContents.vue";
-import { Button } from "~/components/ui/button";
 
-const route = useRoute();
-const { data: page } = await useAsyncData(route.path, async () => {
-  return await queryCollection("content").path(route.path).first();
-});
-
+const { pageData: page } = await usePageData();
 
 definePageMeta({
   layout: "docs",
@@ -17,13 +12,6 @@ useSeoMeta({
   title: `MarkCache${page.value?.title}`,
   description: page.value?.description,
 });
-
-function scrollToTop() {
-  const topElement = document.getElementById("page-top");
-  if (topElement) {
-    topElement.scrollIntoView({ behavior: "smooth" });
-  }
-}
 </script>
 
 <template>
@@ -54,13 +42,7 @@ function scrollToTop() {
             />
           </div>
           <div class="mt-6 border-t pt-4">
-            <Button
-              @click.prevent="scrollToTop"
-              variant="ghost"
-              class="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-foreground"
-            >
-              Back To Top <ArrowUp class="ml-2 h-4 w-4" />
-            </Button>
+            <GoToTop />
           </div>
         </div>
       </aside>

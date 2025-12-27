@@ -4,10 +4,7 @@ import TableOfContents from "./TableOfContents.vue";
 import { Button } from "./ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 
-const route = useRoute();
-const { data: page } = await useAsyncData(route.path, async () => {
-  return await queryCollection("content").path(route.path).first();
-});
+const { pageData: page } = await usePageData();
 </script>
 <template>
   <Popover>
@@ -21,6 +18,7 @@ const { data: page } = await useAsyncData(route.path, async () => {
         v-if="page && page.body && page.body.toc"
         :toc="page.body.toc"
       />
+      <GoToTop />
     </PopoverContent>
   </Popover>
 </template>
