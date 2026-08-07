@@ -7,7 +7,7 @@ const { navigation } = await useNavigationItem()
 
 <template>
   <aside
-    class="hidden w-64 shrink-0 border-r border-border/50 bg-background/80 backdrop-blur-md md:block h-screen sticky top-0 z-40 transition-colors duration-300"
+    class="hidden w-64 shrink-0 border-r border-border/50 bg-background/80 backdrop-blur-md md:block h-[calc(100vh-3.5rem)] sticky top-14 z-40 transition-colors duration-300"
   >
     <ScrollArea class="h-full">
       <div class="p-6 grid gap-2">
