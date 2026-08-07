@@ -1,5 +1,6 @@
 export default defineEventHandler(async (event) => {
   // Query Nuxt Content for markdown sections
+  // @ts-ignore - Nuxt Content v3 typings merge client/server signatures incorrectly
   const sections = await queryCollectionSearchSections(event, 'content')
 
   // Inject additional non-content actions
