@@ -18,6 +18,7 @@ export const [useCommand, provideCommandContext] = createContext<{
     search: string
     filtered: { count: number; items: Map<string, number>; groups: Set<string> }
   }
+  filterItems: () => void
 }>('Command')
 
 export const [useCommandGroup, provideCommandGroupContext] = createContext<{

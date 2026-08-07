@@ -15,7 +15,7 @@ const delegatedProps = reactiveOmit(props, 'class')
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 
 const id = useId()
-const { filterState, allItems, allGroups } = useCommand()
+const { filterState, allItems, allGroups, filterItems } = useCommand()
 const groupContext = useCommandGroup()
 
 const isRender = computed(() => {
@@ -50,6 +50,8 @@ onMounted(() => {
       allGroups.value.get(groupId)?.add(id)
     }
   }
+  
+  filterItems()
 })
 onUnmounted(() => {
   allItems.value.delete(id)
