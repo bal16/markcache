@@ -7,7 +7,9 @@
     "dev": "nuxt dev",
     "generate": "nuxi generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "biome check .",
+    "format": "biome format --write ."
   },
   "dependencies": {
     "@nuxt/content": "^3.9.0",
@@ -36,6 +38,11 @@
   "msw": {
     "workerDirectory": [
       "public"
+    ]
+  },
+  "lint-staged": {
+    "*": [
+      "biome check --write --no-errors-on-unmatched"
     ]
   }
 }
