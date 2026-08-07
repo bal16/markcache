@@ -1,4 +1,5 @@
 @import "@fontsource/geist-sans";
+@import "@fontsource/geist-mono";
 @import "@fontsource/outfit";
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -8,6 +9,9 @@
 
 @theme inline {
   --font-brand: "Outfit", sans-serif;
+  --font-mono:
+    "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);

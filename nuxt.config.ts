@@ -15,6 +15,19 @@ export default defineNuxtConfig({
   css: ['@/assets/main.css'],
   vite: { plugins: [tailwindcss()] },
   modules: ['shadcn-nuxt', '@nuxt/content', '@nuxtjs/color-mode'],
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: {
+            default: 'github-light',
+            dark: 'github-dark',
+          },
+          langs: ['js', 'ts', 'vue', 'json', 'bash', 'yaml', 'html', 'css'],
+        },
+      },
+    },
+  },
 
   shadcn: {
     /**
