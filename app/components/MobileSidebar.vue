@@ -21,7 +21,7 @@ const { navigation } = await useNavigationItem()
         <Icon icon="radix-icons:hamburger-menu" class="w-4 h-4 mr-2" /> Menu
       </Button>
     </SheetTrigger>
-    <SheetContent side="left" class="w-[300px] bg-background/80 backdrop-blur-2xl border-r-border/30">
+    <SheetContent side="left" class="w-[300px] bg-background/80 backdrop-blur-2xl border-r-border/30" :close-button="false">
       <SheetHeader class="sr-only">
         <SheetTitle></SheetTitle>
         <SheetDescription></SheetDescription>

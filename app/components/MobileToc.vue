@@ -14,7 +14,7 @@ const { pageData: page } = await usePageData()
         On This Page <Icon icon="radix-icons:view-horizontal" class="w-4 h-4 ml-2" />
       </Button>
     </PopoverTrigger>
-    <PopoverContent class="w-[300px] rounded-3xl bg-background/80 backdrop-blur-2xl border-border/30 shadow-2xl p-6" side="top" :side-offset="20" align="end">
+    <PopoverContent class="w-[300px] rounded-3xl bg-background/80 backdrop-blur-2xl border-border/30 shadow-2xl p-6" side="top" :side-offset="20" align="start">
       <TableOfContents
         v-if="page && page.body && page.body.toc"
         :toc="page.body.toc"
