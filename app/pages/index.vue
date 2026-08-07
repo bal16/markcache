@@ -66,7 +66,7 @@ const categories = [
             Baca Dokumentasi <ArrowRight class="ml-2 h-4 w-4" />
           </NuxtLink>
         </Button>
-        <Button variant="outline" as-child class="px-8 border-border/50 hover:bg-white/5 transition-all duration-300">
+        <Button variant="outline" as-child class="px-8 border-border/50 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-300">
           <NuxtLink :href="GITHUB_URL" target="_blank">
             <Github class="mr-2 h-4 w-4" />
             GitHub
@@ -83,8 +83,8 @@ const categories = [
           :key="cat.title"
           :to="cat.link"
           :class="[
-            'group relative flex flex-col justify-between overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300',
-            'hover:border-primary/50 hover:bg-white/10 hover:shadow-[0_0_30px_rgba(0,112,243,0.15)] active:scale-[0.98]',
+            'group relative flex flex-col justify-between overflow-hidden rounded-xl border border-black/5 dark:border-white/10 bg-black/5 dark:bg-white/5 p-6 transition-all duration-300',
+            'hover:border-primary/50 dark:hover:border-primary/50 hover:bg-black/10 dark:hover:bg-white/10 hover:shadow-[0_0_30px_rgba(0,112,243,0.15)] active:scale-[0.98]',
             cat.span
           ]"
         >
