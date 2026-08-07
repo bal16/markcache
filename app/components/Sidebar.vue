@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ScrollArea } from '~/components/ui/scroll-area'
 import SidebarItem from '~/components/SidebarItem.vue'
+import { ScrollArea } from '~/components/ui/scroll-area'
 
 const { navigation } = await useNavigationItem()
 </script>

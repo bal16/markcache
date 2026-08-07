@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Zap, BookOpen, Layers, Settings, Rocket, ArrowRight, Github } from 'lucide-vue-next'
+import { ArrowRight, BookOpen, Github, Layers, Rocket, Settings, Zap } from 'lucide-vue-next'
 import { Button } from '~/components/ui/button'
 import { GITHUB_URL } from '~/const'
 

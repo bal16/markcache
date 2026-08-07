@@ -1,7 +1,7 @@
-import { ref, computed } from 'vue'
 import Fuse, { type FuseResultMatch } from 'fuse.js'
-import { File, Hash, Sun, Moon, Laptop } from 'lucide-vue-next'
+import { File, Hash, Laptop, Moon, Sun } from 'lucide-vue-next'
 import type { Component } from 'vue'
+import { computed, ref } from 'vue'
 
 export interface SearchCommand {
   id: string
@@ -75,13 +75,13 @@ export const useSearchEngine = () => {
     // Intercept action trigger
     if (search.value.startsWith('>')) {
       const query = search.value.slice(1).trim().toLowerCase()
-      const allActions = rawItems.value.filter(i => i.type === 'action')
-      
-      const filteredActions = query 
-        ? allActions.filter(i => i.title.toLowerCase().includes(query))
+      const allActions = rawItems.value.filter((i) => i.type === 'action')
+
+      const filteredActions = query
+        ? allActions.filter((i) => i.title.toLowerCase().includes(query))
         : allActions
-        
-      const actions: SearchCommand[] = filteredActions.map(item => {
+
+      const actions: SearchCommand[] = filteredActions.map((item) => {
         const theme = item.action?.split('-')[1]
         let icon = Laptop
         if (theme === 'light') icon = Sun
@@ -123,7 +123,7 @@ export const useSearchEngine = () => {
           description: item.content,
           icon,
           execute: () => {
-            colorMode.preference = theme
+            colorMode.preference = theme || 'system'
           },
         })
         return

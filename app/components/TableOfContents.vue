@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { computed } from 'vue'
 import type { Toc } from '@nuxt/content'
-import { ScrollArea } from './ui/scroll-area'
+import { computed } from 'vue'
 import { cn } from '@/lib/utils'
+import { ScrollArea } from './ui/scroll-area'
+
 // import { useTocObserver } from '@/composables/useTocObserver';
 
 const props = defineProps<{

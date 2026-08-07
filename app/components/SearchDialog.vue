@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import {
   CommandDialog,
-  CommandInput,
-  CommandList,
   CommandEmpty,
   CommandGroup,
+  CommandInput,
   CommandItem,
+  CommandList,
   CommandSeparator,
 } from '~/components/ui/command'
 
 const props = defineProps<{ state: boolean }>()
-const emit = defineEmits<{ (e: 'update:state', value: boolean): void }>()
+const emit = defineEmits<(e: 'update:state', value: boolean) => void>()
 
 const { search, commandGroups, isReady } = useSearchEngine()
 
@@ -21,13 +21,16 @@ const handleSelect = (execute: () => void) => {
   execute()
 }
 
-watch(() => props.state, (isOpen) => {
-  if (!isOpen) {
-    setTimeout(() => {
-      search.value = ''
-    }, 200)
+watch(
+  () => props.state,
+  (isOpen) => {
+    if (!isOpen) {
+      setTimeout(() => {
+        search.value = ''
+      }, 200)
+    }
   }
-})
+)
 </script>
 
 <template>

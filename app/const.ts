@@ -19,7 +19,7 @@ export const defaultResults: SearchResult[] = [
     title: 'Example',
     path: '/second/second',
     type: 'file',
-    subtitle: "second\'s example",
+    subtitle: "second's example",
   },
 ]
 

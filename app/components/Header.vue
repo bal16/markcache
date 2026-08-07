@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
-
-import { Button } from '~/components/ui/button'
+import { onMounted, onUnmounted, ref } from 'vue'
 import ModeToggle from '~/components/ModeToggle.vue'
+import { Button } from '~/components/ui/button'
 import CommandDialog from './SearchDialog.vue'
 
 const open = ref(false)
