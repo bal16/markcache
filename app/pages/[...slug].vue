@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import GoToTop from "~/components/GoToTop.vue";
-import TableOfContents from "~/components/TableOfContents.vue";
+import GoToTop from '~/components/GoToTop.vue'
+import TableOfContents from '~/components/TableOfContents.vue'
 
-const { pageData: page } = await usePageData();
+const { pageData: page } = await usePageData()
 
 definePageMeta({
-  layout: "docs",
-});
+  layout: 'docs',
+})
 
 useSeoMeta({
   title: `MarkCache${page.value?.title}`,
   description: page.value?.description,
-});
+})
 </script>
 
 <template>

@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import { Icon } from "@iconify/vue";
-import TableOfContents from "./TableOfContents.vue";
-import { Button } from "./ui/button";
-import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { Icon } from '@iconify/vue'
+import TableOfContents from './TableOfContents.vue'
+import { Button } from './ui/button'
+import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
 
-const { pageData: page } = await usePageData();
+const { pageData: page } = await usePageData()
 </script>
 <template>
   <Popover>

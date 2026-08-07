@@ -1,18 +1,13 @@
 <script setup lang="ts">
-import { Zap, Layout, Palette, ArrowRight, Github } from "lucide-vue-next";
-import { Button } from "~/components/ui/button";
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "~/components/ui/card";
-import { GITHUB_URL } from "~/const";
+import { Zap, Layout, Palette, ArrowRight, Github } from 'lucide-vue-next'
+import { Button } from '~/components/ui/button'
+import { Card, CardDescription, CardHeader, CardTitle } from '~/components/ui/card'
+import { GITHUB_URL } from '~/const'
 
 useSeoMeta({
-  title: "MarkCache - Home",
-  description: "Dokumentasi dan konten markdown yang cepat dan efisien.",
-});
+  title: 'MarkCache - Home',
+  description: 'Dokumentasi dan konten markdown yang cepat dan efisien.',
+})
 </script>
 
 <template>

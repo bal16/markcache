@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { GITHUB_URL } from "~/const";
-
+import { GITHUB_URL } from '~/const'
 </script>
 <template>
   <footer class="py-6 md:px-8 md:py-0 border-t">

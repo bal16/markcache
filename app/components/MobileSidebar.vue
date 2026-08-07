@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { Icon } from "@iconify/vue";
-import SidebarItem from "./SidebarItem.vue";
-import { Button } from "./ui/button";
-import { ScrollArea } from "./ui/scroll-area";
+import { Icon } from '@iconify/vue'
+import SidebarItem from './SidebarItem.vue'
+import { Button } from './ui/button'
+import { ScrollArea } from './ui/scroll-area'
 import {
   Sheet,
   SheetContent,
@@ -10,9 +10,9 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "./ui/sheet";
+} from './ui/sheet'
 
-const { navigation } = await useNavigationItem();
+const { navigation } = await useNavigationItem()
 </script>
 <template>
   <Sheet>

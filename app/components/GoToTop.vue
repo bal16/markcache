@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import { ArrowUp } from "lucide-vue-next";
-import { Button } from "~/components/ui/button";
+import { ArrowUp } from 'lucide-vue-next'
+import { Button } from '~/components/ui/button'
 
 function scrollToTop() {
-  const topElement = document.getElementById("page-top");
+  const topElement = document.getElementById('page-top')
   if (topElement) {
-    topElement.scrollIntoView({ behavior: "smooth" });
+    topElement.scrollIntoView({ behavior: 'smooth' })
   }
 }
 </script>

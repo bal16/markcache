@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted } from 'vue'
 
-import { Button } from "~/components/ui/button";
-import ModeToggle from "~/components/ModeToggle.vue";
-import CommandDialog from "./SearchDialog.vue";
+import { Button } from '~/components/ui/button'
+import ModeToggle from '~/components/ModeToggle.vue'
+import CommandDialog from './SearchDialog.vue'
 
-const open = ref(false);
+const open = ref(false)
 
 const handleKeydown = (e: KeyboardEvent) => {
-  if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
-    e.preventDefault();
-    open.value = !open.value;
+  if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
+    e.preventDefault()
+    open.value = !open.value
   }
-};
+}
 
-onMounted(() => document.addEventListener("keydown", handleKeydown));
-onUnmounted(() => document.removeEventListener("keydown", handleKeydown));
+onMounted(() => document.addEventListener('keydown', handleKeydown))
+onUnmounted(() => document.removeEventListener('keydown', handleKeydown))
 </script>
 <template>
   <!-- Sticky Header -->

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Sidebar from "~/components/Sidebar.vue";
-import MobileHeader from "~/components/MobileHeader.vue";
+import Sidebar from '~/components/Sidebar.vue'
+import MobileHeader from '~/components/MobileHeader.vue'
 </script>
 
 <template>

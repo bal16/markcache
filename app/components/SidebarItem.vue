@@ -1,35 +1,29 @@
 <script setup lang="ts">
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "~/components/ui/collapsible";
-import { ChevronRight } from "lucide-vue-next";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '~/components/ui/collapsible'
+import { ChevronRight } from 'lucide-vue-next'
 
 interface NavItem {
-  title: string;
-  path: string;
-  children?: NavItem[];
+  title: string
+  path: string
+  children?: NavItem[]
 }
 
 const props = defineProps<{
-  item: NavItem;
-  level?: number; 
-}>();
+  item: NavItem
+  level?: number
+}>()
 
 const formattedTitle = computed(() => {
-  if (!props.item.children) return props.item.title;
+  if (!props.item.children) return props.item.title
 
-  const segments = props.item.path.split("/").filter(Boolean);
-  const folderName = segments[segments.length - 1];
-  return folderName
-    ? folderName.charAt(0).toUpperCase() + folderName.slice(1)
-    : props.item.title;
-});
+  const segments = props.item.path.split('/').filter(Boolean)
+  const folderName = segments[segments.length - 1]
+  return folderName ? folderName.charAt(0).toUpperCase() + folderName.slice(1) : props.item.title
+})
 
 const paddingLeftClass = computed(() => {
-  return props.level ? `padding-left: ${props.level * 12}px` : "";
-});
+  return props.level ? `padding-left: ${props.level * 12}px` : ''
+})
 </script>
 
 <template>

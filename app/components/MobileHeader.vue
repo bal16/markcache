@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import MobileSidebar from "./MobileSidebar.vue";
-import MobileToc from "./MobileToc.vue";
+import MobileSidebar from './MobileSidebar.vue'
+import MobileToc from './MobileToc.vue'
 </script>
 
 <template>
