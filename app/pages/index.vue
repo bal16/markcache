@@ -9,11 +9,41 @@ useSeoMeta({
 })
 
 const categories = [
-  { title: 'Getting Started', desc: 'Mulai instalasi dan konfigurasi MarkCache.', icon: Rocket, link: '/docs', span: 'col-span-1 md:col-span-2 row-span-2' },
-  { title: 'Architecture', desc: 'Pahami cara kerja sistem caching.', icon: Layers, link: '/docs', span: 'col-span-1' },
-  { title: 'API Reference', desc: 'Dokumentasi API lengkap.', icon: BookOpen, link: '/docs', span: 'col-span-1' },
-  { title: 'Components', desc: 'Komponen UI bawaan.', icon: Zap, link: '/docs', span: 'col-span-1' },
-  { title: 'Deployment', desc: 'Cara deploy ke production.', icon: Settings, link: '/docs', span: 'col-span-1 md:col-span-2' },
+  {
+    title: 'Getting Started',
+    desc: 'Mulai instalasi dan konfigurasi MarkCache.',
+    icon: Rocket,
+    link: '/docs',
+    span: 'col-span-1 md:col-span-2 row-span-2',
+  },
+  {
+    title: 'Architecture',
+    desc: 'Pahami cara kerja sistem caching.',
+    icon: Layers,
+    link: '/docs',
+    span: 'col-span-1',
+  },
+  {
+    title: 'API Reference',
+    desc: 'Dokumentasi API lengkap.',
+    icon: BookOpen,
+    link: '/docs',
+    span: 'col-span-1',
+  },
+  {
+    title: 'Components',
+    desc: 'Komponen UI bawaan.',
+    icon: Zap,
+    link: '/docs',
+    span: 'col-span-1',
+  },
+  {
+    title: 'Deployment',
+    desc: 'Cara deploy ke production.',
+    icon: Settings,
+    link: '/docs',
+    span: 'col-span-1 md:col-span-2',
+  },
 ]
 </script>
 
