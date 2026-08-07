@@ -9,7 +9,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "oxlint --deny correctness -A no-unused-vars -A no-empty-function",
-    "format": "biome format --write ."
+    "format": "biome format --write .",
+    "prepare": "husky"
   },
   "dependencies": {
     "@fontsource/geist-sans": "^5.3.0",
@@ -48,7 +49,9 @@
   },
   "lint-staged": {
     "*": [
-      "biome check --write --no-errors-on-unmatched",
+      "biome check --write --no-errors-on-unmatched"
+    ],
+    "*.{js,ts,vue}": [
       "oxlint --deny correctness -A no-unused-vars -A no-empty-function"
     ]
   }
