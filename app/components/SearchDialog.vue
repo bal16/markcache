@@ -23,6 +23,7 @@ const handleSelect = (execute: () => void) => {
 <template>
   <CommandDialog
     :open="props.state"
+    :filter-function="() => true"
     @update:open="emit('update:state', $event)"
   >
     <CommandInput
@@ -53,7 +54,7 @@ const handleSelect = (execute: () => void) => {
           <CommandItem
             v-for="item in group.items"
             :key="item.id"
-            :value="search + ' ' + item.title + ' ' + item.description"
+            :value="item.title + item.description"
             @select="handleSelect(item.execute)"
             class="cursor-pointer"
           >

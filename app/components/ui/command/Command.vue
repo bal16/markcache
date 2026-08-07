@@ -7,7 +7,10 @@ import { reactive, ref, watch } from 'vue'
 import { cn } from '@/lib/utils'
 import { provideCommandContext } from '.'
 
-const props = withDefaults(defineProps<ListboxRootProps & { class?: HTMLAttributes['class'] }>(), {
+const props = withDefaults(defineProps<ListboxRootProps & { 
+  class?: HTMLAttributes['class']
+  filterFunction?: (val: string, search: string) => boolean
+}>(), {
   modelValue: '',
 })
 
@@ -46,7 +49,9 @@ function filterItems() {
 
   // Check which items should be included
   for (const [id, value] of allItems.value) {
-    const score = contains(value, filterState.search)
+    const score = props.filterFunction 
+      ? props.filterFunction(value, filterState.search) ? 1 : 0 
+      : contains(value, filterState.search)
     filterState.filtered.items.set(id, score ? 1 : 0)
     if (score) itemCount++
   }

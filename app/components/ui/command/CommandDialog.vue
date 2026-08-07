@@ -15,6 +15,7 @@ const props = withDefaults(
     DialogRootProps & {
       title?: string
       description?: string
+      filterFunction?: (val: string, search: string) => boolean
     }
   >(),
   {
@@ -34,7 +35,7 @@ const forwarded = useForwardPropsEmits(props, emits)
         <DialogTitle>{{ title }}</DialogTitle>
         <DialogDescription>{{ description }}</DialogDescription>
       </DialogHeader>
-      <Command>
+      <Command :filter-function="props.filterFunction">
         <slot v-bind="slotProps" />
       </Command>
     </DialogContent>
