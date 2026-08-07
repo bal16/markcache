@@ -24,7 +24,7 @@ onUnmounted(() => document.removeEventListener('keydown', handleKeydown))
   >
     <div class="flex items-center gap-2 font-bold tracking-tight">
       <NuxtLink to="/" class="flex items-center gap-2 text-lg">
-        <span>Markcache</span>
+        <span class="font-brand font-bold">MarkCache</span>
       </NuxtLink>
     </div>
 

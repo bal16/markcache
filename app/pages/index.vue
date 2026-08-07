@@ -54,7 +54,7 @@ const categories = [
   <div class="flex flex-col min-h-[calc(100vh-4rem)] relative z-10">
     <!-- Hero Section -->
     <section class="flex-1 flex flex-col items-center justify-center py-24 text-center space-y-8 px-4">
-      <h1 class="text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl text-balance">
+      <h1 class="font-brand text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl text-balance">
         MarkCache
       </h1>
       <p class="max-w-2xl text-lg text-muted-foreground sm:text-xl text-balance">

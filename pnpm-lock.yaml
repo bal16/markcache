@@ -11,6 +11,9 @@ importers:
       '@fontsource/geist-sans':
         specifier: ^5.3.0
         version: 5.3.0
+      '@fontsource/outfit':
+        specifier: ^5.3.0
+        version: 5.3.0
       '@nuxt/content':
         specifier: ^3.9.0
         version: 3.9.0(better-sqlite3@12.5.0)(magicast@0.5.1)
@@ -624,6 +627,9 @@ packages:
 
   '@fontsource/geist-sans@5.3.0':
     resolution: {integrity: sha512-AmG7cE1AvE4NHROPaOl1sN+a02cB5xy6pA/ZV76HXqWTCsJTV2SCBc9DTFHfJqnVOODm7HhXIYtUIb75NP5QXQ==}
+
+  '@fontsource/outfit@5.3.0':
+    resolution: {integrity: sha512-0AVHzTTVJSxWDOxPKSfMeHhZeBFDU3cmgrcOb76ZEyhGo0+xgyG3GsLF3h9+X8w0IX7G4jzjJgFQEBiWdX6VgA==}
 
   '@iconify-json/radix-icons@1.2.5':
     resolution: {integrity: sha512-HkUt+ydCivK/S/aFsgaiZRvs7zDEcO07PKkuEuu2EFBWCuC+Pi1mDdXPX0U3qjRr7JknmnoR4sAg53C+Ig35ow==}
@@ -4860,6 +4866,8 @@ snapshots:
       - vue
 
   '@fontsource/geist-sans@5.3.0': {}
+
+  '@fontsource/outfit@5.3.0': {}
 
   '@iconify-json/radix-icons@1.2.5':
     dependencies:
