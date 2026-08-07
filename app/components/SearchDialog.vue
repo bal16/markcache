@@ -33,9 +33,12 @@ const handleSelect = (execute: () => void) => {
     <CommandList>
       <div
         v-if="!search"
-        class="py-6 text-center text-sm text-muted-foreground"
+        class="py-14 text-center text-sm text-muted-foreground"
       >
-        Type something to search...
+        <p>Type something to search documentation...</p>
+        <p class="mt-2 text-xs opacity-70">
+          Type <kbd class="px-1.5 py-0.5 rounded-md bg-muted border font-mono text-[10px]">&gt;</kbd> to see available commands
+        </p>
       </div>
 
       <CommandEmpty
@@ -74,5 +77,23 @@ const handleSelect = (execute: () => void) => {
       </template>
 
     </CommandList>
+
+    <div class="border-t border-border/50 bg-muted/30 p-3 flex items-center justify-between text-xs text-muted-foreground backdrop-blur-sm">
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-1">
+          <kbd class="flex h-5 w-5 items-center justify-center rounded border bg-background font-sans text-[10px] shadow-sm">↑</kbd>
+          <kbd class="flex h-5 w-5 items-center justify-center rounded border bg-background font-sans text-[10px] shadow-sm">↓</kbd>
+          <span class="ml-1">Navigate</span>
+        </div>
+        <div class="flex items-center gap-1">
+          <kbd class="flex h-5 px-1.5 items-center justify-center rounded border bg-background font-sans text-[10px] shadow-sm">Enter</kbd>
+          <span class="ml-1">Select</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-1">
+        <kbd class="flex h-5 px-1.5 items-center justify-center rounded border bg-background font-sans text-[10px] shadow-sm">Esc</kbd>
+        <span class="ml-1">Close</span>
+      </div>
+    </div>
   </CommandDialog>
 </template>
