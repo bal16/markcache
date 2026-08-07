@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ArrowUp } from 'lucide-vue-next'
+import { ArrowUp } from '@lucide/vue'
 import { Button } from '~/components/ui/button'
 
 function scrollToTop() {

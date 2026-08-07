@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ArrowRight, BookOpen, Github, Layers, Rocket, Settings, Zap } from 'lucide-vue-next'
+import { Icon } from '@iconify/vue'
+import { ArrowRight, BookOpen, Layers, Rocket, Settings, Zap } from '@lucide/vue'
 import { Button } from '~/components/ui/button'
 import { GITHUB_URL } from '~/const'
 
@@ -68,7 +69,7 @@ const categories = [
         </Button>
         <Button variant="outline" as-child class="px-8 border-border/50 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-300">
           <NuxtLink :href="GITHUB_URL" target="_blank">
-            <Github class="mr-2 h-4 w-4" />
+            <Icon icon="lucide:github" class="mr-2 h-4 w-4" />
             GitHub
           </NuxtLink>
         </Button>

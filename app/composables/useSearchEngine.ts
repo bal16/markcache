@@ -1,5 +1,5 @@
+import { File, Hash, Laptop, Moon, Sun } from '@lucide/vue'
 import Fuse, { type FuseResultMatch } from 'fuse.js'
-import { File, Hash, Laptop, Moon, Sun } from 'lucide-vue-next'
 import type { Component } from 'vue'
 import { computed, ref } from 'vue'
 
