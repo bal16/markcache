@@ -70,7 +70,36 @@ export const useSearchEngine = () => {
   }
 
   const commandGroups = computed<SearchCommandGroup[]>(() => {
-    if (!search.value || !fuseInstance.value) return []
+    if (!search.value || !fuseInstance.value || !rawItems.value) return []
+
+    // Intercept action trigger
+    if (search.value.startsWith('>')) {
+      const query = search.value.slice(1).trim().toLowerCase()
+      const allActions = rawItems.value.filter(i => i.type === 'action')
+      
+      const filteredActions = query 
+        ? allActions.filter(i => i.title.toLowerCase().includes(query))
+        : allActions
+        
+      const actions: SearchCommand[] = filteredActions.map(item => {
+        const theme = item.action?.split('-')[1]
+        let icon = Laptop
+        if (theme === 'light') icon = Sun
+        if (theme === 'dark') icon = Moon
+
+        return {
+          id: item.id,
+          title: item.title,
+          description: item.content,
+          icon,
+          execute: () => {
+            colorMode.preference = theme || 'system'
+          },
+        }
+      })
+
+      return [{ heading: 'Actions', items: actions }]
+    }
 
     const results = fuseInstance.value.search(search.value).slice(0, 15)
 
