@@ -14,10 +14,20 @@ const emit = defineEmits<{ (e: 'update:state', value: boolean): void }>()
 
 const { search, commandGroups, isReady } = useSearchEngine()
 
+import { watch } from 'vue'
+
 const handleSelect = (execute: () => void) => {
   emit('update:state', false)
   execute()
 }
+
+watch(() => props.state, (isOpen) => {
+  if (!isOpen) {
+    setTimeout(() => {
+      search.value = ''
+    }, 200)
+  }
+})
 </script>
 
 <template>
