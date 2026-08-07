@@ -118,7 +118,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    font-family: 'Geist Sans', sans-serif;
+    font-family: "Geist Sans", sans-serif;
     @apply bg-background text-foreground;
   }
   html {
