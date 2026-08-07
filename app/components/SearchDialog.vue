@@ -53,7 +53,7 @@ const handleSelect = (execute: () => void) => {
           <CommandItem
             v-for="item in group.items"
             :key="item.id"
-            :value="item.title + item.description"
+            :value="search + ' ' + item.title + ' ' + item.description"
             @select="handleSelect(item.execute)"
             class="cursor-pointer"
           >
