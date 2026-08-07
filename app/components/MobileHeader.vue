@@ -5,13 +5,14 @@ import MobileToc from './MobileToc.vue'
 
 <template>
   <section
-    class="flex flex-row-reverse lg:hidden sticky top-14 z-40 h-12 shrink-0 items-center justify-between gap-x-4 border-b bg-background/95 px-4 backdrop-blur supports-backdrop-filter:bg-background/60 md:px-6"
+    class="flex lg:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 h-14 shrink-0 items-center justify-center gap-x-1 rounded-full border border-border/50 bg-background/70 px-2 shadow-2xl backdrop-blur-xl supports-backdrop-filter:bg-background/50"
   >
-    <div>
-      <MobileToc />
-    </div>
-    <div class="flex md:hidden">
+    <div class="flex">
       <MobileSidebar />
+    </div>
+    <div class="h-6 w-[1px] bg-border/50 mx-1"></div>
+    <div class="flex">
+      <MobileToc />
     </div>
   </section>
 </template>

@@ -17,12 +17,12 @@ const { navigation } = await useNavigationItem()
 <template>
   <Sheet>
     <SheetTrigger as-child>
-      <Button variant="ghost">
-        <Icon icon="radix-icons:text-align-left" width="15" height="15" /> Menu
+      <Button variant="ghost" class="rounded-full px-4 h-10 font-medium tracking-tight text-muted-foreground hover:text-foreground">
+        <Icon icon="radix-icons:hamburger-menu" class="w-4 h-4 mr-2" /> Menu
       </Button>
     </SheetTrigger>
-    <SheetContent side="left">
-      <SheetHeader>
+    <SheetContent side="left" class="w-[300px] bg-background/80 backdrop-blur-2xl border-r-border/30">
+      <SheetHeader class="sr-only">
         <SheetTitle></SheetTitle>
         <SheetDescription></SheetDescription>
       </SheetHeader>

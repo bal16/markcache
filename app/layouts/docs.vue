@@ -13,7 +13,7 @@ import Sidebar from '~/components/Sidebar.vue'
       <!-- Main Layout: Sidebar (Fixed) + Content (Scrollable) -->
       <div class="flex w-full items-start flex-1">
         <Sidebar />
-        <main class="flex-1 min-w-0 flex flex-col min-h-[calc(100vh-3.5rem)]">
+        <main class="flex-1 min-w-0 flex flex-col min-h-[calc(100vh-3.5rem)] pb-24 lg:pb-0">
           <div class="container max-w-5xl py-6 lg:py-8 mx-auto flex-1">
             <slot />
           </div>
