@@ -1,4 +1,4 @@
-import { ref, watch, onUnmounted, nextTick, type Ref } from 'vue'
+import { ref, watch, onUnmounted, onMounted, nextTick, type Ref } from 'vue'
 
 export function useTocObserver(links: Ref<any[]>) {
   const activeId = ref<string | null>(null)
@@ -33,18 +33,23 @@ export function useTocObserver(links: Ref<any[]>) {
 
     idsToObserve.forEach((id) => {
       const el = document.getElementById(id)
+      console.log('[TOC Observer] searching for id:', id, 'found element:', !!el)
       if (el) observer?.observe(el)
     })
   }
 
-  watch(
-    links,
-    async () => {
-      await nextTick()
-      initObserver()
-    },
-    { immediate: true }
-  )
+  onMounted(() => {
+    watch(
+      links,
+      () => {
+        // Use requestAnimationFrame or a small timeout to ensure DOM is ready
+        setTimeout(() => {
+          initObserver()
+        }, 100)
+      },
+      { immediate: true }
+    )
+  })
 
   onUnmounted(() => {
     observer?.disconnect()
