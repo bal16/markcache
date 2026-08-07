@@ -7,10 +7,10 @@ const { navigation } = await useNavigationItem()
 
 <template>
   <aside
-    class="hidden w-64 shrink-0 border-r bg-muted/10 md:block h-screen sticky top-0"
+    class="hidden w-64 shrink-0 border-r border-border/50 bg-background/80 backdrop-blur-md md:block h-screen sticky top-0 z-40 transition-colors duration-300"
   >
     <ScrollArea class="h-full">
-      <div class="p-4 grid gap-2">
+      <div class="p-6 grid gap-2">
         <template v-if="navigation">
           <SidebarItem
             v-for="item in navigation"
