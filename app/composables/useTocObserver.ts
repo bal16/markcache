@@ -1,4 +1,4 @@
-import { nextTick, onMounted, onUnmounted, type Ref, ref, watch } from 'vue'
+import { onMounted, onUnmounted, type Ref, ref, watch } from 'vue'
 
 export function useTocObserver(links: Ref<any[]>) {
   const activeId = ref<string | null>(null)
