@@ -14,7 +14,8 @@
       "!**/.nuxt",
       "!**/node_modules",
       "!**/public",
-      "!**/.github"
+      "!**/.github",
+      "!**/*.md"
     ]
   },
   "formatter": {
