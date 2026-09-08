@@ -44,14 +44,14 @@ pnpm generate
 
 ## Project Structure
 
-```
+```text
 app/
-	app.vue                 # Global app shell
-	assets/main.css         # Tailwind entry + global styles
-	components/             # App components (header, sidebar, UI library)
-	layouts/                # Nuxt layouts (default, docs)
-	lib/utils.ts            # Shared utilities
-	pages/                  # Route files (index, [...slug] for content)
+ app.vue                 # Global app shell
+ assets/main.css         # Tailwind entry + global styles
+ components/             # App components (header, sidebar, UI library)
+ layouts/                # Nuxt layouts (default, docs)
+ lib/utils.ts            # Shared utilities
+ pages/                  # Route files (index, [...slug] for content)
 content/                  # Markdown content (auto-routed by @nuxt/content)
 public/                   # Public assets (robots.txt, MSW worker)
 nuxt.config.ts            # Nuxt configuration
@@ -125,7 +125,7 @@ Tailwind CSS v4 is configured via the Vite plugin. Global styles are in [app/ass
 
 ## Useful Scripts
 
-- `pnpm dev`: Start dev server at http://localhost:3000
+- `pnpm dev`: Start dev server at <http://localhost:3000>
 - `pnpm build`: Production build
 - `pnpm preview`: Preview built app locally
 - `pnpm generate`: Generate a static site
