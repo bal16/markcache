@@ -1,0 +1,44 @@
+{
+  // Schema resmi markdownlint-cli2 (bukan schema markdownlint biasa)
+  "$schema": "https://raw.githubusercontent.com/DavidAnson/markdownlint-cli2/main/schema/markdownlint-cli2-config-schema.json",
+
+  // Single source of truth untuk lint Markdown di repo ini.
+  // Dipakai oleh: `pnpm lint:md`, lint-staged (pre-commit), dan Neovim (nvim-lint + mason).
+  "config": {
+    "default": true,
+
+    // MD013 - line length mati total (prose konten punya baris panjang)
+    "MD013": false,
+
+    // MD033 - allow inline HTML (komponen Vue di Nuxt Content)
+    "MD033": false,
+
+    // MD041 - baris pertama boleh bukan H1 (file konten diawali frontmatter)
+    "MD041": false,
+
+    // MD025 - frontmatter `title` + H1 di body adalah pola normal Nuxt Content, bukan duplikat
+    "MD025": false,
+
+    // MD060 - table style diserahkan ke formatter editor (prettier via Neovim),
+    // biar linter tidak berantem dengan formatter
+    "MD060": false,
+
+    // MD028 - blank line di dalam blockquote dimatikan
+    "MD028": false
+  },
+
+  "globs": ["**/*.md", "**/*.markdown"],
+
+  //08f5e6cb-39c3-4b46-81da-38e9b189df02
+  "ignores": [
+    "node_modules/**",
+    ".git/**",
+    ".nuxt/**",
+    ".output/**",
+    ".data/**",
+    "dist/**",
+    "public/**",
+    ".vercel/**",
+    "docs/superpowers/**"
+  ]
+}
