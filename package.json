@@ -11,6 +11,8 @@
     "lint": "oxlint --deny correctness -A no-unused-vars -A no-empty-function",
     "lint:md": "markdownlint-cli2",
     "lint:md:fix": "markdownlint-cli2 --fix",
+    "contentlint": "node scripts/contentlint.mjs",
+    "contentlint:fix": "node scripts/contentlint.mjs --fix",
     "format": "biome format --write .",
     "typecheck": "nuxi typecheck",
     "prepare": "husky"
