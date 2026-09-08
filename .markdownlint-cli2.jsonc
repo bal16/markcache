@@ -38,6 +38,9 @@
     "dist/**",
     "public/**",
     ".vercel/**",
-    "docs/superpowers/**"
+    "docs/superpowers/**",
+    "content/.obsidian/**",
+    "content/_templates/**",
+    "content/attachments/**"
   ]
 }

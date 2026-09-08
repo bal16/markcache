@@ -4,7 +4,10 @@ export default defineContentConfig({
   collections: {
     content: defineCollection({
       type: 'page',
-      source: '**/*.md',
+      source: {
+        include: '**/*.md',
+        exclude: ['**/.obsidian/**', '**/_templates/**', '**/_*.md'],
+      },
     }),
   },
 })

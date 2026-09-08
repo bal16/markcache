@@ -26,3 +26,17 @@ logs
 
 # Local docs (not for commit)
 docs/superpowers/
+
+# Obsidian vault state (content/ is a vault per ADR-002)
+# Allowlist: hanya config minimal yang di-commit.
+# Semua state lokal workspace/cache/graph diabaikan.
+content/.obsidian/*
+!content/.obsidian/app.json
+content/.obsidian/workspace*.json
+content/.obsidian/workspace-mobile.json
+content/.obsidian/cache/
+content/.obsidian/graph.json
+content/.obsidian/starred.json
+content/.obsidian/bookmarks.json
+.obsidian/workspace*.json
+.obsidian/cache/

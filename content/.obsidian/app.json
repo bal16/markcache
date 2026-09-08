@@ -1,0 +1,13 @@
+{
+  "livePreview": true,
+  "showFrontmatter": true,
+  "spellcheck": false,
+  "newFileLocation": "current",
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": true,
+  "attachmentFolderPath": "attachments",
+  "promptDelete": true,
+  "showLineNumber": false,
+  "foldHeading": true,
+  "foldIndent": true
+}
