@@ -3,5 +3,11 @@
   "plugins": ["import", "typescript", "unicorn"],
   "categories": {
     "correctness": "error"
+  },
+  // Moved from `pnpm lint` CLI flags so bare `oxlint` and `pnpm lint`
+  // produce identical verdicts (single source of truth = this file).
+  "rules": {
+    "no-unused-vars": "allow",
+    "no-empty-function": "allow"
   }
 }

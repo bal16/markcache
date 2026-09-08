@@ -8,7 +8,7 @@
     "generate": "nuxi generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "oxlint --deny correctness -A no-unused-vars -A no-empty-function",
+    "lint": "oxlint",
     "lint:md": "markdownlint-cli2",
     "lint:md:fix": "markdownlint-cli2 --fix",
     "contentlint": "node scripts/contentlint.mjs",

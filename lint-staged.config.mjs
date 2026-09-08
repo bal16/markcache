@@ -8,6 +8,6 @@
 export default {
   '*': ['biome check --write --no-errors-on-unmatched'],
   '*.md': ['markdownlint-cli2 --fix'],
-  '*.{js,ts,vue}': ['oxlint --deny correctness -A no-unused-vars -A no-empty-function'],
+  '*.{js,ts,vue}': ['oxlint'],
   '*.{js,mjs,cjs,ts,mts,cts,vue}': () => 'pnpm typecheck',
 }
