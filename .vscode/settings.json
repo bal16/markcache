@@ -19,5 +19,19 @@
   "[jsonc]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
-  "js/ts.tsdk.path": "node_modules/typescript/lib"
+  "[markdown]": {
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false,
+    "editor.defaultFormatter": null,
+    "editor.codeActionsOnSave": {}
+  },
+  "js/ts.tsdk.path": "node_modules/typescript/lib",
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true
+  }
 }
