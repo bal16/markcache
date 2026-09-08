@@ -29,7 +29,6 @@
 
   "globs": ["**/*.md", "**/*.markdown"],
 
-  //08f5e6cb-39c3-4b46-81da-38e9b189df02
   "ignores": [
     "node_modules/**",
     ".git/**",
