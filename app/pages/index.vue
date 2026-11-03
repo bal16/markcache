@@ -1,5 +1,14 @@
 <script setup lang="ts">
-import { ArrowRight, Blocks, Clapperboard, Search, Terminal, Wrench } from '@lucide/vue'
+import {
+  ArrowRight,
+  Blocks,
+  Clapperboard,
+  Download,
+  Magnet,
+  Search,
+  Terminal,
+  Wrench,
+} from '@lucide/vue'
 import type { Component } from 'vue'
 import { Button } from '~/components/ui/button'
 
@@ -31,6 +40,8 @@ const iconMap: Record<string, Component> = {
   clapperboard: Clapperboard,
   terminal: Terminal,
   blocks: Blocks,
+  magnet: Magnet,
+  download: Download,
 }
 
 // Kategori belum terisi hanya label — tidak ada halaman kosong (ADR-001 #3).
