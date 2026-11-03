@@ -41,7 +41,7 @@ watch(
   >
     <CommandInput
       v-model="search"
-      placeholder="Type to search documentation or commands..."
+      placeholder="Cari link, kategori, atau perintah..."
     />
 
     <CommandList>
@@ -49,16 +49,16 @@ watch(
         v-if="!search"
         class="py-14 text-center text-sm text-muted-foreground"
       >
-        <p>Type something to search documentation...</p>
+        <p>Ketik untuk mencari link dan kategori...</p>
         <p class="mt-2 text-xs opacity-70">
-          Type <kbd class="px-1.5 py-0.5 rounded-md bg-muted border font-mono text-[10px]">&gt;</kbd> to see available commands
+          Ketik <kbd class="px-1.5 py-0.5 rounded-md bg-muted border font-mono text-[10px]">&gt;</kbd> untuk perintah (tema gelap/terang)
         </p>
       </div>
 
       <CommandEmpty
         v-if="search && commandGroups.length === 0 && isReady"
       >
-        No results found.
+        Tidak ada hasil ditemukan.
       </CommandEmpty>
 
       <template v-for="(group, index) in commandGroups" :key="group.heading">

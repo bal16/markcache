@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from 'vue'
+import { onMounted, onUnmounted } from 'vue'
 import ModeToggle from '~/components/ModeToggle.vue'
 import { Button } from '~/components/ui/button'
 import CommandDialog from './SearchDialog.vue'
 
-const open = ref(false)
+const { open } = useSearchOpen()
 
 const handleKeydown = (e: KeyboardEvent) => {
   if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
