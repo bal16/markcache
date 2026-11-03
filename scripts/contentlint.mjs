@@ -248,7 +248,10 @@ function daysSince(dateStr) {
  * @returns {FenceSegment[]} Alternating prose/code segments; odd indices are code.
  */
 function splitFences(text) {
-  const parts = text.split(/(```[\s\S]*?(?:```|$))/g)
+  // Capture includes the fence's leading indentation so it stays byte-stable
+  // inside code segments; otherwise the trailing-whitespace trim in
+  // formatProse would eat a list item's "   " before "```bash".
+  const parts = text.split(/([ \t]*```[\s\S]*?(?:```|$))/g)
   return parts.map((text, i) => ({ code: i % 2 === 1, text }))
 }
 

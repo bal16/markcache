@@ -44,7 +44,7 @@ Karena folder wajib bernama `content/` (konvensi `@nuxt/content` untuk routing `
 
 Jalankan sebelum commit konten:
 
-```bash
+   ```bash
 node scripts/contentlint.mjs
 node scripts/contentlint.mjs --fix
 ```
