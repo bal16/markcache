@@ -1,6 +1,7 @@
 export async function useNavigationItem() {
   const { data: navigation } = await useAsyncData('navigation', () => {
-    return queryCollectionNavigation('content').order('title', 'ASC')
+    // Urutan kurasi via field `order` di frontmatter (ADR-003 #4).
+    return queryCollectionNavigation('content').order('order', 'ASC')
   })
   return {
     navigation,

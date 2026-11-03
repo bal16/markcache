@@ -34,7 +34,7 @@ Karena folder wajib bernama `content/` (konvensi `@nuxt/content` untuk routing `
 ## Aturan tulis agar lolos web + Obsidian (ADR-002)
 
 - Link internal: markdown relatif, bukan wikilink kurung-siku-ganda.
-  Benar: `[Second](./second/second.md)`, `(/streaming)`.
+  Benar: `[Streaming](./streaming/index.md)` atau `(/streaming)`.
   Salah: wikilink ganda atau embed seru-plus-ganda.
 - Satu folder = satu kategori, `index.md` = halaman kategori.
 - Frontmatter minimal: `title, description, category, tags, updated, draft, featured`.

@@ -1,75 +1,57 @@
-# Nuxt Minimal Starter
+# MarkCache
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+**Direktori link terkurasi ala [FMHY](https://fmhy.net) — ID-first.** Deskripsi
+ditulis dalam Bahasa Indonesia, nama tool tetap global, dan layanan/komunitas
+Indonesia diprioritaskan. Bukan docs-starter generik; setiap kategori adalah
+daftar link terkurasi yang bisa dijelajahi dari [landing](/) → halaman kategori
+→ klik keluar, atau dicari dengan `⌘K`.
 
-## Setup
+Kategori aktif: **Streaming**, **Dev Tools**. Kategori lain (Downloading,
+Reading, Audio, Torrenting, AI Tools) menyusul — hanya tampil setelah benar-
+benar terisi (lihat ADR-001).
 
-Make sure to install dependencies:
+## Stack
+
+- [Nuxt 4](https://nuxt.com) + `@nuxt/content` (Markdown, prerender statis)
+- shadcn-nuxt + Tailwind CSS v4, dark mode
+- Search `⌘K` berbasis Fuse (`/api/search.json`, di-prerender)
+- `contentlint` — linter konten kurasi (ADR-002)
+- `content/` dibuka sebagai **vault Obsidian** (pola hybrid, ADR-002)
+
+## Development
 
 ```bash
-# npm
-npm install
-
-# pnpm
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+pnpm dev          # http://localhost:3000
 ```
 
-## Development Server
+## Kontribusi konten
 
-Start the development server on `http://localhost:3000`:
+Konten adalah Markdown biasa di `content/` — satu folder = satu kategori,
+`index.md` = halaman kategori, `## H2` = subkategori, dan tiap link satu bullet:
+
+```md
+- [Nama Tool](https://example.com) — deskripsi singkat Indonesia. `tag` ⭐
+```
+
+1. Salin `content/_templates/kategori.md` untuk kategori baru.
+2. Lint sebelum commit:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+pnpm contentlint:fix   # format + aturan ADR-002
+pnpm lint:md           # markdownlint
+pnpm lint              # oxlint
 ```
 
-## Production
-
-Build the application for production:
+Alat lain:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+pnpm build             # build + prerender
+pnpm preview           # preview hasil build
 ```
 
-Locally preview production build:
+Keputusan arsitektur dicatat di [`docs/adr/`](docs/adr/):
 
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- [ADR-001 — Arah Produk: Direktori Kurasi ala FMHY, ID-First](docs/adr/001-product-direction-fmhy-id-first.md)
+- [ADR-002 — Konten Obsidian-Friendly, Pola Hybrid](docs/adr/002-obsidian-friendly-hybrid-content.md)
+- [ADR-003 — Arsitektur Directory MVP (Reuse, Bukan Rewrite)](docs/adr/003-directory-mvp-architecture.md)

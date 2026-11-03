@@ -11,6 +11,13 @@ export default defineNuxtConfig({
   },
   compatibilityDate: '2025-07-15',
   ssr: true,
+  app: {
+    head: {
+      // ADR-003 #6: '%s — MarkCache' (perbaiki `MarkCache${title}` tanpa spasi)
+      titleTemplate: '%s — MarkCache',
+      htmlAttrs: { lang: 'id' },
+    },
+  },
   devtools: { enabled: true },
   css: ['@/assets/main.css'],
   vite: { plugins: [tailwindcss()] },

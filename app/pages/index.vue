@@ -1,51 +1,32 @@
 <script setup lang="ts">
-import { Icon } from '@iconify/vue'
-import { ArrowRight, BookOpen, Layers, Rocket, Settings, Zap } from '@lucide/vue'
+import { ArrowRight, Clapperboard, Terminal, Wrench } from '@lucide/vue'
+import type { Component } from 'vue'
 import { Button } from '~/components/ui/button'
 import { GITHUB_URL } from '~/const'
 
 useSeoMeta({
-  title: 'MarkCache - Home',
-  description: 'Dokumentasi dan konten markdown yang cepat dan efisien.',
+  title: 'Direktori link terkurasi, ID-first',
+  description:
+    'MarkCache — direktori tautan gratis ala FMHY yang dikurasi manual untuk pengguna Indonesia: streaming, anime, hingga dev tools.',
 })
 
-const categories = [
-  {
-    title: 'Getting Started',
-    desc: 'Mulai instalasi dan konfigurasi MarkCache.',
-    icon: Rocket,
-    link: '/docs',
-    span: 'col-span-1 md:col-span-2 row-span-2',
-  },
-  {
-    title: 'Architecture',
-    desc: 'Pahami cara kerja sistem caching.',
-    icon: Layers,
-    link: '/docs',
-    span: 'col-span-1',
-  },
-  {
-    title: 'API Reference',
-    desc: 'Dokumentasi API lengkap.',
-    icon: BookOpen,
-    link: '/docs',
-    span: 'col-span-1',
-  },
-  {
-    title: 'Components',
-    desc: 'Komponen UI bawaan.',
-    icon: Zap,
-    link: '/docs',
-    span: 'col-span-1',
-  },
-  {
-    title: 'Deployment',
-    desc: 'Cara deploy ke production.',
-    icon: Settings,
-    link: '/docs',
-    span: 'col-span-1 md:col-span-2',
-  },
-]
+const { data: kategori } = await useAsyncData('kategori-featured', () => {
+  return queryCollection('content')
+    .where('featured', '=', true)
+    .where('draft', '<>', true)
+    .order('order', 'ASC')
+    .select('path', 'title', 'description', 'icon')
+    .all()
+})
+
+const iconMap: Record<string, Component> = {
+  clapperboard: Clapperboard,
+  terminal: Terminal,
+}
+
+// Kategori yang planned tapi belum terisi — hanya label, biar tidak ada
+// halaman kosong (ADR-001 #3).
+const segeraHadir = ['Downloading', 'Reading', 'Audio', 'Torrenting', 'AI Tools']
 </script>
 
 <template>
@@ -59,17 +40,17 @@ const categories = [
         MarkCache
       </h1>
       <p class="max-w-2xl text-lg text-muted-foreground sm:text-xl text-balance">
-        Kelola dan sajikan konten Markdown Anda dengan performa tinggi dan kemudahan integrasi di Nuxt.
+        Direktori tautan gratis ala FMHY — dikurasi manual, ditulis untuk
+        pengguna Indonesia. Streaming, anime, sampai dev tools.
       </p>
       <div class="flex gap-4">
         <Button as-child class="px-8 bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_rgba(0,112,243,0.3)] transition-all duration-300">
-          <NuxtLink to="/docs">
-            Baca Dokumentasi <ArrowRight class="ml-2 h-4 w-4" />
+          <NuxtLink to="/streaming">
+            Jelajahi Kategori <ArrowRight class="ml-2 h-4 w-4" />
           </NuxtLink>
         </Button>
         <Button variant="outline" as-child class="px-8 border-border/50 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-300">
           <NuxtLink :href="GITHUB_URL" target="_blank">
-            <Icon icon="lucide:github" class="mr-2 h-4 w-4" />
             GitHub
           </NuxtLink>
         </Button>
@@ -79,25 +60,36 @@ const categories = [
     <!-- Bento Grid Categories Section -->
     <section class="container mx-auto pb-24 px-4 max-w-5xl">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[minmax(150px,auto)]">
-        <NuxtLink 
-          v-for="cat in categories" 
-          :key="cat.title"
-          :to="cat.link"
-          :class="[
-            'group relative flex flex-col justify-between overflow-hidden rounded-xl border border-black/5 dark:border-white/10 bg-black/5 dark:bg-white/5 p-6 transition-all duration-300',
-            'hover:border-primary/50 dark:hover:border-primary/50 hover:bg-black/10 dark:hover:bg-white/10 hover:shadow-[0_0_30px_rgba(0,112,243,0.15)] active:scale-[0.98]',
-            cat.span
-          ]"
+        <NuxtLink
+          v-for="cat in kategori"
+          :key="cat.path"
+          :to="cat.path"
+          class="group relative flex flex-col justify-between overflow-hidden rounded-xl border border-black/5 dark:border-white/10 bg-black/5 dark:bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 dark:hover:border-primary/50 hover:bg-black/10 dark:hover:bg-white/10 hover:shadow-[0_0_30px_rgba(0,112,243,0.15)] active:scale-[0.98] md:col-span-1"
         >
           <!-- Spotlight background effect -->
           <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
-          
+
           <div class="relative z-10">
-            <component :is="cat.icon" class="h-8 w-8 text-primary mb-4 transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-110" />
+            <component
+              :is="iconMap[cat.icon ?? ''] ?? Wrench"
+              class="h-8 w-8 text-primary mb-4 transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-110"
+            />
             <h3 class="text-xl font-semibold tracking-tight text-foreground">{{ cat.title }}</h3>
-            <p class="mt-2 text-sm text-muted-foreground">{{ cat.desc }}</p>
+            <p class="mt-2 text-sm text-muted-foreground">{{ cat.description }}</p>
           </div>
         </NuxtLink>
+      </div>
+
+      <!-- Segera hadir: kategori belum terisi, tidak ada halaman kosong -->
+      <div class="mt-10 flex flex-wrap items-center gap-3 justify-center">
+        <span class="text-sm text-muted-foreground">Segera hadir:</span>
+        <span
+          v-for="soon in segeraHadir"
+          :key="soon"
+          class="px-3 py-1 rounded-full text-xs border border-dashed border-border text-muted-foreground/70"
+        >
+          {{ soon }}
+        </span>
       </div>
     </section>
   </div>
