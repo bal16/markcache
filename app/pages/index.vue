@@ -2,7 +2,8 @@
 import { ArrowRight, Blocks, Clapperboard, Search, Terminal, Wrench } from '@lucide/vue'
 import type { Component } from 'vue'
 import { Button } from '~/components/ui/button'
-import { GITHUB_URL } from '~/const'
+
+// import { GITHUB_URL } from '~/const'
 
 useSeoMeta({
   title: 'Direktori link terkurasi, ID-first',
@@ -114,11 +115,11 @@ const firstCategory = computed(() => cats.value[0]?.path ?? '/streaming')
             <span class="text-xs">⌘</span>K
           </kbd>
         </Button>
-        <Button variant="outline" as-child class="px-8 border-border/50 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-300">
+        <!-- <Button variant="outline" as-child class="px-8 border-border/50 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-300">
           <NuxtLink :href="GITHUB_URL" target="_blank">
             GitHub
           </NuxtLink>
-        </Button>
+        </Button> -->
       </div>
     </section>
 
@@ -133,7 +134,7 @@ const firstCategory = computed(() => cats.value[0]?.path ?? '/streaming')
           class="group relative flex flex-col justify-between overflow-hidden rounded-xl border border-black/5 dark:border-white/10 bg-black/5 dark:bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 dark:hover:border-primary/50 hover:bg-black/10 dark:hover:bg-white/10 hover:shadow-[0_0_30px_rgba(0,112,243,0.15)] active:scale-[0.98]"
         >
           <!-- Spotlight background effect -->
-          <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+          <div class="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
 
           <div class="relative z-10 flex flex-col h-full">
             <div class="flex items-start justify-between">
