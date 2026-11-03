@@ -2,6 +2,7 @@
 import {
   ArrowRight,
   Blocks,
+  Bot,
   Clapperboard,
   Download,
   Magnet,
@@ -42,6 +43,7 @@ const iconMap: Record<string, Component> = {
   blocks: Blocks,
   magnet: Magnet,
   download: Download,
+  bot: Bot,
 }
 
 // Kategori belum terisi hanya label — tidak ada halaman kosong (ADR-001 #3).
