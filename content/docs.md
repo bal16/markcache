@@ -2,6 +2,7 @@
 title: "Tentang & Kontribusi"
 description: "Apa itu MarkCache dan cara menambah link baru lewat vault Obsidian."
 category: "meta"
+domain: meta
 icon: "book-open"
 tags: ["kontribusi", "meta"]
 updated: "2026-11-03"

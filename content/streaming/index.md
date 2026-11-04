@@ -2,6 +2,7 @@
 title: "Streaming"
 description: "Nonton film, series, anime, dan TV gratis — kurasi khusus pengguna Indonesia."
 category: "streaming"
+domain: hiburan
 icon: "clapperboard"
 tags: ["video", "anime", "streaming"]
 updated: "2026-11-03"

@@ -37,6 +37,24 @@ const { data: kategori } = await useAsyncData('kategori-featured', () => {
 
 const cats = computed(() => kategori.value ?? [])
 
+// ADR-006: grouping halaman landing berdasarkan `domain` frontmatter.
+// Struktur konten tetap flat (1 folder = 1 kategori, ADR-002); grouping
+// ini tampilan-only di landing.
+const DOMAIN_ORDER = ['hiburan', 'dev', 'utilitas'] as const
+const DOMAIN_LABEL: Record<string, string> = {
+  hiburan: 'Hiburan',
+  dev: 'Developer',
+  utilitas: 'Utilitas',
+}
+
+const groups = computed(() => {
+  return DOMAIN_ORDER.map((domain) => ({
+    domain,
+    label: DOMAIN_LABEL[domain] ?? domain,
+    items: cats.value.filter((c) => (c.domain ?? 'utilitas') === domain),
+  })).filter((g) => g.items.length > 0)
+})
+
 const iconMap: Record<string, Component> = {
   clapperboard: Clapperboard,
   terminal: Terminal,
@@ -47,7 +65,7 @@ const iconMap: Record<string, Component> = {
 }
 
 // Kategori belum terisi hanya label — tidak ada halaman kosong (ADR-001 #3).
-const segeraHadir = ['Downloading', 'Reading', 'Audio', 'Torrenting', 'AI Tools']
+const segeraHadir = ['Reading', 'Audio', 'Akses & Privasi', 'Komunitas']
 
 // Statistik ringan dari body AST: hitung link eksternal terkurasi.
 // AST Nuxt Content bisa tampil sebagai objek (`{type, props, children}`)
@@ -136,45 +154,50 @@ const firstCategory = computed(() => cats.value[0]?.path ?? '/streaming')
       </div>
     </section>
 
-    <!-- Bento Grid Categories Section -->
+    <!-- Bento Grid Categories Section (grouped by domain, ADR-006) -->
     <section class="container mx-auto pb-24 px-4 max-w-5xl">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[minmax(150px,auto)]">
-        <NuxtLink
-          v-for="(cat, i) in cats"
-          :key="cat.path"
-          :to="cat.path"
-          :class="i === 0 ? 'md:col-span-2' : 'md:col-span-1'"
-          class="group relative flex flex-col justify-between overflow-hidden rounded-xl border border-black/5 dark:border-white/10 bg-black/5 dark:bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 dark:hover:border-primary/50 hover:bg-black/10 dark:hover:bg-white/10 hover:shadow-[0_0_30px_rgba(0,112,243,0.15)] active:scale-[0.98]"
-        >
-          <!-- Spotlight background effect -->
-          <div class="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+      <div v-for="group in groups" :key="group.domain" class="mt-10 first:mt-0">
+        <h2 class="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground/70">
+          {{ group.label }}
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[minmax(150px,auto)]">
+          <NuxtLink
+            v-for="(cat, j) in group.items"
+            :key="cat.path"
+            :to="cat.path"
+            :class="j === 0 ? 'md:col-span-2' : 'md:col-span-1'"
+            class="group relative flex flex-col justify-between overflow-hidden rounded-xl border border-black/5 dark:border-white/10 bg-black/5 dark:bg-white/5 p-6 transition-all duration-300 hover:border-primary/50 dark:hover:border-primary/50 hover:bg-black/10 dark:hover:bg-white/10 hover:shadow-[0_0_30px_rgba(0,112,243,0.15)] active:scale-[0.98]"
+          >
+            <!-- Spotlight background effect -->
+            <div class="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
 
-          <div class="relative z-10 flex flex-col h-full">
-            <div class="flex items-start justify-between">
-              <component
-                :is="iconMap[cat.icon ?? ''] ?? Wrench"
-                class="h-8 w-8 text-primary transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-110"
-              />
-              <span
-                v-if="linkCount[cat.path]"
-                class="text-xs text-muted-foreground tabular-nums px-2 py-1 rounded-full border border-border/60"
-              >
-                {{ linkCount[cat.path] }} link
-              </span>
+            <div class="relative z-10 flex flex-col h-full">
+              <div class="flex items-start justify-between">
+                <component
+                  :is="iconMap[cat.icon ?? ''] ?? Wrench"
+                  class="h-8 w-8 text-primary transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-110"
+                />
+                <span
+                  v-if="linkCount[cat.path]"
+                  class="text-xs text-muted-foreground tabular-nums px-2 py-1 rounded-full border border-border/60"
+                >
+                  {{ linkCount[cat.path] }} link
+                </span>
+              </div>
+              <h3 class="mt-4 text-xl font-semibold tracking-tight text-foreground">{{ cat.title }}</h3>
+              <p class="mt-2 text-sm text-muted-foreground">{{ cat.description }}</p>
+              <div class="mt-auto pt-4 flex flex-wrap gap-1.5">
+                <span
+                  v-for="sub in subcategories(cat)"
+                  :key="sub"
+                  class="text-[11px] px-2 py-0.5 rounded-md bg-black/5 dark:bg-white/10 text-muted-foreground"
+                >
+                  {{ sub }}
+                </span>
+              </div>
             </div>
-            <h3 class="mt-4 text-xl font-semibold tracking-tight text-foreground">{{ cat.title }}</h3>
-            <p class="mt-2 text-sm text-muted-foreground">{{ cat.description }}</p>
-            <div class="mt-auto pt-4 flex flex-wrap gap-1.5">
-              <span
-                v-for="sub in subcategories(cat)"
-                :key="sub"
-                class="text-[11px] px-2 py-0.5 rounded-md bg-black/5 dark:bg-white/10 text-muted-foreground"
-              >
-                {{ sub }}
-              </span>
-            </div>
-          </div>
-        </NuxtLink>
+          </NuxtLink>
+        </div>
       </div>
 
       <!-- Segera hadir: kategori belum terisi, tidak ada halaman kosong -->

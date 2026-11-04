@@ -2,6 +2,7 @@
 title: "Dev Hub"
 description: "Indeks opini untuk memilih stack — framework, library, dan layanan developer."
 category: "devhub"
+domain: dev
 icon: "blocks"
 tags: ["developer", "framework", "library"]
 updated: "2026-11-03"

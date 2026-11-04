@@ -2,6 +2,7 @@
 title: "Torrenting"
 description: "Situs, klien, dan layanan torrent — kurasi untuk pengguna Indonesia."
 category: "torrenting"
+domain: hiburan
 icon: "magnet"
 tags: ["torrent", "unduh"]
 updated: "2026-11-03"

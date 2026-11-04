@@ -12,6 +12,9 @@ export default defineContentConfig({
       },
       schema: z.object({
         category: z.string().optional(),
+        // ADR-006: kelompok top-level untuk grouping landing.
+        // hiburan (streaming/torrenting/downloading) | dev | utilitas | meta
+        domain: z.enum(['hiburan', 'dev', 'utilitas', 'meta']).optional().default('utilitas'),
         icon: z.string().optional(),
         tags: z.array(z.string()).optional().default([]),
         updated: z.string().optional(),

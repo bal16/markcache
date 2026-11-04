@@ -2,6 +2,7 @@
 title: "Downloading"
 description: "Situs unduh software, buku, dan arsip — dari arsip legal sampai DDL."
 category: "downloading"
+domain: hiburan
 icon: "download"
 tags: ["unduh", "arsip"]
 updated: "2026-11-03"

@@ -2,6 +2,7 @@
 title: "AI Tools"
 description: "Alat AI gratis & open-source: chat, search, gambar, audio, dan local LLM."
 category: "aitools"
+domain: utilitas
 icon: "bot"
 tags: ["ai", "llm", "generatif"]
 updated: "2026-11-03"

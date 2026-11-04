@@ -2,6 +2,7 @@
 title: "Dev Tools"
 description: "Perangkat developer gratis dan open-source — git, docker, database, AI, hosting, security."
 category: "devtools"
+domain: dev
 icon: "terminal"
 tags: ["developer", "tools", "oss"]
 updated: "2026-11-03"
