@@ -15,7 +15,7 @@ import {
 const { pageData: page } = await usePageData()
 </script>
 <template>
-  <Drawer direction="bottom">
+  <Drawer>
     <DrawerTrigger as-child>
       <Button variant="ghost" class="rounded-full px-4 h-10 font-medium tracking-tight text-muted-foreground hover:text-foreground">
         On This Page <Icon icon="radix-icons:view-horizontal" class="w-4 h-4 ml-2" />
