@@ -4,9 +4,9 @@ import { nextTick, onMounted, onUnmounted, ref } from 'vue'
 import { Button } from '@/components/ui/button'
 
 const colorMode = useColorMode()
-const buttonRef = ref<HTMLElement | null>(null)
+const buttonRef = ref<any>(null)
 
-async function toggle(originEl?: HTMLElement | null) {
+async function toggle(originEl?: any) {
   const next = colorMode.value === 'dark' ? 'light' : 'dark'
 
   // Tentukan titik origin untuk circular reveal
