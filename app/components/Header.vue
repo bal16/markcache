@@ -38,7 +38,7 @@ onUnmounted(() => document.removeEventListener('keydown', handleKeydown))
           <span class="hidden md:inline">Search...</span>
           <SearchKBD />
         </Button>
-        <Button variant="ghost" class="md:hidden inline-flex p-0 m-0" @click="open = true" as-child>
+        <Button variant="ghost" class="md:hidden inline-flex p-0 m-0" @click="open = true">
           <SearchKBD />
         </Button>
       </div>
