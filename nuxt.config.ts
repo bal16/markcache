@@ -20,7 +20,24 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   css: ['@/assets/main.css'],
-  vite: { plugins: [tailwindcss()] },
+  vite: {
+    plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: [
+        '@iconify/vue',
+        '@lucide/vue',
+        '@vue/devtools-core',
+        '@vueuse/core',
+        'class-variance-authority',
+        'clsx',
+        'fuse.js',
+        'reka-ui',
+        'tailwind-merge',
+        'vue-sonner',
+        'workbox-window',
+      ],
+    },
+  },
   modules: [
     'shadcn-nuxt',
     '@nuxt/content',
