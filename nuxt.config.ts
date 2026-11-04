@@ -77,6 +77,9 @@ export default defineNuxtConfig({
 
   pwa: {
     registerType: 'autoUpdate',
+    client: {
+      installPrompt: true,
+    },
     manifest: {
       name: 'MarkCache — Direktori Kurasi Link',
       short_name: 'MarkCache',
