@@ -3,25 +3,38 @@ import { Icon } from '@iconify/vue'
 import GoToTop from './GoToTop.vue'
 import TableOfContents from './TableOfContents.vue'
 import { Button } from './ui/button'
-import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
+import {
+  Drawer,
+  DrawerContent,
+  DrawerDescription,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from './ui/drawer'
 
 const { pageData: page } = await usePageData()
 </script>
 <template>
-  <Popover>
-    <PopoverTrigger as-child>
+  <Drawer direction="bottom">
+    <DrawerTrigger as-child>
       <Button variant="ghost" class="rounded-full px-4 h-10 font-medium tracking-tight text-muted-foreground hover:text-foreground">
         On This Page <Icon icon="radix-icons:view-horizontal" class="w-4 h-4 ml-2" />
       </Button>
-    </PopoverTrigger>
-    <PopoverContent class="w-[300px] rounded-3xl bg-background/80 backdrop-blur-2xl border-border/30 shadow-2xl p-6" side="top" :side-offset="20" align="start">
-      <TableOfContents
-        v-if="page && page.body && page.body.toc"
-        :toc="page.body.toc"
-      />
-      <div class="mt-8 flex justify-start">
-        <GoToTop />
+    </DrawerTrigger>
+    <DrawerContent class="max-h-[85vh]">
+      <DrawerHeader class="text-left">
+        <DrawerTitle>On This Page</DrawerTitle>
+        <DrawerDescription>Navigasi heading halaman ini.</DrawerDescription>
+      </DrawerHeader>
+      <div class="overflow-y-auto px-4 pb-6">
+        <TableOfContents
+          v-if="page && page.body && page.body.toc"
+          :toc="page.body.toc"
+        />
+        <div class="mt-8 flex justify-start">
+          <GoToTop />
+        </div>
       </div>
-    </PopoverContent>
-  </Popover>
+    </DrawerContent>
+  </Drawer>
 </template>
