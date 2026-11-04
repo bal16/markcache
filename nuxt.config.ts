@@ -21,7 +21,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['@/assets/main.css'],
   vite: { plugins: [tailwindcss()] },
-  modules: ['shadcn-nuxt', '@nuxt/content', '@nuxtjs/color-mode'],
+  modules: ['shadcn-nuxt', '@nuxt/content', '@nuxtjs/color-mode', '@vite-pwa/nuxt'],
   content: {
     build: {
       markdown: {
@@ -58,5 +58,42 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/**': { prerender: true },
+  },
+
+  pwa: {
+    registerType: 'autoUpdate',
+    manifest: {
+      name: 'MarkCache — Direktori Kurasi Link',
+      short_name: 'MarkCache',
+      description: 'Direktori kurasi link ala FMHY, ID-first: streaming, downloading, dan lainnya.',
+      lang: 'id',
+      start_url: '/',
+      scope: '/',
+      display: 'standalone',
+      background_color: '#0b1020',
+      theme_color: '#0b1020',
+      icons: [
+        { src: '/pwa-192x192.png', sizes: '192x192', type: 'image/png' },
+        { src: '/pwa-512x512.png', sizes: '512x512', type: 'image/png' },
+        {
+          src: '/pwa-512x512-maskable.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'maskable',
+        },
+      ],
+    },
+    workbox: {
+      // Precache seluruh output statis (HTML per route + aset).
+      globPatterns: ['**/*.{js,css,html,ico,png,svg,json,webmanifest}'],
+      // Multi-page statis: jangan fallback SPA ke index.html.
+      navigateFallback: null,
+      cleanupOutdatedCaches: true,
+      clientsClaim: true,
+      skipWaiting: true,
+    },
+    devOptions: {
+      enabled: true,
+    },
   },
 })
