@@ -4,6 +4,7 @@ import TableOfContents from '~/components/TableOfContents.vue'
 
 const route = useRoute()
 const { pageData: page } = await usePageData()
+const contentBody = ref<HTMLElement | null>(null)
 
 definePageMeta({
   layout: 'docs',
@@ -48,6 +49,15 @@ function applyTagFilter() {
   })
 }
 
+function applyExternalLinkTargets() {
+  contentBody.value?.querySelectorAll<HTMLAnchorElement>('a[href]').forEach((link) => {
+    const href = link.getAttribute('href') ?? ''
+    if (!/^https?:\/\//i.test(href)) return
+    link.target = '_blank'
+    link.rel = 'noopener noreferrer'
+  })
+}
+
 watch(
   () => route.query.tag,
   async () => {
@@ -58,7 +68,16 @@ watch(
 
 onMounted(() => {
   applyTagFilter()
+  applyExternalLinkTargets()
 })
+
+watch(
+  () => page.value?.path,
+  async () => {
+    await nextTick()
+    applyExternalLinkTargets()
+  }
+)
 </script>
 
 <template>
@@ -85,7 +104,9 @@ onMounted(() => {
             <ShareButton class="shrink-0" />
           </div>
           <hr class="my-6" />
-          <ContentRenderer :value="page" />
+          <div ref="contentBody">
+            <ContentRenderer :value="page" />
+          </div>
         </template>
         <div v-else>
           <h1>404 Not Found</h1>
