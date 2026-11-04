@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 import { Icon } from '@iconify/vue'
-import { nextTick, onMounted, onUnmounted, ref } from 'vue'
+import { type ComponentPublicInstance, nextTick, onMounted, onUnmounted, ref } from 'vue'
 import { Button } from '@/components/ui/button'
 
 const colorMode = useColorMode()
-const buttonRef = ref<any>(null)
+const buttonRef = ref<ComponentPublicInstance | null>(null)
 
-async function toggle(originEl?: any) {
+async function toggle(originEl?: unknown) {
   const next = colorMode.value === 'dark' ? 'light' : 'dark'
 
   // Tentukan titik origin untuk circular reveal
@@ -14,9 +14,12 @@ async function toggle(originEl?: any) {
   if (typeof document !== 'undefined') {
     let x = window.innerWidth / 2
     let y = window.innerHeight / 2
-    const node = (el as any)?.$el || el
-    if (node && typeof node.getBoundingClientRect === 'function') {
-      const rect = node.getBoundingClientRect()
+    const node = (el as { $el?: unknown } | null)?.$el ?? el
+    if (
+      node &&
+      typeof (node as { getBoundingClientRect?: unknown }).getBoundingClientRect === 'function'
+    ) {
+      const rect = (node as { getBoundingClientRect: () => DOMRect }).getBoundingClientRect()
       x = rect.left + rect.width / 2
       y = rect.top + rect.height / 2
     }
