@@ -94,6 +94,10 @@ export const useSearchEngine = () => {
           icon,
           execute: () => {
             const next = theme || 'dark'
+            if (typeof document !== 'undefined') {
+              document.documentElement.style.setProperty('--vt-x', `${window.innerWidth / 2}px`)
+              document.documentElement.style.setProperty('--vt-y', `${window.innerHeight / 2}px`)
+            }
             if (
               typeof document !== 'undefined' &&
               typeof (document as any).startViewTransition === 'function'
@@ -135,6 +139,10 @@ export const useSearchEngine = () => {
           icon,
           execute: () => {
             const next = theme || 'dark'
+            if (typeof document !== 'undefined') {
+              document.documentElement.style.setProperty('--vt-x', `${window.innerWidth / 2}px`)
+              document.documentElement.style.setProperty('--vt-y', `${window.innerHeight / 2}px`)
+            }
             if (
               typeof document !== 'undefined' &&
               typeof (document as any).startViewTransition === 'function'

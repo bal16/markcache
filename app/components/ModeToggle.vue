@@ -1,12 +1,28 @@
 <script lang="ts" setup>
 import { Icon } from '@iconify/vue'
-import { nextTick, onMounted, onUnmounted } from 'vue'
+import { nextTick, onMounted, onUnmounted, ref } from 'vue'
 import { Button } from '@/components/ui/button'
 
 const colorMode = useColorMode()
+const buttonRef = ref<HTMLElement | null>(null)
 
-async function toggle() {
+async function toggle(originEl?: HTMLElement | null) {
   const next = colorMode.value === 'dark' ? 'light' : 'dark'
+
+  // Tentukan titik origin untuk circular reveal
+  const el = originEl || buttonRef.value
+  if (typeof document !== 'undefined') {
+    let x = window.innerWidth / 2
+    let y = window.innerHeight / 2
+    if (el) {
+      const rect = el.getBoundingClientRect()
+      x = rect.left + rect.width / 2
+      y = rect.top + rect.height / 2
+    }
+    document.documentElement.style.setProperty('--vt-x', `${x}px`)
+    document.documentElement.style.setProperty('--vt-y', `${y}px`)
+  }
+
   if (
     typeof document !== 'undefined' &&
     typeof (document as any).startViewTransition === 'function'
@@ -32,7 +48,6 @@ onMounted(() => {
   }
 
   const handler = (e: KeyboardEvent) => {
-    // Jangan trigger di input/form/contenteditable
     const target = e.target as HTMLElement | null
     if (
       target &&
@@ -43,10 +58,9 @@ onMounted(() => {
     ) {
       return
     }
-    // Hanya Shift+D, tanpa modifier lain
     if (e.shiftKey && !e.ctrlKey && !e.metaKey && !e.altKey && e.key.toLowerCase() === 'd') {
       e.preventDefault()
-      toggle()
+      toggle(buttonRef.value)
     }
   }
   window.addEventListener('keydown', handler)
@@ -56,11 +70,12 @@ onMounted(() => {
 
 <template>
   <Button
+    ref="buttonRef"
     variant="ghost"
     size="icon"
     class="relative"
     aria-label="Toggle theme"
-    @click="toggle"
+    @click="toggle($event.currentTarget as HTMLElement)"
   >
     <Icon
       icon="radix-icons:sun"

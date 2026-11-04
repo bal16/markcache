@@ -138,8 +138,21 @@
   }
 }
 
-::view-transition-old(root),
+::view-transition-old(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
 ::view-transition-new(root) {
-  animation-duration: 0.35s;
-  animation-timing-function: ease;
+  animation: circular-reveal 0.5s ease-out;
+  mix-blend-mode: normal;
+}
+
+@keyframes circular-reveal {
+  from {
+    clip-path: circle(0% at var(--vt-x, 50%) var(--vt-y, 50%));
+  }
+  to {
+    clip-path: circle(150% at var(--vt-x, 50%) var(--vt-y, 50%));
+  }
 }
