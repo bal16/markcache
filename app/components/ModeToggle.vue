@@ -1,12 +1,28 @@
 <script lang="ts" setup>
 import { Icon } from '@iconify/vue'
-import { onMounted, onUnmounted } from 'vue'
+import { nextTick, onMounted, onUnmounted } from 'vue'
 import { Button } from '@/components/ui/button'
 
 const colorMode = useColorMode()
 
-function toggle() {
-  colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+async function toggle() {
+  const next = colorMode.value === 'dark' ? 'light' : 'dark'
+  if (
+    typeof document !== 'undefined' &&
+    typeof (document as any).startViewTransition === 'function'
+  ) {
+    const transition = (document as any).startViewTransition(async () => {
+      colorMode.preference = next
+      await nextTick()
+    })
+    try {
+      await transition.finished
+    } catch {
+      // ignore
+    }
+  } else {
+    colorMode.preference = next
+  }
 }
 
 onMounted(() => {

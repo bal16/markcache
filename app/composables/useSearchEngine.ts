@@ -1,7 +1,7 @@
 import { File, Hash, Laptop, Moon, Sun } from '@lucide/vue'
 import Fuse, { type FuseResultMatch } from 'fuse.js'
 import type { Component } from 'vue'
-import { computed, ref } from 'vue'
+import { computed, nextTick, ref } from 'vue'
 
 export interface SearchCommand {
   id: string
@@ -93,7 +93,18 @@ export const useSearchEngine = () => {
           description: item.content,
           icon,
           execute: () => {
-            colorMode.preference = theme || 'dark'
+            const next = theme || 'dark'
+            if (
+              typeof document !== 'undefined' &&
+              typeof (document as any).startViewTransition === 'function'
+            ) {
+              ;(document as any).startViewTransition(async () => {
+                colorMode.preference = next
+                await nextTick()
+              })
+            } else {
+              colorMode.preference = next
+            }
           },
         }
       })
@@ -123,7 +134,18 @@ export const useSearchEngine = () => {
           description: item.content,
           icon,
           execute: () => {
-            colorMode.preference = theme || 'dark'
+            const next = theme || 'dark'
+            if (
+              typeof document !== 'undefined' &&
+              typeof (document as any).startViewTransition === 'function'
+            ) {
+              ;(document as any).startViewTransition(async () => {
+                colorMode.preference = next
+                await nextTick()
+              })
+            } else {
+              colorMode.preference = next
+            }
           },
         })
         return
