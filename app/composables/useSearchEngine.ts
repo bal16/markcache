@@ -93,7 +93,7 @@ export const useSearchEngine = () => {
           description: item.content,
           icon,
           execute: () => {
-            colorMode.preference = theme || 'system'
+            colorMode.preference = theme || 'light'
           },
         }
       })
@@ -123,7 +123,7 @@ export const useSearchEngine = () => {
           description: item.content,
           icon,
           execute: () => {
-            colorMode.preference = theme || 'system'
+            colorMode.preference = theme || 'light'
           },
         })
         return
