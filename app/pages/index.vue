@@ -7,6 +7,7 @@ import {
   Clapperboard,
   Download,
   Magnet,
+  MoveUpRight,
   Search,
   Terminal,
   Wrench,
@@ -162,7 +163,10 @@ const firstCategory = computed(() => cats.value[0]?.path ?? '/streaming')
         MarkCache
       </h1>
       <p class="max-w-2xl text-lg text-muted-foreground sm:text-xl text-balance">
-        Direktori tautan gratis ala FMHY — dikurasi manual, ditulis untuk
+        Direktori tautan gratis ala 
+        <Button variant="link" size="default" class="px-0 mx-0 text-xl" as-child>
+          <a href="https://fmhy.net/" target="_blank" rel="noopener noreferrer">FMHY <MoveUpRight /></a>
+        </Button> — dikurasi manual, ditulis untuk
         pengguna Indonesia. Streaming, anime, sampai dev tools.
       </p>
       <p v-if="totalLinks" class="text-sm text-muted-foreground/80">
