@@ -21,7 +21,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['@/assets/main.css'],
   vite: { plugins: [tailwindcss()] },
-  modules: ['shadcn-nuxt', '@nuxt/content', '@nuxtjs/color-mode', '@vite-pwa/nuxt'],
+  modules: [
+    'shadcn-nuxt',
+    '@nuxt/content',
+    '@nuxtjs/color-mode',
+    '@vite-pwa/nuxt',
+    'nuxt-og-image',
+  ],
   content: {
     build: {
       markdown: {
@@ -58,6 +64,15 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/**': { prerender: true },
+  },
+
+  site: {
+    // Ganti dengan domain produksi bila berbeda.
+    url: 'https://markcache.vercel.app',
+  },
+
+  ogImage: {
+    zeroRuntime: true,
   },
 
   pwa: {

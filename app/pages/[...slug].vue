@@ -19,6 +19,12 @@ useSeoMeta({
   ogDescription: () => page.value?.description,
 })
 
+defineOgImage('MarkCache.satori', {
+  title: page.value?.title ?? 'Tidak ditemukan',
+  description:
+    page.value?.description ?? 'Direktori tautan gratis terkurasi untuk pengguna Indonesia.',
+})
+
 // Filter per-link client-side via ?tag=xxx (ADR-002 konsekuensi v1).
 // Parsing ringan: li yang text-nya tak mengandung tag disembunyikan.
 const activeTag = ref<string | null>(null)
@@ -68,9 +74,12 @@ onMounted(() => {
         </div>
         <template v-if="page">
           <h1>{{ page.title }}</h1>
-          <p class="lead text-xl text-muted-foreground mb-8">
-            {{ page.description }}
-          </p>
+          <div class="not-prose flex items-center justify-between gap-4 mb-8">
+            <p class="lead text-xl text-muted-foreground m-0">
+              {{ page.description }}
+            </p>
+            <ShareButton class="shrink-0" />
+          </div>
           <hr class="my-6" />
           <ContentRenderer :value="page" />
         </template>
@@ -87,7 +96,8 @@ onMounted(() => {
               :toc="page.body.toc"
             />
           </div>
-          <div class="mt-6 border-t pt-4">
+          <div class="mt-6 border-t pt-4 space-y-2">
+            <ShareButton class="w-full justify-start" />
             <GoToTop />
           </div>
         </div>

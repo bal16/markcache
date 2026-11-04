@@ -22,6 +22,11 @@ useSeoMeta({
     'MarkCache — direktori tautan gratis ala FMHY yang dikurasi manual untuk pengguna Indonesia: streaming, anime, hingga dev tools.',
 })
 
+defineOgImage('MarkCache.satori', {
+  title: 'MarkCache — Direktori link terkurasi, ID-first',
+  description: 'Direktori tautan gratis ala FMHY yang dikurasi manual untuk pengguna Indonesia.',
+})
+
 interface MdcNode {
   type?: string
   children?: MdcNode[]
