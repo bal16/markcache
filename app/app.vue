@@ -51,6 +51,6 @@ useHead({
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
-  <Toaster position="bottom-center" rich-colors close-button />
+  <Toaster position="bottom-center" close-button close-button-position="top-right" />
   <PwaFeedback />
 </template>
