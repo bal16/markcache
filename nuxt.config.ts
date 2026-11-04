@@ -83,6 +83,11 @@ export default defineNuxtConfig({
         },
       ],
     },
+    experimental: {
+      // Nuxt SSG fetch _payload.json dengan query param; handler ini
+      // membuatnya resolve saat offline.
+      enableWorkboxPayloadQueryParams: true,
+    },
     workbox: {
       // Precache seluruh output statis (HTML per route + aset).
       globPatterns: ['**/*.{js,css,html,ico,png,svg,json,webmanifest}'],
