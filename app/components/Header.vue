@@ -3,6 +3,7 @@ import { onMounted, onUnmounted } from 'vue'
 import ModeToggle from '~/components/ModeToggle.vue'
 import { Button } from '~/components/ui/button'
 import CommandDialog from './SearchDialog.vue'
+import SearchKBD from './SearchKBD.vue'
 
 const { open } = useSearchOpen()
 
@@ -32,14 +33,13 @@ onUnmounted(() => document.removeEventListener('keydown', handleKeydown))
         <Button
           @click="open = true"
           variant="ghost"
-          class="inline-flex h-8 md:w-44 items-center justify-between rounded-md border border-input bg-muted/50 px-3 py-2 text-xs text-muted-foreground ring-offset-background whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          class="hidden md:inline-flex h-8 md:w-44 items-center justify-between rounded-md border border-input bg-muted/50 px-3 py-2 text-xs text-muted-foreground ring-offset-background whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
         >
           <span class="hidden md:inline">Search...</span>
-          <kbd
-            class="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100"
-          >
-            <span class="text-xs">⌘</span>K
-          </kbd>
+          <SearchKBD />
+        </Button>
+        <Button variant="ghost" class="md:hidden inline-flex p-0 m-0" @click="open = true" as-child>
+          <SearchKBD />
         </Button>
       </div>
       <div class="">
