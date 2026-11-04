@@ -31,7 +31,8 @@ const { pageData: page } = await usePageData()
           v-if="page && page.body && page.body.toc"
           :toc="page.body.toc"
         />
-        <div class="mt-8 flex justify-start">
+        <div class="mt-8 flex justify-start gap-2">
+          <ShareButton />
           <GoToTop />
         </div>
       </div>
