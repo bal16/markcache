@@ -21,7 +21,7 @@ order: 3
 
 ## Meta-Framework
 
-- [Next.js](https://nextjs.com) — meta-framework React paling besar; app router dan server components. `react` ⭐
+- [Next.js](https://nextjs.org) — meta-framework React paling besar; app router dan server components. `react` ⭐
 - [Nuxt](https://nuxt.com) — meta-framework Vue; dipakai situs ini sendiri. `vue` ⭐
 - [TanStack Start](https://tanstack.com/start/latest) — full-stack React dari tim TanStack, di atas Router dan Query. `react`
 - [Astro](https://astro.build) — arsitektur konten-first, ideal untuk situs marketing dan blog. `konten`
