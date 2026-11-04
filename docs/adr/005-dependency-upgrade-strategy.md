@@ -1,7 +1,7 @@
 # ADR-005: Strategi Upgrade Dependencies — Major & Minor Bumps
 
-Status: Accepted
-Date: 2026-11-03
+Status: Completed
+Date: 2026-11-04
 Deciders: bal16
 
 ## Context
