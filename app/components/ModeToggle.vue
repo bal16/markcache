@@ -14,8 +14,9 @@ async function toggle(originEl?: HTMLElement | null) {
   if (typeof document !== 'undefined') {
     let x = window.innerWidth / 2
     let y = window.innerHeight / 2
-    if (el) {
-      const rect = el.getBoundingClientRect()
+    const node = (el as any)?.$el || el
+    if (node && typeof node.getBoundingClientRect === 'function') {
+      const rect = node.getBoundingClientRect()
       x = rect.left + rect.width / 2
       y = rect.top + rect.height / 2
     }
