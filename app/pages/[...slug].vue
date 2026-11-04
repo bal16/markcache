@@ -17,6 +17,10 @@ useSeoMeta({
     page.value?.description ?? 'Direktori tautan gratis terkurasi untuk pengguna Indonesia.',
   ogTitle: () => page.value?.title,
   ogDescription: () => page.value?.description,
+  ogImageAlt: () =>
+    `${page.value?.title ?? 'MarkCache'} — direktori link terkurasi untuk pengguna Indonesia`,
+  twitterTitle: () => page.value?.title,
+  twitterDescription: () => page.value?.description,
 })
 
 defineOgImage('MarkCache.satori', {

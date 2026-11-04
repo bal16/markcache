@@ -20,6 +20,32 @@ useSeoMeta({
   title: 'Direktori link terkurasi, ID-first',
   description:
     'MarkCache — direktori tautan gratis ala FMHY yang dikurasi manual untuk pengguna Indonesia: streaming, anime, hingga dev tools.',
+  ogTitle: 'Direktori link terkurasi, ID-first — MarkCache',
+  ogDescription: 'Direktori tautan gratis ala FMHY yang dikurasi manual untuk pengguna Indonesia.',
+  ogImageAlt: 'MarkCache, direktori link terkurasi untuk pengguna Indonesia',
+  twitterTitle: 'Direktori link terkurasi, ID-first — MarkCache',
+  twitterDescription:
+    'Direktori tautan gratis ala FMHY yang dikurasi manual untuk pengguna Indonesia.',
+})
+
+useHead({
+  script: [
+    {
+      key: 'homepage-jsonld',
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        '@id': 'https://markcache.vercel.app/#webpage',
+        url: 'https://markcache.vercel.app/',
+        name: 'Direktori link terkurasi, ID-first — MarkCache',
+        description:
+          'MarkCache — direktori tautan gratis ala FMHY yang dikurasi manual untuk pengguna Indonesia: streaming, anime, hingga dev tools.',
+        inLanguage: 'id',
+        isPartOf: { '@id': 'https://markcache.vercel.app/#website' },
+      }),
+    },
+  ],
 })
 
 defineOgImage('MarkCache.satori', {
