@@ -10,9 +10,10 @@ export function useTocObserver(links: Ref<any[]>) {
 
     const idsToObserve: string[] = []
     const collectIds = (items: any[]) => {
-      items.forEach((item) => {
-        idsToObserve.push(item.id)
-        if (item.children) collectIds(item.children)
+      ;(items || []).forEach((item) => {
+        if (!item) return
+        if (item.id) idsToObserve.push(item.id)
+        if (Array.isArray(item.children)) collectIds(item.children)
       })
     }
     collectIds(links.value)

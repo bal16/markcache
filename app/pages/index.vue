@@ -118,7 +118,7 @@ const totalLinks = computed(() =>
 // Subkategori (H2) untuk preview chip di kartu.
 function subcategories(cat: (typeof cats.value)[number]): string[] {
   const links = cat.body?.toc?.links ?? []
-  return links.filter((l) => l.depth === 2).map((l) => l.text)
+  return links.filter((l) => l && l.depth === 2).map((l) => l.text)
 }
 
 const { open: searchOpen } = useSearchOpen()

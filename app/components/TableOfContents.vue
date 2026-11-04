@@ -10,7 +10,14 @@ const props = defineProps<{
   toc: Toc
 }>()
 
-const links = computed(() => props.toc?.links || [])
+function normalizeLinks(list: any[]): any[] {
+  return (list || []).filter(Boolean).map((l) => ({
+    ...l,
+    children: Array.isArray(l?.children) ? normalizeLinks(l.children) : [],
+  }))
+}
+
+const links = computed(() => normalizeLinks(props.toc?.links || []))
 
 const { activeId, scrollToId } = useTocObserver(links)
 </script>
@@ -21,43 +28,47 @@ const { activeId, scrollToId } = useTocObserver(links)
       <p class="font-medium text-sm mb-4">On This Page</p>
 
       <ul v-if="links.length" class="space-y-2 text-sm">
-        <li v-for="link in links" :key="link.id">
-          <a
-            :href="`#${link.id}`"
-            @click.prevent="scrollToId(link.id)"
-            :class="
-              cn(
-                'block border-l-2 pl-4 transition-colors hover:text-foreground',
-                activeId === link.id
-                  ? 'border-primary font-medium text-primary'
-                  : 'border-transparent text-muted-foreground'
-              )
-            "
-          >
-            {{ link.text }}
-          </a>
+        <li v-for="(link, i) in links" :key="link?.id ?? i">
+          <template v-if="link">
+            <a
+              :href="`#${link.id}`"
+              @click.prevent="scrollToId(link.id)"
+              :class="
+                cn(
+                  'block border-l-2 pl-4 transition-colors hover:text-foreground',
+                  activeId === link.id
+                    ? 'border-primary font-medium text-primary'
+                    : 'border-transparent text-muted-foreground'
+                )
+              "
+            >
+              {{ link.text }}
+            </a>
 
-          <ul
-            v-if="link.children && link.children.length"
-            class="mt-2 space-y-2"
-          >
-            <li v-for="child in link.children" :key="child.id">
-              <a
-                :href="`#${child.id}`"
-                @click.prevent="scrollToId(child.id)"
-                :class="
-                  cn(
-                    'block border-l-2 pl-8 transition-colors hover:text-foreground',
-                    activeId === child.id
-                      ? 'border-primary font-medium text-primary'
-                      : 'border-transparent text-muted-foreground'
-                  )
-                "
-              >
-                {{ child.text }}
-              </a>
-            </li>
-          </ul>
+            <ul
+              v-if="link.children && link.children.length"
+              class="mt-2 space-y-2"
+            >
+              <li v-for="(child, ci) in link.children" :key="child?.id ?? ci">
+                <template v-if="child">
+                  <a
+                    :href="`#${child.id}`"
+                    @click.prevent="scrollToId(child.id)"
+                    :class="
+                      cn(
+                        'block border-l-2 pl-8 transition-colors hover:text-foreground',
+                        activeId === child.id
+                          ? 'border-primary font-medium text-primary'
+                          : 'border-transparent text-muted-foreground'
+                      )
+                    "
+                  >
+                    {{ child.text }}
+                  </a>
+                </template>
+              </li>
+            </ul>
+          </template>
         </li>
       </ul>
     </ScrollArea>

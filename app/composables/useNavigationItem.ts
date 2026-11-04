@@ -9,6 +9,7 @@ export async function useNavigationItem() {
   // tanpa parent collapsible duplikat (folder-name di-mask SidebarItem).
   const normalized = computed(() => {
     const promote = (node: NavNode): NavNode => {
+      if (!node) return node
       const original = node.children
       if (!original?.length) return node
       const children = original.map(promote)
@@ -18,7 +19,7 @@ export async function useNavigationItem() {
       }
       return { ...node, children }
     }
-    return (navigation.value ?? []).map(promote)
+    return (navigation.value ?? []).filter(Boolean).map(promote)
   })
 
   return {

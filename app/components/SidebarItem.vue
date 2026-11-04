@@ -20,7 +20,7 @@ const paddingLeftClass = computed(() => {
 
 <template>
   <Collapsible
-    v-if="item.children && item.children.length"
+    v-if="item && item.children && item.children.length"
     :default-open="true"
     class="flex flex-col gap-2 w-full mt-2 first:mt-0"
   >
@@ -36,8 +36,8 @@ const paddingLeftClass = computed(() => {
 
     <CollapsibleContent class="grid gap-1 ml-2 pl-2 border-l border-border/40">
       <SidebarItem
-        v-for="child in item.children"
-        :key="child.path"
+        v-for="(child, ci) in item.children"
+        :key="child?.path ?? ci"
         :item="child"
         :level="(level || 0) + 1"
       />
@@ -45,7 +45,7 @@ const paddingLeftClass = computed(() => {
   </Collapsible>
 
   <NuxtLink
-    v-else
+    v-else-if="item"
     :to="item.path"
     class="block truncate rounded-md py-2 px-3 text-sm text-muted-foreground transition-all duration-200 hover:bg-black/5 dark:hover:bg-white/5 hover:text-foreground hover:translate-x-1"
     active-class="border-l-2 border-primary bg-primary/10 text-primary font-medium hover:translate-x-0"
