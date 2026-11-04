@@ -21,7 +21,7 @@ const {
       <h1 class="text-[64px] leading-tight font-black text-balance">
         {{ title }}
       </h1>
-      <p class="text-[28px] leading-snug text-slate-300 max-w-[900px]">
+      <p class="text-[28px] leading-snug text-slate-300 max-w-225">
         {{ description }}
       </p>
     </div>

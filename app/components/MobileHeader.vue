@@ -10,7 +10,7 @@ import MobileToc from './MobileToc.vue'
     <div class="flex md:hidden">
       <MobileSidebar />
     </div>
-    <div class="h-6 w-[1px] bg-border/50 mx-1 md:hidden"></div>
+    <div class="h-6 w-px bg-border/50 mx-1 md:hidden"></div>
     <div class="flex">
       <MobileToc />
     </div>
