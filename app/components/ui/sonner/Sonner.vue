@@ -7,9 +7,9 @@ import {
   TriangleAlertIcon,
   XIcon,
 } from '@lucide/vue'
+import { cn } from 'cn'
 import type { ToasterProps } from 'vue-sonner'
 import { Toaster as Sonner } from 'vue-sonner'
-import { cn } from '@/lib/utils'
 
 const props = defineProps<ToasterProps>()
 </script>
@@ -43,7 +43,7 @@ const props = defineProps<ToasterProps>()
       </div>
     </template>
     <template #close-icon>
-      <XIcon class="size-4" />
+      <XIcon class="size-4 text-popover-foreground" />
     </template>
   </Sonner>
 </template>
