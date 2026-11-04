@@ -2,6 +2,7 @@
 import {
   ArrowRight,
   Blocks,
+  BookOpen,
   Bot,
   Clapperboard,
   Download,
@@ -40,11 +41,12 @@ const cats = computed(() => kategori.value ?? [])
 // ADR-006: grouping halaman landing berdasarkan `domain` frontmatter.
 // Struktur konten tetap flat (1 folder = 1 kategori, ADR-002); grouping
 // ini tampilan-only di landing.
-const DOMAIN_ORDER = ['hiburan', 'dev', 'utilitas'] as const
+const DOMAIN_ORDER = ['hiburan', 'dev', 'utilitas', 'meta'] as const
 const DOMAIN_LABEL: Record<string, string> = {
   hiburan: 'Hiburan',
   dev: 'Developer',
   utilitas: 'Utilitas',
+  meta: 'Meta',
 }
 
 const groups = computed(() => {
@@ -62,6 +64,7 @@ const iconMap: Record<string, Component> = {
   magnet: Magnet,
   download: Download,
   bot: Bot,
+  'book-open': BookOpen,
 }
 
 // Kategori belum terisi hanya label — tidak ada halaman kosong (ADR-001 #3).
@@ -92,6 +95,9 @@ function countLinks(node: unknown): number {
   return 0
 }
 
+// Statistik hero exclude domain `meta` (halaman tentang bukan kategori).
+const statCats = computed(() => cats.value.filter((c) => (c.domain ?? 'utilitas') !== 'meta'))
+
 const linkCount = computed<Record<string, number>>(() => {
   const map: Record<string, number> = {}
   for (const cat of cats.value) {
@@ -100,7 +106,9 @@ const linkCount = computed<Record<string, number>>(() => {
   return map
 })
 
-const totalLinks = computed(() => Object.values(linkCount.value).reduce((a, b) => a + b, 0))
+const totalLinks = computed(() =>
+  statCats.value.map((c) => countLinks(c.body)).reduce((a, b) => a + b, 0)
+)
 
 // Subkategori (H2) untuk preview chip di kartu.
 function subcategories(cat: (typeof cats.value)[number]): string[] {
@@ -127,7 +135,7 @@ const firstCategory = computed(() => cats.value[0]?.path ?? '/streaming')
         pengguna Indonesia. Streaming, anime, sampai dev tools.
       </p>
       <p v-if="totalLinks" class="text-sm text-muted-foreground/80">
-        {{ totalLinks }} link terkurasi di {{ cats.length }} kategori
+        {{ totalLinks }} link terkurasi di {{ statCats.length }} kategori
       </p>
       <div class="flex gap-4">
         <Button as-child class="px-8 bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_rgba(0,112,243,0.3)] transition-all duration-300">

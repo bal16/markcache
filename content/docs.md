@@ -7,7 +7,7 @@ icon: "book-open"
 tags: ["kontribusi", "meta"]
 updated: "2026-11-03"
 draft: false
-featured: false
+featured: true
 order: 9
 ---
 
