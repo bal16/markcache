@@ -6,6 +6,13 @@ const route = useRoute()
 const { pageData: page } = await usePageData()
 const contentBody = ref<HTMLElement | null>(null)
 
+if (!page.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Halaman tidak ditemukan',
+  })
+}
+
 definePageMeta({
   layout: 'docs',
 })
@@ -108,9 +115,6 @@ watch(
             <ContentRenderer :value="page" />
           </div>
         </template>
-        <div v-else>
-          <h1>404 Not Found</h1>
-        </div>
       </article>
 
       <aside class="hidden lg:block h-full">
