@@ -62,6 +62,7 @@ order: 2
 ## AI & Machine Learning
 
 - [Hugging Face](https://huggingface.co/) — hub model, dataset, dan Spaces. `ai` ⭐
+- [Hugging Face Spaces](https://huggingface.co/spaces) — hosting Docker untuk aplikasi ML: 16 GB RAM & 50 GB disk gratis, bebas model sebesar apa pun. `ml-hosting` ⭐
 - [Unsloth](https://unsloth.ai/) — fine-tune LLM dengan RAM/VRAM kecil. `ai`
 - [Google AI Studio](https://aistudio.google.com/app/apps) — playground + API Gemini, gratis. `ai`
 - [Qwen Chat](https://chat.qwen.ai/) — chat AI gratis dengan mode coding. `ai`
@@ -80,7 +81,19 @@ order: 2
 - [surge](https://surge.sh/) — deploy dari CLI sekali perintah. `statis`
 - [GitHub Pages](https://docs.github.com/en/pages) — hosting statis dari repo, 100 GB bandwidth. `statis`
 - [Coolify](https://coolify.io/) — alternatif Heroku/Vercel self-host untuk VPS sendiri. `selfhost` ⭐
-- [Render](https://render.com/) — deploy backend dan database terkelola. `backend`
+- [Google Cloud Run](https://cloud.google.com/run) — serverless container; tier selalu-gratis 2 juta request/bulan, image s/d 32 GB. `container`
+- [Render](https://render.com/) — web service dari Dockerfile; tier gratis 512 MB RAM — terlalu mepet untuk model ML besar. `backend`
+
+## Object Storage (S3-Compatible)
+
+> Kuota dihitung per akun, bebas banyak bucket/project. Indeks tier gratis
+> lintas layanan: [free-for.dev](https://free-for.dev/) di Dev Hub.
+
+- [Cloudflare R2](https://developers.cloudflare.com/r2/) — 10 GB gratis, **$0 egress fee** selamanya; API S3 penuh. `s3` ⭐
+- [Storj](https://www.storj.io/) — 25 GB storage + 25 GB egress/bulan gratis; tanpa kartu kredit. `s3` ⭐
+- [Backblaze B2](https://www.backblaze.com/cloud-storage) — 10 GB gratis selamanya; egress gratis melalui Cloudflare (Bandwidth Alliance). `s3`
+- [MinIO](https://min.io/) — object storage S3-compatible self-host, standar industri. `selfhost` ⭐
+- [Garage](https://garagehq.deuxfleurs.fr/) — object storage self-host ringan, tahan gejala jaringan. `selfhost`
 
 ## Security
 

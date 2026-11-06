@@ -62,8 +62,8 @@ order: 3
 
 ## Database & BaaS
 
-- [Supabase](https://supabase.com/) — Postgres BaaS lengkap: auth, storage, realtime, edge function. `baas` ⭐
-- [Neon](https://neon.com/) — Postgres serverless dengan branching database seperti Git. `postgres` ⭐
+- [Supabase](https://supabase.com/) — Postgres BaaS lengkap: auth, storage, realtime; 2 project aktif di tier gratis. `baas` ⭐
+- [Neon](https://neon.com/) — Postgres serverless dengan branching ala Git; scale-to-zero, cold start cepat. 10 project gratis. `postgres` ⭐
 - [Drizzle](https://orm.drizzle.team/) — ORM SQL TypeScript yang ringan; jodoh dengan Neon. `orm`
 - [Prisma](https://www.prisma.io/) — ORM TypeScript paling populer dengan DX paling hangat. `orm`
 - [Turso](https://turso.tech/) — SQLite terdistribusi di edge, replikasi global. `sqlite`
