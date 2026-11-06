@@ -7,6 +7,19 @@ const route = useRoute()
 const { pageData: page } = await usePageData()
 const contentBody = ref<HTMLElement | null>(null)
 
+// Label absolut ID dihitung pada render (SSR/prerender) agar stabil lintas hari.
+const dateFormatter = new Intl.DateTimeFormat('id-ID', {
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+})
+
+function absoluteDate(iso?: string): string | null {
+  if (!iso) return null
+  const t = Date.parse(iso)
+  return Number.isNaN(t) ? null : dateFormatter.format(t)
+}
+
 if (!page.value) {
   throw createError({
     statusCode: 404,
@@ -109,9 +122,20 @@ watch(
         <template v-if="page">
           <h1>{{ page.title }}</h1>
           <div class="not-prose flex items-center justify-between gap-4 mb-8">
-            <p class="lead text-xl text-muted-foreground m-0">
-              {{ page.description }}
-            </p>
+            <div>
+              <p class="lead text-xl text-muted-foreground m-0">
+                {{ page.description }}
+              </p>
+              <p
+                v-if="page.updated || page.created"
+                class="text-[11px] text-muted-foreground/60 mt-1.5 m-0"
+              >
+                <template v-if="page.updated">Diperbarui {{ absoluteDate(page.updated) }}</template>
+                <template v-if="page.created">
+                  <template v-if="page.updated"> · </template>Ditambahkan {{ absoluteDate(page.created) }}
+                </template>
+              </p>
+            </div>
             <ShareButton class="shrink-0" />
           </div>
           <hr class="my-6" />

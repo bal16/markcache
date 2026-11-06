@@ -93,6 +93,31 @@ const groups = computed(() => {
   })).filter((g) => g.items.length > 0)
 })
 
+// Metadata kesegaran: label "Diperbarui" dihitung pada build time (prerender).
+// Tulis ulang manual per deploy; jangan komputasi ulang di client (hindari
+// hydration mismatch lintas hari).
+function relativeDays(iso?: string): string | null {
+  if (!iso) return null
+  const t = Date.parse(iso)
+  if (Number.isNaN(t)) return null
+  const days = Math.round((Date.now() - t) / 86_400_000)
+  if (days >= 365) {
+    return new Intl.RelativeTimeFormat('id', { numeric: 'auto' }).format(
+      -Math.round(days / 365),
+      'year'
+    )
+  }
+  return new Intl.RelativeTimeFormat('id', { numeric: 'auto' }).format(-days, 'day')
+}
+
+// Kategori baru (created ≤ 21 hari) dapat pill "Baru" di kartu.
+function isNewCategory(iso?: string): boolean {
+  if (!iso) return false
+  const t = Date.parse(iso)
+  if (Number.isNaN(t)) return false
+  return Date.now() - t <= 21 * 86_400_000
+}
+
 const iconMap: Record<string, Component> = {
   clapperboard: Clapperboard,
   terminal: Terminal,
@@ -224,10 +249,17 @@ const firstCategory = computed(() => cats.value[0]?.path ?? '/streaming')
 
             <div class="relative z-10 flex flex-col h-full">
               <div class="flex items-start justify-between">
-                <component
-                  :is="iconMap[cat.icon ?? ''] ?? Wrench"
-                  class="h-8 w-8 text-primary transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-110"
-                />
+                <div class="flex items-center gap-2">
+                  <component
+                    :is="iconMap[cat.icon ?? ''] ?? Wrench"
+                    class="h-8 w-8 text-primary transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-110"
+                  />
+                  <span
+                    v-if="isNewCategory(cat.created)"
+                    class="text-[10px] px-1.5 py-0.5 rounded-full bg-primary/15 text-primary font-medium"
+                    >Baru</span
+                  >
+                </div>
                 <span
                   v-if="linkCount[cat.path]"
                   class="text-xs text-muted-foreground tabular-nums px-2 py-1 rounded-full border border-border/60"
@@ -237,6 +269,9 @@ const firstCategory = computed(() => cats.value[0]?.path ?? '/streaming')
               </div>
               <h3 class="mt-4 text-xl font-semibold tracking-tight text-foreground">{{ cat.title }}</h3>
               <p class="mt-2 text-sm text-muted-foreground">{{ cat.description }}</p>
+              <p v-if="relativeDays(cat.updated)" class="mt-1.5 text-[11px] text-muted-foreground/60">
+                Diperbarui {{ relativeDays(cat.updated) }}
+              </p>
               <div class="mt-auto pt-4 flex flex-wrap gap-1.5">
                 <span
                   v-for="sub in subcategories(cat)"

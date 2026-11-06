@@ -6,6 +6,7 @@ domain: utilitas
 icon: "graduation-cap"
 tags: ["mahasiswa", "pelajar", "gratis"]
 updated: "2026-11-06"
+created: "2026-11-06"
 draft: false
 featured: true
 order: 10

@@ -4,7 +4,8 @@ description: "Satu kalimat: isi kategori ini untuk siapa."
 category: "nama-folder"
 icon: "clapperboard"
 tags: ["contoh", "kategori"]
-updated: "2026-09-08"
+updated: "2026-11-06"
+created: "2026-09-08"
 draft: false
 featured: true
 ---

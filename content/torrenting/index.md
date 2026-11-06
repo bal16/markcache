@@ -6,6 +6,7 @@ domain: hiburan
 icon: "magnet"
 tags: ["torrent", "unduh"]
 updated: "2026-11-03"
+created: "2026-11-03"
 draft: false
 featured: true
 order: 4

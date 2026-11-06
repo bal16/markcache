@@ -18,6 +18,9 @@ export default defineContentConfig({
         icon: z.string().optional(),
         tags: z.array(z.string()).optional().default([]),
         updated: z.string().optional(),
+        // ADR-007? (metadata kesegaran): tanggal kategori pertama dibuka,
+        // backfill dari git history. `updated` = revisi terakhir.
+        created: z.string().optional(),
         draft: z.boolean().optional().default(false),
         featured: z.boolean().optional().default(false),
         order: z.number().optional(),

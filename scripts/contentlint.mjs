@@ -40,7 +40,7 @@ const REQUIRED_KEYS = ['title', 'description']
  * gradual migration of legacy files that only carry title/description/date/tags).
  * @type {string[]}
  */
-const RECOMMENDED_KEYS = ['category', 'tags', 'updated', 'draft', 'featured']
+const RECOMMENDED_KEYS = ['category', 'tags', 'updated', 'created', 'draft', 'featured']
 
 /** Age in days after which `updated` is reported stale (warning). @type {number} */
 const STALE_DAYS = 180
@@ -319,6 +319,19 @@ function lintFile(file) {
       warnings.push(`frontmatter: "updated" is not a valid date: ${JSON.stringify(updated)}`)
     } else if (daysSince(updated) > STALE_DAYS) {
       warnings.push(`frontmatter: "updated" is stale (> ${STALE_DAYS}d): ${updated}`)
+    }
+    // `created` — kapan kategori pertama dibuka. Valid kalau ada; sanity check:
+    // lihat besar error bila created > updated (logika tak apikal).
+    const created = data.created
+    if (created !== undefined && (typeof created !== 'string' || daysSince(created) === null)) {
+      warnings.push(`frontmatter: "created" is not a valid date: ${JSON.stringify(created)}`)
+    } else if (
+      created !== undefined &&
+      updated !== undefined &&
+      daysSince(updated) !== null &&
+      daysSince(created) < daysSince(updated)
+    ) {
+      warnings.push(`frontmatter: "created" is newer than "updated": ${created} > ${updated}`)
     }
   }
 

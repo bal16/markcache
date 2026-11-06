@@ -6,6 +6,7 @@ domain: meta
 icon: "book-open"
 tags: ["kontribusi", "meta"]
 updated: "2026-11-03"
+created: "2025-12-19"
 draft: false
 featured: true
 order: 9
