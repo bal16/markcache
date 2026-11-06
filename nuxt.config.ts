@@ -113,19 +113,23 @@ export default defineNuxtConfig({
       theme_color: '#0b1020',
       icons: [
         {
+          src: '/pwa-192x192.png',
+          sizes: '192x192',
+          type: 'image/png',
+          purpose: 'any',
+        },
+        {
+          src: '/pwa-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'any',
+        },
+        {
           src: '/pwa-512x512-maskable.png',
           sizes: '512x512',
           type: 'image/png',
           purpose: 'maskable',
         },
-        {
-          src: '/pwa-1024x1024-maskable.png',
-          sizes: '1024x1024',
-          type: 'image/png',
-          purpose: 'maskable',
-        },
-        { src: '/pwa-192x192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
-        { src: '/pwa-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
       ],
     },
     experimental: {
