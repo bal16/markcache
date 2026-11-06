@@ -27,6 +27,7 @@ order: 6
 
 ## Multi-Model & Search AI
 
+- [OpenRouter](https://openrouter.ai/) — satu API untuk semua model utama; beberapa model pakai gratis. `multi` ⭐
 - [Together.ai](https://chat.together.ai/) — GLM-5.3, Kimi K3, Qwen, DeepSeek V4 Pro; 110/day. `multi` ⭐
 - [Tryingopen](https://www.tryingopen.com/) — DeepSeek V4, Qwen3.8, GLM-5.3; unlimited 12/chat. `multi`
 - [Brave Ask](https://search.brave.com/ask) — AI search engine, no sign-up. `search` ⭐

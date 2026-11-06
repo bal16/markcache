@@ -33,6 +33,10 @@ order: 9
 - [Firecrawl MCP](https://github.com/firecrawl/firecrawl-mcp-server) — crawl, scrape, dan extract data web terstruktur untuk agent. `scrape`
 - [Terse](https://github.com/inth3shadows/terse) — proxy kompresi output tool MCP; merapihkan konteks dari jawaban yang berjela-ela. `optimasi`
 
+## Klien Agent
+
+- [OpenCode](https://opencode.ai/) — coding agent open-source: CLI/TUI lintas provider, bukan terkunci di satu vendor. `agent` ⭐
+
 ## Skills
 
 - [Superpowers](https://github.com/obra/superpowers) — metodologi dev lengkap untuk agent: TDD, debugging, git worktree, penyelesaian konflik merge. `skill` ⭐
