@@ -1,5 +1,5 @@
 ---
-title: "Gratis Mahasiswa"
+title: "Student Deals"
 description: "Bundel, kredit, dan tool gratis untuk pelajar & mahasiswa — klaim semua yang aktif."
 category: "mahasiswa"
 domain: utilitas
