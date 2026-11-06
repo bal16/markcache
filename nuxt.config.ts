@@ -145,6 +145,9 @@ export default defineNuxtConfig({
       globPatterns: ['**/*.{js,css,html,ico,png,svg,json,webmanifest,woff2,wasm,txt}'],
       // mockServiceWorker.js hanya untuk MSW (testing), bukan bagian aplikasi.
       globIgnores: ['**/mockServiceWorker.js'],
+      // `?tag=` (filter tautan per halaman kategori) — refresh bervariasi
+      // query saat offline tetap tersaji dari precache, jangan lempar ke jaringan.
+      ignoreURLParametersMatching: [/^utm_/, /^fbclid$/, /^tag$/],
       // Multi-page statis: jangan fallback SPA ke index.html.
       navigateFallback: null,
       cleanupOutdatedCaches: true,
