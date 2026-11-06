@@ -1,8 +1,27 @@
 <script setup lang="ts">
+import { useOnline } from '@vueuse/core'
 import { onMounted, watch } from 'vue'
 import { toast } from 'vue-sonner'
 
 const { $pwa } = useNuxtApp()
+
+// Indikator konektivitas: beri tahu pengguna saat offline bahwa
+// halaman terkurasi tetap tersedia dari cache service worker.
+const online = useOnline()
+
+watch(
+  online,
+  (isOnline) => {
+    if (isOnline) {
+      toast.success('Kembali online')
+    } else {
+      toast.info('Anda sedang offline', {
+        description: 'Halaman terkurasi tetap bisa dibuka dari cache.',
+      })
+    }
+  },
+  { immediate: true }
+)
 
 onMounted(() => {
   if (!$pwa) return

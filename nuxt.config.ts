@@ -135,7 +135,12 @@ export default defineNuxtConfig({
     },
     workbox: {
       // Precache seluruh output statis (HTML per route + aset).
-      globPatterns: ['**/*.{js,css,html,ico,png,svg,json,webmanifest}'],
+      // - `woff2`: font Fontsource (Geist/Outfit) agar tipografi utuh offline.
+      // - `wasm`: sqlite3.wasm (@nuxt/content) untuk queryCollection di client.
+      // - `txt`: /__nuxt_content/**/sql_dump.txt (basis data konten client).
+      globPatterns: ['**/*.{js,css,html,ico,png,svg,json,webmanifest,woff2,wasm,txt}'],
+      // mockServiceWorker.js hanya untuk MSW (testing), bukan bagian aplikasi.
+      globIgnores: ['**/mockServiceWorker.js'],
       // Multi-page statis: jangan fallback SPA ke index.html.
       navigateFallback: null,
       cleanupOutdatedCaches: true,
