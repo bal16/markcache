@@ -182,7 +182,12 @@ function subcategories(cat: (typeof cats.value)[number]): string[] {
 }
 
 const { open: searchOpen } = useSearchOpen()
-const firstCategory = computed(() => cats.value[0]?.path ?? '/streaming')
+
+// "Jelajahi Kategori" = anchor smooth-scroll ke grid kategori di landing,
+// bukan menembus ke salah satu kategori (semantik tombol dulu menipu).
+function scrollToKategori() {
+  document.getElementById('kategori')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
 </script>
 
 <template>
@@ -207,9 +212,9 @@ const firstCategory = computed(() => cats.value[0]?.path ?? '/streaming')
       </p>
       <div class="flex gap-4">
         <Button as-child class="px-8 bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_rgba(0,112,243,0.3)] transition-all duration-300">
-          <NuxtLink :to="firstCategory">
+          <a href="#kategori" @click.prevent="scrollToKategori">
             Jelajahi Kategori <ArrowRight class="ml-2 h-4 w-4" />
-          </NuxtLink>
+          </a>
         </Button>
         <Button
           variant="outline"
@@ -231,7 +236,7 @@ const firstCategory = computed(() => cats.value[0]?.path ?? '/streaming')
     </section>
 
     <!-- Bento Grid Categories Section (grouped by domain) -->
-    <section class="container mx-auto pb-24 px-4 max-w-5xl">
+    <section id="kategori" class="container mx-auto pb-24 px-4 max-w-5xl scroll-mt-20">
       <div v-for="group in groups" :key="group.domain" class="mt-10 first:mt-0">
         <h2 class="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground/70">
           {{ group.label }}
