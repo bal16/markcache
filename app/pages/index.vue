@@ -10,6 +10,7 @@ import {
   Library,
   Magnet,
   MoveUpRight,
+  Puzzle,
   Search,
   Terminal,
   Wrench,
@@ -101,6 +102,7 @@ const iconMap: Record<string, Component> = {
   'book-open': BookOpen,
   library: Library,
   headphones: Headphones,
+  puzzle: Puzzle,
 }
 
 // Kategori belum terisi hanya label — tidak ada halaman kosong.

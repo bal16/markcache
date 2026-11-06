@@ -70,7 +70,6 @@ order: 2
 - [Bolt.new](https://bolt.new/) — AI membentuk dan menjalankan web app selesai di browser. `ai`
 - [Repomix](https://repomix.com/) — kumpul repo menjadi satu prompt siap LLM. `ai`
 - [CodeRabbit](https://www.coderabbit.ai/) — review PR otomatis oleh AI. `review`
-- [MCP Market](https://mcpmarket.com/) — index server MCP untuk agent AI. `ai`
 
 ## Hosting & Deploy
 
