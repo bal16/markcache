@@ -11,7 +11,7 @@ featured: true
 
 # Nama Kategori
 
-> Template kategori MarkCache (ADR-002). Copy file ini menjadi
+> Template kategori MarkCache. Copy file ini menjadi
 > `content/<nama-folder>/index.md`, lalu ganti isi contoh di bawah.
 > Aturan: H2 = subkategori, tiap resource satu bullet
 > `- [Nama](https://example.com) — deskripsi singkat.`.

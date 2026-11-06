@@ -16,7 +16,7 @@ order: 9
 MarkCache adalah situs **direktori link terkurasi ala [FMHY](https://fmhy.net)**,
 dengan positioning ID-first: deskripsi ditulis dalam Bahasa Indonesia, nama
 tool tetap mengikuti nama global, dan link/layanan/ komunitas Indonesia
-diprioritaskan (lihat [ADR-001](https://github.com/bal16/markcache/)).
+diprioritaskan.
 
 ## Prinsip kurasi
 
@@ -42,7 +42,7 @@ diprioritaskan (lihat [ADR-001](https://github.com/bal16/markcache/)).
    ```
 
 5. Kirim PR. Pemilik repo akan mereview sebelum merge (pola
-   solo-curated + open-contrib, per ADR-002).
+   solo-curated + open-contrib).
 
 ## Aturan format (v1)
 
@@ -55,5 +55,4 @@ Obsidian.
 ## Stack
 
 Nuxt 4 + `@nuxt/content`, prerender statis, search `⌘K` berbasis Fuse,
-dark mode, dan linter konten khusus (`contentlint`). Detail keputusan arah
-produkt ada di `docs/adr/`.
+dark mode, dan linter konten khusus (`contentlint`).

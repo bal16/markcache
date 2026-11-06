@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Footer from '~/components/Footer.vue'
 import GoToTop from '~/components/GoToTop.vue'
 import TableOfContents from '~/components/TableOfContents.vue'
 
@@ -17,7 +18,7 @@ definePageMeta({
   layout: 'docs',
 })
 
-// SEO dasar per ADR-003 #6: titleTemplate '%s — MarkCache' dipasang di
+// SEO dasar: titleTemplate '%s — MarkCache' dipasang di
 // nuxt.config, jadi di sini cukup kirim title halaman yang reaktif.
 useSeoMeta({
   title: () => page.value?.title ?? 'Tidak ditemukan',
@@ -37,7 +38,7 @@ defineOgImage('MarkCache.satori', {
     page.value?.description ?? 'Direktori tautan gratis terkurasi untuk pengguna Indonesia.',
 })
 
-// Filter per-link client-side via ?tag=xxx (ADR-002 konsekuensi v1).
+// Filter per-link client-side via ?tag=xxx.
 // Parsing ringan: li yang text-nya tak mengandung tag disembunyikan.
 const activeTag = ref<string | null>(null)
 
@@ -90,9 +91,12 @@ watch(
 <template>
   <div id="page-top" class="container max-w-5xl py-6 lg:py-8 relative">
     <div class="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-10 p-6 w-full">
-      <article
-        class="prose prose-sm dark:prose-invert max-w-none min-w-0 prose-headings:scroll-m-20"
-      >
+      <!-- Kolom artikel: artikel + footer dalam 1 sel agar aside (ToC)
+           melar setinggi keduanya — rentang sticky ToC mencakup footer. -->
+      <div class="flex flex-col min-w-0">
+        <article
+          class="prose prose-sm dark:prose-invert max-w-none min-w-0 prose-headings:scroll-m-20"
+        >
         <div
           v-if="activeTag"
           class="not-prose flex items-center gap-2 mb-6 px-4 py-2 rounded-lg border border-primary/40 bg-primary/5 text-sm"
@@ -116,6 +120,13 @@ watch(
           </div>
         </template>
       </article>
+
+        <!-- Footer halaman docs (dipindah dari layout agar masuk rentang
+             sticky ToC — lihat komentar di app/layouts/docs.vue). -->
+        <div class="mt-auto">
+          <Footer />
+        </div>
+      </div>
 
       <aside class="hidden lg:block h-full">
         <div class="sticky top-20 h-[calc(100vh-10rem)] overflow-y-auto w-62.5">

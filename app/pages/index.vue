@@ -70,8 +70,8 @@ const { data: kategori } = await useAsyncData('kategori-featured', () => {
 
 const cats = computed(() => kategori.value ?? [])
 
-// ADR-006: grouping halaman landing berdasarkan `domain` frontmatter.
-// Struktur konten tetap flat (1 folder = 1 kategori, ADR-002); grouping
+// Grouping halaman landing berdasarkan `domain` frontmatter.
+// Struktur konten tetap flat (1 folder = 1 kategori); grouping
 // ini tampilan-only di landing.
 const DOMAIN_ORDER = ['hiburan', 'dev', 'utilitas', 'meta'] as const
 const DOMAIN_LABEL: Record<string, string> = {
@@ -99,7 +99,7 @@ const iconMap: Record<string, Component> = {
   'book-open': BookOpen,
 }
 
-// Kategori belum terisi hanya label — tidak ada halaman kosong (ADR-001 #3).
+// Kategori belum terisi hanya label — tidak ada halaman kosong.
 const segeraHadir = ['Reading', 'Audio', 'Akses & Privasi', 'Komunitas']
 
 // Statistik ringan dari body AST: hitung link eksternal terkurasi.
@@ -197,7 +197,7 @@ const firstCategory = computed(() => cats.value[0]?.path ?? '/streaming')
       </div>
     </section>
 
-    <!-- Bento Grid Categories Section (grouped by domain, ADR-006) -->
+    <!-- Bento Grid Categories Section (grouped by domain) -->
     <section class="container mx-auto pb-24 px-4 max-w-5xl">
       <div v-for="group in groups" :key="group.domain" class="mt-10 first:mt-0">
         <h2 class="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground/70">

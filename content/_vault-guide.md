@@ -31,7 +31,7 @@ Karena folder wajib bernama `content/` (konvensi `@nuxt/content` untuk routing `
 
    Yang tampil bagus di web bukan nama vault, tapi `title` frontmatter.
 
-## Aturan tulis agar lolos web + Obsidian (ADR-002)
+## Aturan tulis agar lolos web + Obsidian
 
 - Link internal: markdown relatif, bukan wikilink kurung-siku-ganda.
   Benar: `[Streaming](./streaming/index.md)` atau `(/streaming)`.

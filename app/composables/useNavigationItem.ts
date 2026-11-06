@@ -1,10 +1,10 @@
 export async function useNavigationItem() {
   const { data: navigation } = await useAsyncData('navigation', () => {
-    // Urutan kurasi via field `order` di frontmatter (ADR-003 #4).
+    // Urutan kurasi via field `order` di frontmatter.
     return queryCollectionNavigation('content').order('order', 'ASC')
   })
 
-  // ADR-002: 1 folder = 1 kategori dengan index.md. Folder yang isinya
+  // 1 folder = 1 kategori dengan index.md. Folder yang isinya
   // cuma index.md di-promote jadi item mandiri — judul pakai title halaman,
   // tanpa parent collapsible duplikat (folder-name di-mask SidebarItem).
   const normalized = computed(() => {

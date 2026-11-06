@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   ssr: true,
   app: {
     head: {
-      // ADR-003 #6: '%s — MarkCache' (perbaiki `MarkCache${title}` tanpa spasi)
+      // titleTemplate '%s — MarkCache' (perbaiki `MarkCache${title}` tanpa spasi)
       titleTemplate: '%s — MarkCache',
       htmlAttrs: { lang: 'id' },
     },
