@@ -6,6 +6,8 @@ import {
   Bot,
   Clapperboard,
   Download,
+  Headphones,
+  Library,
   Magnet,
   MoveUpRight,
   Search,
@@ -97,10 +99,12 @@ const iconMap: Record<string, Component> = {
   download: Download,
   bot: Bot,
   'book-open': BookOpen,
+  library: Library,
+  headphones: Headphones,
 }
 
 // Kategori belum terisi hanya label — tidak ada halaman kosong.
-const segeraHadir = ['Reading', 'Audio', 'Akses & Privasi', 'Komunitas']
+const segeraHadir = ['Akses & Privasi', 'Komunitas']
 
 // Statistik ringan dari body AST: hitung link eksternal terkurasi.
 // AST Nuxt Content bisa tampil sebagai objek (`{type, props, children}`)
