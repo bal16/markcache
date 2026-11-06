@@ -19,6 +19,7 @@ order: 4
 ## Situs Torrent
 
 - [1337x](https://1337x.to/home/) — situs torrent umum paling populer, banyak mirror aktif. `torrent` ⭐
+- [YTS](https://yts.gg/) — film 4K/1080p ukuran paling efisien; mirror aktif di [ytsproxies](https://ytsproxies.com/). `torrent` ⭐
 - [LimeTorrents](https://www.limetorrents.fun/) — video, audio, dan buku; antarmuka sederhana. `torrent`
 - [RARBG Dump](https://rarbgdump.com/) — jejak arsip situs legendaris RARBG yang sudah tutup. `torrent`
 

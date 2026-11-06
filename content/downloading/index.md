@@ -19,6 +19,7 @@ order: 5
 
 ## Indonesia
 
+- [Pahe](https://pahe.ink/) — encoder film & anime HEVC/4K ukuran mini, andalan komunitas ID; ramai iklan. `encode` ⭐
 - [Lendrive](https://lendrive.web.id/) — unduh film dan anime batch, sub Indonesia, 1080p. `sub-indo` ⭐
 - [IndonesiaEbook](https://ebook.twointomedia.com/) — koleksi ebook berbahasa Indonesia. `buku`
 - [Madrotter Treasure Hunt](https://madrotter-treasure-hunt.blogspot.com/) — arsip musik lawas Indonesia. `musik`
