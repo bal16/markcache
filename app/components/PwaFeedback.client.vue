@@ -8,16 +8,19 @@ const { $pwa } = useNuxtApp()
 // Indikator konektivitas: beri tahu pengguna saat offline bahwa
 // halaman terkurasi tetap tersedia dari cache service worker.
 const online = useOnline()
+const wasOffline = ref(!online.value)
 
 watch(
   online,
   (isOnline) => {
-    if (isOnline) {
-      toast.success('Kembali online')
-    } else {
+    if (!isOnline) {
+      wasOffline.value = true
       toast.info('Anda sedang offline', {
         description: 'Halaman terkurasi tetap bisa dibuka dari cache.',
       })
+    } else if (wasOffline.value) {
+      wasOffline.value = false
+      toast.success('Kembali online')
     }
   },
   { immediate: true }
