@@ -144,7 +144,10 @@ export default defineNuxtConfig({
       // - `txt`: /__nuxt_content/**/sql_dump.txt (basis data konten client).
       globPatterns: ['**/*.{js,css,html,ico,png,svg,json,webmanifest,woff2,wasm,txt}'],
       // mockServiceWorker.js hanya untuk MSW (testing), bukan bagian aplikasi.
-      globIgnores: ['**/mockServiceWorker.js'],
+      // 404.html dibalas server dengan status 404, dan 200.html tidak muncul
+      // di route /200 — keduanya membuat install precache workbox gagal total
+      // (install di-ganggu satu respons non-200 saja), soal tidak dikeluarkan.
+      globIgnores: ['**/mockServiceWorker.js', '**/404.html', '**/200.html'],
       // `?tag=` (filter tautan per halaman kategori) — refresh bervariasi
       // query saat offline tetap tersaji dari precache, jangan lempar ke jaringan.
       ignoreURLParametersMatching: [/^utm_/, /^fbclid$/, /^tag$/],
