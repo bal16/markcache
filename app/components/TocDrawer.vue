@@ -29,7 +29,7 @@ const hasToc = computed(() => Boolean(toc.value?.links?.length))
     <DrawerContent class="max-h-[85vh]">
       <DrawerHeader class="text-left">
         <DrawerTitle>Di halaman ini</DrawerTitle>
-        <DrawerDescription>Navigasi judul bagian di halaman ini.</DrawerDescription>
+        <DrawerDescription class="sr-only">Navigasi judul bagian di halaman ini.</DrawerDescription>
       </DrawerHeader>
       <div class="overflow-y-auto px-4 pb-6">
         <TableOfContents

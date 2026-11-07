@@ -22,12 +22,12 @@ const { groups } = await useNavigationItem()
       </Button>
     </SheetTrigger>
     <SheetContent side="left" class="w-75 bg-background/80 backdrop-blur-2xl border-r-border/30" :close-button="false">
-      <SheetHeader class="sr-only">
-        <SheetTitle>Menu navigasi</SheetTitle>
-        <SheetDescription>Daftar kategori dan halaman MarkCache.</SheetDescription>
+      <SheetHeader>
+        <SheetTitle>Menu</SheetTitle>
+        <SheetDescription class="sr-only">Daftar kategori dan halaman MarkCache.</SheetDescription>
       </SheetHeader>
       <ScrollArea class="h-full">
-        <div class="p-4 grid gap-0.5">
+        <div class="px-4 pb-4 grid gap-0.5">
           <NuxtLink
             to="/directory"
             active-class="border-l-2 border-primary bg-primary/10 text-primary font-medium hover:translate-x-0"
