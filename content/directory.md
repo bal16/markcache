@@ -34,7 +34,7 @@ Peta 11 kategori dan 348 link terkurasi, plus halaman meta — loncat langsung k
 ## Utilitas
 
 - [AI Tools](/aitools) — 44 link · [Chat Gratis (Web)](/aitools#chat-gratis-web), [Multi-Model & Search AI](/aitools#multi-model-search-ai), [Local LLM (Desktop / WebUI)](/aitools#local-llm-desktop-webui), [Fine-Tuning & Self-Host Tools](/aitools#fine-tuning-self-host-tools), [Image Generation](/aitools#image-generation), [Audio & TTS](/aitools#audio-tts), [AI Coding (sudah di Dev Hub / Dev Tools)](/aitools#ai-coding-sudah-di-dev-hub-dev-tools), [Benchmark & Evaluasi](/aitools#benchmark-evaluasi)
-- [Gratis Mahasiswa](/mahasiswa) — 10 link · [Bundel & Klaim Utama](/mahasiswa#bundel-klaim-utama), [Learning Gratis](/mahasiswa#learning-gratis), [Tips Klaim](/mahasiswa#tips-klaim)
+- [Student Deals](/mahasiswa) — 10 link · [Bundel & Klaim Utama](/mahasiswa#bundel-klaim-utama), [Learning Gratis](/mahasiswa#learning-gratis), [Tips Klaim](/mahasiswa#tips-klaim)
 
 ## Meta
 

@@ -7,7 +7,7 @@ daftar link terkurasi yang bisa dijelajahi dari [landing](/) → halaman kategor
 → klik keluar, atau dicari dengan `⌘K`.
 
 Kategori aktif: **Streaming, Dev Tools, Dev Hub, Torrenting, Downloading,
-AI Tools, Reading, Audio, Agent & MCP, Gratis Mahasiswa, dan Games**. Kategori
+AI Tools, Reading, Audio, Agent & MCP, Student Deals, dan Games**. Kategori
 baru hanya tampil setelah benar-benar terisi (lihat ADR-001).
 
 ## Stack

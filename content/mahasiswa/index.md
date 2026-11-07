@@ -1,18 +1,18 @@
 ---
-title: "Gratis Mahasiswa"
+title: "Student Deals"
 description: "Bundel, kredit cloud, dan tool gratis untuk pelajar dan mahasiswa. Panduan klaim plus pengingat agar manfaatnya tidak hangus setelah lulus."
 category: "mahasiswa"
 domain: utilitas
 icon: "graduation-cap"
 tags: ["mahasiswa", "pelajar", "gratis"]
-updated: "2026-11-06"
+updated: "2026-11-07"
 created: "2026-11-06"
 draft: false
 featured: true
 order: 10
 ---
 
-# Gratis Mahasiswa
+# Student Deals
 
 > Manfaat dan tool gratis untuk pelajar & mahasiswa. Mayoritas butuh verifikasi
 > status kampus (email edukasi, KTM, kartu pelajar digital). Sebagian aktif
