@@ -97,16 +97,16 @@ watch(
         <div class="flex items-center gap-1">
           <kbd class="flex h-5 w-5 items-center justify-center rounded border bg-background font-sans text-[10px] shadow-sm">↑</kbd>
           <kbd class="flex h-5 w-5 items-center justify-center rounded border bg-background font-sans text-[10px] shadow-sm">↓</kbd>
-          <span class="ml-1">Navigate</span>
+          <span class="ml-1">Navigasi</span>
         </div>
         <div class="flex items-center gap-1">
           <kbd class="flex h-5 px-1.5 items-center justify-center rounded border bg-background font-sans text-[10px] shadow-sm">Enter</kbd>
-          <span class="ml-1">Select</span>
+          <span class="ml-1">Pilih</span>
         </div>
       </div>
       <div class="flex items-center gap-1">
         <kbd class="flex h-5 px-1.5 items-center justify-center rounded border bg-background font-sans text-[10px] shadow-sm">Esc</kbd>
-        <span class="ml-1">Close</span>
+        <span class="ml-1">Tutup</span>
       </div>
     </div>
   </CommandDialog>

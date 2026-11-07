@@ -23,15 +23,14 @@ import { Button } from '~/components/ui/button'
 // import { GITHUB_URL } from '~/const'
 
 useSeoMeta({
-  title: 'Direktori link terkurasi, ID-first',
+  title: 'Direktori tautan terkurasi, ID-first',
   description:
-    'MarkCache — direktori tautan gratis ala FMHY yang dikurasi manual untuk pengguna Indonesia: streaming, anime, hingga dev tools.',
-  ogTitle: 'Direktori link terkurasi, ID-first — MarkCache',
-  ogDescription: 'Direktori tautan gratis ala FMHY yang dikurasi manual untuk pengguna Indonesia.',
-  ogImageAlt: 'MarkCache, direktori link terkurasi untuk pengguna Indonesia',
-  twitterTitle: 'Direktori link terkurasi, ID-first — MarkCache',
-  twitterDescription:
-    'Direktori tautan gratis ala FMHY yang dikurasi manual untuk pengguna Indonesia.',
+    'MarkCache, direktori tautan gratis ala FMHY yang dikurasi manual untuk pengguna Indonesia. Dari streaming dan anime sampai dev tools.',
+  ogTitle: 'MarkCache: Direktori tautan terkurasi, ID-first',
+  ogDescription: 'Direktori tautan gratis ala FMHY, dikurasi manual untuk pengguna Indonesia.',
+  ogImageAlt: 'MarkCache, direktori tautan terkurasi untuk pengguna Indonesia',
+  twitterTitle: 'MarkCache: Direktori tautan terkurasi, ID-first',
+  twitterDescription: 'Direktori tautan gratis ala FMHY, dikurasi manual untuk pengguna Indonesia.',
 })
 
 useHead({
@@ -44,9 +43,9 @@ useHead({
         '@type': 'WebPage',
         '@id': 'https://markcache.vercel.app/#webpage',
         url: 'https://markcache.vercel.app/',
-        name: 'Direktori link terkurasi, ID-first — MarkCache',
+        name: 'MarkCache: Direktori tautan terkurasi, ID-first',
         description:
-          'MarkCache — direktori tautan gratis ala FMHY yang dikurasi manual untuk pengguna Indonesia: streaming, anime, hingga dev tools.',
+          'MarkCache, direktori tautan gratis ala FMHY yang dikurasi manual untuk pengguna Indonesia. Dari streaming dan anime sampai dev tools.',
         inLanguage: 'id',
         isPartOf: { '@id': 'https://markcache.vercel.app/#website' },
       }),
@@ -55,8 +54,8 @@ useHead({
 })
 
 defineOgImage('MarkCache.satori', {
-  title: 'MarkCache — Direktori link terkurasi, ID-first',
-  description: 'Direktori tautan gratis ala FMHY yang dikurasi manual untuk pengguna Indonesia.',
+  title: 'MarkCache: Direktori tautan terkurasi, ID-first',
+  description: 'Direktori tautan gratis ala FMHY, dikurasi manual untuk pengguna Indonesia.',
 })
 
 interface MdcNode {
@@ -206,8 +205,8 @@ function scrollToKategori() {
         Direktori tautan gratis ala 
         <Button variant="link" size="default" class="px-0 mx-0 text-xl" as-child>
           <a href="https://fmhy.net/" target="_blank" rel="noopener noreferrer">FMHY <MoveUpRight /></a>
-        </Button> — dikurasi manual, ditulis untuk
-        pengguna Indonesia. Streaming, anime, sampai dev tools.
+        </Button>, dikurasi manual untuk pengguna Indonesia. Dari streaming
+        dan anime sampai dev tools.
       </p>
       <p v-if="totalLinks" class="text-sm text-muted-foreground/80">
         {{ totalLinks }} link terkurasi di {{ statCats.length }} kategori

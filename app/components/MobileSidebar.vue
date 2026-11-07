@@ -23,8 +23,8 @@ const { groups } = await useNavigationItem()
     </SheetTrigger>
     <SheetContent side="left" class="w-75 bg-background/80 backdrop-blur-2xl border-r-border/30" :close-button="false">
       <SheetHeader class="sr-only">
-        <SheetTitle></SheetTitle>
-        <SheetDescription></SheetDescription>
+        <SheetTitle>Menu navigasi</SheetTitle>
+        <SheetDescription>Daftar kategori dan halaman MarkCache.</SheetDescription>
       </SheetHeader>
       <ScrollArea class="h-full">
         <div class="p-4 grid gap-0.5">

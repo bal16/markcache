@@ -8,7 +8,7 @@ definePageMeta({
 useSeoMeta({
   title: 'Index',
   description:
-    'Index semua kategori dan subkategori MarkCache — peta satu halaman untuk loncat langsung ke seksi yang dicari.',
+    'Peta semua kategori dan subkategori MarkCache dalam satu halaman, supaya lebih cepat menuju seksi yang dicari.',
   ogTitle: 'Index — MarkCache',
   ogDescription: 'Peta semua kategori dan subkategori dalam satu halaman.',
   twitterTitle: 'Index — MarkCache',
@@ -63,8 +63,8 @@ function subcategories(page: IndexPage) {
       <h1>Index</h1>
       <div class="not-prose mb-8">
         <p class="lead text-xl text-muted-foreground m-0">
-          Peta semua kategori dan subkategori MarkCache — loncat langsung ke
-          seksi yang dicari, tanpa buka halaman satu-satu.
+          Peta semua kategori dan subkategori MarkCache. Pilih seksi yang dituju
+          tanpa membuka halaman satu per satu.
         </p>
       </div>
       <hr class="my-6" />

@@ -9,14 +9,14 @@ import { GITHUB_URL } from '~/const'
       <p
         class="text-balance text-center text-sm leading-loose text-muted-foreground md:text-left"
       >
-        Built by
+        Dibuat oleh
         <NuxtLink
           :href="GITHUB_URL.split('/').slice(0, 4).join('/')"
           target="_blank"
           rel="noreferrer"
           class="font-medium underline underline-offset-4"
-          >MarkCache Team</NuxtLink
-        >. The source code is available on
+          >tim MarkCache</NuxtLink
+        >. Kode sumber tersedia di
         <NuxtLink
           :href="GITHUB_URL"
           target="_blank"

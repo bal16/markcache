@@ -15,6 +15,6 @@ function scrollToTop() {
     variant="ghost"
     class="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-foreground"
   >
-    Back To Top <ArrowUp class="ml-2 h-4 w-4" />
+    Kembali ke atas <ArrowUp class="ml-2 h-4 w-4" />
   </Button>
 </template>

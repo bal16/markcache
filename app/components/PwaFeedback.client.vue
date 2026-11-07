@@ -47,7 +47,7 @@ watch(
   (isOnline) => {
     if (!isOnline) {
       wasOffline.value = true
-      toast.info('Anda sedang offline', {
+      toast.info('Kamu sedang offline', {
         description: 'Halaman terkurasi tetap bisa dibuka dari cache.',
       })
     } else if (wasOffline.value) {
@@ -66,7 +66,7 @@ onMounted(async () => {
   const ok = await ping()
   if (!ok) {
     wasOffline.value = true
-    toast.info('Anda sedang offline', {
+    toast.info('Kamu sedang offline', {
       description: 'Halaman terkurasi tetap bisa dibuka dari cache.',
     })
   }

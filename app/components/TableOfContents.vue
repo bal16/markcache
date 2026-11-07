@@ -25,7 +25,7 @@ const { activeId, scrollToId } = useTocObserver(links)
 <template>
   <nav class="space-y-2">
     <ScrollArea class="h-full">
-      <p class="font-medium text-sm mb-4">On This Page</p>
+      <p class="font-medium text-sm mb-4">Di halaman ini</p>
 
       <ul v-if="links.length" class="space-y-2 text-sm">
         <li v-for="(link, i) in links" :key="link?.id ?? i">

@@ -35,7 +35,7 @@ onUnmounted(() => document.removeEventListener('keydown', handleKeydown))
           variant="ghost"
           class="hidden md:inline-flex h-8 md:w-44 items-center justify-between rounded-md border border-input bg-muted/50 px-3 py-2 text-xs text-muted-foreground ring-offset-background whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
         >
-          <span class="hidden md:inline">Search...</span>
+          <span class="hidden md:inline">Cari...</span>
           <SearchKBD />
         </Button>
         <Button variant="ghost" class="md:hidden inline-flex p-0 m-0" @click="open = true">

@@ -18,13 +18,13 @@ const { pageData: page } = await usePageData()
   <Drawer>
     <DrawerTrigger as-child>
       <Button variant="ghost" class="rounded-full px-4 h-10 font-medium tracking-tight text-muted-foreground hover:text-foreground">
-        On This Page <Icon icon="radix-icons:view-horizontal" class="w-4 h-4 ml-2" />
+        Di halaman ini <Icon icon="radix-icons:view-horizontal" class="w-4 h-4 ml-2" />
       </Button>
     </DrawerTrigger>
     <DrawerContent class="max-h-[85vh]">
       <DrawerHeader class="text-left">
-        <DrawerTitle>On This Page</DrawerTitle>
-        <DrawerDescription>Navigasi heading halaman ini.</DrawerDescription>
+        <DrawerTitle>Di halaman ini</DrawerTitle>
+        <DrawerDescription>Navigasi judul bagian di halaman ini.</DrawerDescription>
       </DrawerHeader>
       <div class="overflow-y-auto px-4 pb-6">
         <TableOfContents

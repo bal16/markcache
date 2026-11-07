@@ -32,7 +32,7 @@ diprioritaskan.
 
 Tidak perlu clone repo — buka [New issue](https://github.com/bal16/markcache/issues/new/choose)
 dan pilih formulir **Lapor Link Mati**: tulis URL-nya, halaman MarkCache di
-mana link itu berada, dan gejalanya. Alternatif aktif (bila Anda tahu) sangat
+mana link itu berada, dan gejalanya. Alternatif aktif (bila kamu tahu) sangat
 membantu kurasi. Laporan lewat issue ini lebih cepat ditindak daripada lapor
 di mana pun, karena terstruktur dan mudah dicari.
 

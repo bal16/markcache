@@ -78,7 +78,7 @@ onMounted(() => {
     variant="ghost"
     size="icon"
     class="relative"
-    aria-label="Toggle theme"
+    aria-label="Ganti tema"
     @click="toggle($event.currentTarget as HTMLElement)"
   >
     <Icon
@@ -89,6 +89,6 @@ onMounted(() => {
       icon="radix-icons:moon"
       class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
     />
-    <span class="sr-only">Toggle theme</span>
+    <span class="sr-only">Ganti tema</span>
   </Button>
 </template>
