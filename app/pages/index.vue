@@ -6,6 +6,7 @@ import {
   Bot,
   Clapperboard,
   Download,
+  Gamepad2,
   GraduationCap,
   Headphones,
   Library,
@@ -130,6 +131,7 @@ const iconMap: Record<string, Component> = {
   headphones: Headphones,
   puzzle: Puzzle,
   'graduation-cap': GraduationCap,
+  'gamepad-2': Gamepad2,
 }
 
 // Kategori belum terisi hanya label — tidak ada halaman kosong.
