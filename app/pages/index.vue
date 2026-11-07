@@ -239,6 +239,12 @@ function scrollToKategori() {
 
     <!-- Bento Grid Categories Section (grouped by domain) -->
     <section id="kategori" class="container mx-auto pb-24 px-4 max-w-5xl scroll-mt-20">
+      <p class="text-right text-sm mb-2">
+        <NuxtLink
+          to="/indeks"
+          class="text-muted-foreground transition-colors hover:text-primary"
+        >Indeks semua subkategori <ArrowRight class="inline h-3.5 w-3.5" /></NuxtLink>
+      </p>
       <div v-for="group in groups" :key="group.domain" class="mt-10 first:mt-0">
         <h2 class="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground/70">
           {{ group.label }}
