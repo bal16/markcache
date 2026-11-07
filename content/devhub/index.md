@@ -14,11 +14,11 @@ order: 3
 
 # Dev Hub
 
-> Indeks opini untuk memilih stack: 5–8 pilihan terkuat per slot, bukan indeks
-> raksasa. Kurasi dari FMHY `developer-tools.md`, awesome list, dan praksis
-> repo ini sendiri. Alat harian (git, docker, terminal, hosting) ada di
-> [Dev Tools](/devtools). Stack berubah cepat — yang masuk ini "pilihan aman",
-> bukan "terbaru minggu ini".
+> Indeks opini untuk memilih stack: 5 sampai 8 pilihan terkuat per slot.
+> Kurasi dari FMHY `developer-tools.md`, awesome list, dan praktik repo ini
+> sendiri. Alat harian (git, docker, terminal, hosting) ada di
+> [Dev Tools](/devtools). Stack berubah cepat, jadi yang masuk di sini adalah
+> pilihan yang bertahan lama.
 
 ## Meta-Framework
 

@@ -16,7 +16,7 @@ order: 10
 
 > Manfaat dan tool gratis untuk pelajar & mahasiswa. Mayoritas butuh verifikasi
 > status kampus (email edukasi, KTM, kartu pelajar digital). Sebagian aktif
-> hanya selama masa studi — klaim sejak tahun pertama biar tak hangus.
+> hanya selama masa studi, jadi klaim sejak tahun pertama biar tak hangus.
 
 ## Bundel & Klaim Utama
 
@@ -36,6 +36,6 @@ order: 10
 
 ## Tips Klaim
 
-> Simpan email kampus kamu dengan rapi — hampir semua vendor mengirim link
+> Simpan email kampus kamu dengan rapi. Hampir semua vendor mengirim link
 > verifikasi ke sana. Klaim satu per satu sebelum masa studi berakhir.
 > Sejumlah paket pasca-kuliah tidak bisa diperpanjang.

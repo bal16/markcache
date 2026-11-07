@@ -15,7 +15,7 @@ order: 7
 # Reading
 
 > Tempat membaca gratis: komik, manga, manhwa, light novel, e-book, dan
-> audiobook. Banyak situs ini ramai iklan — pasang uBlock Origin sebelum
+> audiobook. Banyak situs ini ramai iklan, jadi pasang uBlock Origin sebelum
 > berkunjung.
 
 ## Indonesia

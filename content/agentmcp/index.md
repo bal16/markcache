@@ -46,7 +46,7 @@ order: 9
 
 ## Server Resmi (modelcontextprotocol)
 
-Repositori resmi proyek protokol MCP — titik awal paling aman sebelum mencari yang komunitas.
+Repositori resmi proyek protokol MCP, titik awal sebelum mencari server dari komunitas.
 
 - [Filesystem](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) — operasi file lokal dengan kontrol akses. `fs` ⭐
 - [Fetch](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) — ambil konten web dan konversi untuk konsumsi LLM. `web`

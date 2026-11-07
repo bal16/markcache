@@ -15,7 +15,7 @@ order: 4
 # Torrenting
 
 > Situs, agregator, dan klien torrent terkurasi. Untuk pengguna Indonesia:
-> traffic torrent sebaiknya lewat VPN — lihat bagian Keamanan & VPN di bawah.
+> trafik torrent sebaiknya lewat VPN. Lihat bagian Keamanan & VPN di bawah.
 
 ## Situs Torrent
 

@@ -15,16 +15,16 @@ order: 1
 # Streaming
 
 > Direktori situs streaming terkurasi. Diambil dari kurasi FMHY dan komunitas
-> Indonesia, diseleksi manual. Wajib pasang pemblokir iklan sebelum berkunjung —
-> sebagian besar situs di bawah memakai iklan popup/redirect.
+> Indonesia, diseleksi manual. Wajib pasang pemblokir iklan sebelum berkunjung.
+> Sebagian besar situs di bawah memakai iklan popup/redirect.
 
-## Indonesia — Film & Series
+## Indonesia: Film & Series
 
 - [IDLix](https://idlix.net/) — film dan series gratis, subtitle Indonesia. `sub-indo` ⭐
 - [KlikXXi](https://www.klikxxi.com/) — film/TV sub Indonesia, mirror aktif. `sub-indo`
 - [Ngefilm](https://new39.ngefilm.site/) — film, TV, dan anime lokal. `sub-indo`
 
-## Indonesia — Anime
+## Indonesia: Anime
 
 - [OtakuDesu](https://otakudesu.cloud/) — anime sub Indonesia, 720p. `sub-indo` ⭐
 - [Samehadaku](https://samehadaku.care/) — anime sub Indonesia 1080p, punya kanal Telegram. `sub-indo`

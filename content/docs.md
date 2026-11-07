@@ -14,9 +14,9 @@ order: 9
 
 # Tentang MarkCache
 
-MarkCache adalah situs **direktori link terkurasi ala [FMHY](https://fmhy.net)**,
-dengan positioning ID-first: deskripsi ditulis dalam Bahasa Indonesia, nama
-tool tetap mengikuti nama global, dan link/layanan/ komunitas Indonesia
+MarkCache adalah situs **direktori tautan terkurasi ala [FMHY](https://fmhy.net)**
+dengan pendekatan ID-first: deskripsi ditulis dalam bahasa Indonesia, nama
+tool tetap mengikuti nama global, dan layanan atau komunitas Indonesia
 diprioritaskan.
 
 ## Prinsip kurasi
@@ -24,17 +24,17 @@ diprioritaskan.
 - Link layak masuk jika: domain aktif, gratis, deskripsi satu kalimat jelas,
   dan tidak dobel dengan link lain di halaman yang sama.
 - Link dicabut jika: domain mati, paywall total (tanpa tier gratis), atau
-  scam/bisa merugikan pengunjung.
-- Kategori kosong tidak pernah tampil: yang belum terisi diperlihatkan
+  scam, atau bisa merugikan pengunjung.
+- Kategori kosong tidak ditampilkan: yang belum terisi diperlihatkan
   sebagai "segera hadir" di landing.
 
 ## Lapor link mati
 
-Tidak perlu clone repo — buka [New issue](https://github.com/bal16/markcache/issues/new/choose)
+Tidak perlu menyalin repo. Buka [New issue](https://github.com/bal16/markcache/issues/new/choose)
 dan pilih formulir **Lapor Link Mati**: tulis URL-nya, halaman MarkCache di
 mana link itu berada, dan gejalanya. Alternatif aktif (bila kamu tahu) sangat
-membantu kurasi. Laporan lewat issue ini lebih cepat ditindak daripada lapor
-di mana pun, karena terstruktur dan mudah dicari.
+membantu kurasi. Laporan lewat issue ini lebih mudah ditindak karena
+terstruktur dan mudah dicari.
 
 ## Cara kontribusi
 
@@ -50,8 +50,8 @@ di mana pun, karena terstruktur dan mudah dicari.
    node scripts/contentlint.mjs --fix
    ```
 
-5. Kirim PR — checklist format akan muncul otomatis. Pemilik repo akan
-   mereview sebelum merge (pola solo-curated + open-contrib).
+5. Kirim PR. Checklist format akan muncul otomatis. Pemilik repo akan
+   meninjau sebelum merge (pola solo-curated + open-contrib).
 
 ## Aturan format (v1)
 

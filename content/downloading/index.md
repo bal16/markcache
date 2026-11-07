@@ -14,9 +14,9 @@ order: 5
 
 # Downloading
 
-> Situs untuk mengunduh software, buku, arsip, dan file besar — dari arsip
-> legal sampai situs DDL. Untuk software: selalu scan dengan
-> [VirusTotal](https://www.virustotal.com/gui/) sebelum install.
+> Situs untuk mengunduh software, buku, arsip, dan file besar: dari arsip
+> legal sampai situs DDL. Untuk software, selalu pindai dengan
+> [VirusTotal](https://www.virustotal.com/gui/) sebelum dipasang.
 
 ## Indonesia
 
@@ -44,7 +44,7 @@ order: 5
 ## Situs Unduh Umum (DDL)
 
 > Hati-hati: situs DDL ramai iklan dan tombol unduh palsu. Pasang uBlock dan
-> hindari tombol yang membuka tab baru — unduhan asli selalu di halaman yang sama.
+> hindari tombol yang membuka tab baru. Unduhan asli biasanya ada di halaman yang sama.
 
 - [Novanon](https://novanon.net/) — audio, majalah, komik, buku, kursus. `ddl`
 - [TehParadox](https://www.tehparadox.net/) — audio, buku, majalah, ROM retro. `ddl`

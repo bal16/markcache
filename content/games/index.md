@@ -16,7 +16,7 @@ order: 11
 
 > Main langsung di browser, menghidupkan ulang klasik lewat port & recomp,
 > emulator retro, sampai dunia modding. Catatan untuk port/recomp: file game
-> aslinya milikmu sendiri — proyek di bawah hanya menjalankan ulang itu.
+> aslinya milikmu sendiri. Proyek di bawah hanya menjalankan ulang file itu.
 
 ## Web Games (asli)
 
@@ -32,7 +32,7 @@ order: 11
 
 ## Port & Recomp
 
-Butuh file game aslinya sendiri (disc/ROM) — proyek ini menjalankan ulang, bukan membagikan isinya.
+Butuh file game aslinya sendiri (disc/ROM). Proyek ini menjalankan ulang file tersebut, bukan membagikan isinya.
 
 - [SpeedBreaker](https://github.com/SpeedBreakerProject/speedbreaker) — static recompilation NFS Most Wanted 2005 (Xbox 360) ke PC. `recomp` ⭐
 - [NFSU2 Recompiled](https://github.com/codepdbh/nfsu2-recompiled) — static recompilation Need for Speed Underground 2 ke x86-64. `recomp`
@@ -45,7 +45,7 @@ Butuh file game aslinya sendiri (disc/ROM) — proyek ini menjalankan ulang, buk
 
 ## Retro & Emulator (browser)
 
-Semua koleksi di sini legal — dijalankan dari arsip Internet Archive. Untuk self-hosting sendiri: [EmulatorJS](https://github.com/EmulatorJS/EmulatorJS) (library JS emulation, mudah disematkan).
+Koleksi di sini dijalankan dari arsip Internet Archive. Untuk self-hosting sendiri: [EmulatorJS](https://github.com/EmulatorJS/EmulatorJS) (library emulasi JS, mudah disematkan).
 
 - [DOS Zone](https://dos.zone/) — mainkan game DOS klasik di browser, koleksi siap pakai. `dos` ⭐
 - [Console Living Room](https://archive.org/details/consolelivingroom) — arsip console retro resmi Internet Archive, main langsung. `retro` ⭐
