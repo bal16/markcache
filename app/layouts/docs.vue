@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Header from '~/components/Header.vue'
-import MobileHeader from '~/components/MobileHeader.vue'
+import MobileDock from '~/components/MobileDock.vue'
 import Sidebar from '~/components/Sidebar.vue'
 </script>
 
@@ -8,7 +8,7 @@ import Sidebar from '~/components/Sidebar.vue'
   <div class="flex flex-col min-h-screen bg-background text-foreground">
     <Header />
     <div class="flex flex-col w-full flex-1 min-h-0">
-      <MobileHeader />
+      <MobileDock />
       <!-- Main Layout: Sidebar (Fixed) + Content (Scrollable) -->
       <!-- Footer halaman docs dirender oleh masing-masing halaman
            (di dalam kolom artikel) agar rentang sticky ToC mencakup footer. -->
