@@ -12,7 +12,7 @@ const { navigation } = await useNavigationItem()
     <ScrollArea class="h-full">
       <div class="p-6 grid gap-2">
         <NuxtLink
-          to="/indeks"
+          to="/directory"
           active-class="border-l-2 border-primary bg-primary/10 text-primary font-medium hover:translate-x-0"
           class="block truncate rounded-md py-2 px-3 text-sm font-medium text-foreground transition-all duration-200 hover:bg-black/5 dark:hover:bg-white/5 hover:text-primary hover:translate-x-1"
         >

@@ -241,7 +241,7 @@ function scrollToKategori() {
     <section id="kategori" class="container mx-auto pb-24 px-4 max-w-5xl scroll-mt-20">
       <p class="text-right text-sm mb-2">
         <NuxtLink
-          to="/indeks"
+          to="/directory"
           class="text-muted-foreground transition-colors hover:text-primary"
         >Indeks semua subkategori <ArrowRight class="inline h-3.5 w-3.5" /></NuxtLink>
       </p>
