@@ -6,9 +6,13 @@ import { ScrollArea } from './ui/scroll-area'
 
 // import { useTocObserver } from '@/composables/useTocObserver';
 
-const props = defineProps<{
-  toc: Toc
-}>()
+const props = withDefaults(
+  defineProps<{
+    toc: Toc
+    showTitle?: boolean
+  }>(),
+  { showTitle: true }
+)
 
 function normalizeLinks(list: any[]): any[] {
   return (list || []).filter(Boolean).map((l) => ({
@@ -25,7 +29,7 @@ const { activeId, scrollToId } = useTocObserver(links)
 <template>
   <nav class="space-y-2">
     <ScrollArea class="h-full">
-      <p class="font-medium text-sm mb-4">Di halaman ini</p>
+      <p v-if="showTitle" class="font-medium text-sm mb-4">Di halaman ini</p>
 
       <ul v-if="links.length" class="space-y-2 text-sm">
         <li v-for="(link, i) in links" :key="link?.id ?? i">

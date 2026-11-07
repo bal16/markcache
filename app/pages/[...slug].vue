@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Footer from '~/components/Footer.vue'
 import GoToTop from '~/components/GoToTop.vue'
+import InlineToc from '~/components/InlineToc.vue'
 import TableOfContents from '~/components/TableOfContents.vue'
 
 const route = useRoute()
@@ -103,7 +104,7 @@ watch(
 
 <template>
   <div id="page-top" class="container max-w-5xl py-6 lg:py-8 relative">
-    <div class="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-10 p-6 w-full">
+    <div class="grid grid-cols-1 xl:grid-cols-[1fr_250px] gap-10 p-6 w-full">
       <!-- Kolom artikel: artikel + footer dalam 1 sel agar aside (ToC)
            melar setinggi keduanya — rentang sticky ToC mencakup footer. -->
       <div class="flex flex-col min-w-0">
@@ -138,6 +139,10 @@ watch(
             </div>
             <ShareButton class="shrink-0" />
           </div>
+          <InlineToc
+            v-if="page.body?.toc?.links?.length"
+            :toc="page.body.toc"
+          />
           <hr class="my-6" />
           <div ref="contentBody">
             <ContentRenderer :value="page" />
@@ -152,7 +157,7 @@ watch(
         </div>
       </div>
 
-      <aside class="hidden lg:block h-full">
+      <aside class="hidden xl:block h-full">
         <div class="sticky top-20 h-[calc(100vh-10rem)] overflow-y-auto w-62.5">
           <div class="">
             <TableOfContents

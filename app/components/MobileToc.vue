@@ -35,6 +35,7 @@ const hasToc = computed(() => Boolean(toc.value?.links?.length))
         <TableOfContents
           v-if="toc"
           :toc="toc"
+          :show-title="false"
         />
         <div class="mt-8 flex justify-start gap-2">
           <ShareButton />
