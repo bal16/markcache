@@ -20,7 +20,7 @@ const { groups } = await useNavigationItem()
         </NuxtLink>
         <div class="h-px bg-border/40 my-3" />
         <template v-for="group in groups" :key="group.domain">
-          <!-- Heading non-klik per domain; semua link di bawahnya tetap flat. -->
+          <!-- Non-clickable domain headings; all links below stay flat. -->
           <p class="mb-1 mt-5 pl-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-muted-foreground/70 select-none">
             {{ group.label }}
           </p>

@@ -14,8 +14,7 @@ import {
 
 const { pageData: page } = await usePageData()
 
-// Halaman non-konten (mis. /directory) tidak punya ToC. Jangan render
-// trigger "Di halaman ini" agar drawer tidak terbuka kosong di mobile.
+// Pages without H2 have no ToC. Skip the trigger so the drawer never opens empty.
 const toc = computed(() => page.value?.body?.toc)
 const hasToc = computed(() => Boolean(toc.value?.links?.length))
 </script>

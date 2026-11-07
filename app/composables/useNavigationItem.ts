@@ -1,13 +1,13 @@
 export async function useNavigationItem() {
   const { data: navigation } = await useAsyncData('navigation', () => {
-    // Urutan kurasi via field `order` di frontmatter;
-    // `domain` dibawa juga untuk grouping sidebar (ADR-006, tampilan-only).
+    // Curation order via the `order` frontmatter field; `domain` is carried
+    // along for sidebar grouping (ADR-006, presentation-only).
     return queryCollectionNavigation('content', ['domain', 'order']).order('order', 'ASC')
   })
 
-  // 1 folder = 1 kategori dengan index.md. Folder yang isinya
-  // cuma index.md di-promote jadi item mandiri — judul pakai title halaman,
-  // tanpa parent collapsible duplikat (folder-name di-mask SidebarItem).
+  // 1 folder = 1 category with index.md. Folders containing only index.md are
+  // promoted to standalone items: the page title is used, with no duplicate
+  // collapsible parent (the folder name is masked by SidebarItem).
   const normalized = computed(() => {
     const promote = (node: NavNode): NavNode => {
       if (!node) return node
@@ -23,10 +23,10 @@ export async function useNavigationItem() {
     return (navigation.value ?? []).filter(Boolean).map(promote)
   })
 
-  // Grouping domain untuk sidebar: heading non-klik per domain,
-  // semua link tetap flat (landing & sidebar konsep sama).
-  // `/directory` (Index) sudah tampil sebagai link tetap di atas sidebar,
-  // jadi jangan diduplikasi di grup Meta.
+  // Domain grouping for the sidebar: a non-clickable heading per domain, all
+  // links stay flat (same concept as the landing page). `/directory` (Index) is
+  // already a fixed link at the top of the sidebar, so do not duplicate it in
+  // the Meta group.
   const groups = computed(() => {
     return DOMAIN_ORDER.map((domain) => ({
       domain,
@@ -43,7 +43,7 @@ export async function useNavigationItem() {
   }
 }
 
-// ADR-006: kelompok top-level. Dipakai landing & sidebar (heading per domain).
+// ADR-006: top-level groups. Used by the landing page and sidebar (heading per domain).
 export const DOMAIN_ORDER = ['hiburan', 'dev', 'utilitas', 'meta'] as const
 export const DOMAIN_LABEL: Record<string, string> = {
   hiburan: 'Hiburan',

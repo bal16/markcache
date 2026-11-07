@@ -4,8 +4,8 @@ import { Button } from '~/components/ui/button'
 
 withDefaults(
   defineProps<{
-    // `button` untuk permukaan navigasi (aside/drawer), `link` untuk aksi
-    // penutup artikel yang tidak perlu bersaing dengan footer.
+    // 'button' for navigation surfaces (aside/drawer), 'link' for the
+    // end-of-article action.
     appearance?: 'button' | 'link'
     size?: 'sm' | 'default' | 'lg'
   }>(),

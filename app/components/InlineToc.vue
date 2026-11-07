@@ -13,8 +13,8 @@ const open = ref(true)
 </script>
 
 <template>
-  <!-- ToC inline untuk tablet (md–xl). Di bawah xl sidebar masih tampil,
-       jadi ToC tidak perlu drawer; di atas xl ToC pindah ke kolom kanan. -->
+  <!-- Inline ToC for tablet (md–xl). Below xl the sidebar is still visible,
+       so the ToC does not need a drawer; above xl it moves to the right column. -->
   <Collapsible
     v-model:open="open"
     class="not-prose hidden border-y border-border/60 md:block xl:hidden"

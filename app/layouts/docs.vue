@@ -9,9 +9,8 @@ import Sidebar from '~/components/Sidebar.vue'
     <Header />
     <div class="flex flex-col w-full flex-1 min-h-0">
       <MobileDock />
-      <!-- Main Layout: Sidebar (Fixed) + Content (Scrollable) -->
-      <!-- Footer halaman docs dirender oleh masing-masing halaman
-           (di dalam kolom artikel) agar rentang sticky ToC mencakup footer. -->
+      <!-- The docs footer is rendered by each page inside the article column
+           so the sticky ToC range includes it. -->
       <div class="flex w-full items-start flex-1">
         <Sidebar />
         <main class="flex-1 min-w-0 flex flex-col min-h-[calc(100vh-3.5rem)] pb-24 md:pb-0">

@@ -8,7 +8,7 @@ const route = useRoute()
 const { pageData: page } = await usePageData()
 const contentBody = ref<HTMLElement | null>(null)
 
-// Label absolut ID dihitung pada render (SSR/prerender) agar stabil lintas hari.
+// Absolute dates are formatted at render (SSR/prerender) so they stay stable across days.
 const dateFormatter = new Intl.DateTimeFormat('id-ID', {
   day: 'numeric',
   month: 'short',
@@ -32,8 +32,6 @@ definePageMeta({
   layout: 'docs',
 })
 
-// SEO dasar: titleTemplate '%s — MarkCache' dipasang di
-// nuxt.config, jadi di sini cukup kirim title halaman yang reaktif.
 useSeoMeta({
   title: () => page.value?.title ?? 'Tidak ditemukan',
   description: () =>
@@ -52,8 +50,8 @@ defineOgImage('MarkCache.satori', {
     page.value?.description ?? 'Direktori tautan gratis terkurasi untuk pengguna Indonesia.',
 })
 
-// Filter per-link client-side via ?tag=xxx.
-// Parsing ringan: li yang text-nya tak mengandung tag disembunyikan.
+// Client-side per-link filter via ?tag=xxx.
+// Lightweight parsing: hide li elements whose text does not contain the tag.
 const activeTag = ref<string | null>(null)
 
 function escapeRe(s: string) {
@@ -105,8 +103,9 @@ watch(
 <template>
   <div id="page-top" class="container max-w-5xl py-6 lg:py-8 relative">
     <div class="grid grid-cols-1 xl:grid-cols-[1fr_250px] gap-10 p-6 w-full">
-      <!-- Kolom artikel: artikel + footer dalam 1 sel agar aside (ToC)
-           melar setinggi keduanya — rentang sticky ToC mencakup footer. -->
+      <!-- Article column: article + footer in one cell so the ToC aside
+           stretches to both heights, keeping the footer inside the sticky
+           ToC range. -->
       <div class="flex flex-col min-w-0">
         <article
           class="prose prose-sm dark:prose-invert max-w-none min-w-0 prose-headings:scroll-m-20"
@@ -150,12 +149,12 @@ watch(
         </template>
       </article>
 
-        <!-- Footer halaman docs (dipindah dari layout agar masuk rentang
-             sticky ToC — lihat komentar di app/layouts/docs.vue). -->
+        <!-- Docs page footer (moved from the layout so it falls inside the
+             sticky ToC range; see the comment in app/layouts/docs.vue). -->
         <div class="mt-auto">
-          <!-- Aksi akhir bacaan, tersedia di semua breakpoint. Di tablet
-               (md–xl) tidak ada aside ToC maupun drawer, jadi ini satu-satunya
-               tombol kembali ke atas. -->
+          <!-- End-of-reading action, available at every breakpoint. At tablet
+               (md–xl) there is no ToC aside or drawer, so this is the only
+               back-to-top control. -->
           <div class="flex justify-center pt-8 pb-8 md:justify-end">
             <GoToTop appearance="link" />
           </div>
