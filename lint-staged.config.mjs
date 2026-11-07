@@ -1,13 +1,13 @@
 // lint-staged config (replaces the "lint-staged" key previously in package.json).
 //
-// Cost policy: the pre-commit hook must stay <1s for content-only commits
-// (the dominant case for a curated directory). Full `pnpm typecheck`
-// (~7s, uncacheable — vue-tsc rechecks every SFC despite tsbuildinfo)
-// runs ONLY when code files are staged, and unconditionally in CI.
+// Cost policy: the pre-commit hook stays <1s for both content-only and code
+// commits. Type checking is deliberately NOT part of pre-commit: `vue-tsc`
+// takes ~5-7s on any source change (it rechecks every SFC, so incremental
+// builds don't help). `pnpm typecheck` runs once per push instead, in
+// .husky/pre-push.
 
 export default {
   '*': ['biome check --write --no-errors-on-unmatched'],
   '*.md': ['markdownlint-cli2 --fix'],
   '*.{js,ts,vue}': ['oxlint'],
-  '*.{js,mjs,cjs,ts,mts,cts,vue}': () => 'pnpm typecheck',
 }

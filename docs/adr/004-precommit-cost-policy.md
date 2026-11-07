@@ -1,6 +1,6 @@
 # ADR-004: Kebijakan Biaya Pre-Commit (Typecheck Kondisional, Tanpa CI Dulu)
 
-Status: Accepted
+Status: Superseded by ADR-008
 Date: 2026-09-08
 Deciders: bal16
 
