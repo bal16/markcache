@@ -58,7 +58,7 @@ function subcategories(page: IndeksPage) {
 </script>
 
 <template>
-  <div class="container max-w-3xl py-6 lg:py-8 relative">
+  <div class="container max-w-3xl px-6 py-12 lg:py-16 relative">
     <article class="prose prose-sm dark:prose-invert max-w-none prose-headings:scroll-m-20">
       <h1>Indeks</h1>
       <div class="not-prose mb-8">
