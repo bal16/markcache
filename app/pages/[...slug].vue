@@ -153,6 +153,12 @@ watch(
         <!-- Footer halaman docs (dipindah dari layout agar masuk rentang
              sticky ToC — lihat komentar di app/layouts/docs.vue). -->
         <div class="mt-auto">
+          <!-- Aksi akhir bacaan, tersedia di semua breakpoint. Di tablet
+               (md–xl) tidak ada aside ToC maupun drawer, jadi ini satu-satunya
+               tombol kembali ke atas. -->
+          <div class="flex justify-center pt-8 md:justify-end">
+            <GoToTop />
+          </div>
           <Footer />
         </div>
       </div>
