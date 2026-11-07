@@ -234,16 +234,18 @@ function scrollToKategori() {
           </NuxtLink>
         </Button> -->
       </div>
-    </section>
-
-    <!-- Bento Grid Categories Section (grouped by domain) -->
-    <section id="kategori" class="container mx-auto pb-24 px-4 max-w-5xl scroll-mt-20">
-      <p class="text-right text-sm mb-2">
+      <!-- Navigasi tersier: peta lengkap semua kategori + subkategori.
+           Ditaruh di hero agar tidak mengambang di atas grid kategori. -->
+      <p class="text-sm">
         <NuxtLink
           to="/directory"
           class="text-muted-foreground transition-colors hover:text-primary"
         >Index semua subkategori <ArrowRight class="inline h-3.5 w-3.5" /></NuxtLink>
       </p>
+    </section>
+
+    <!-- Bento Grid Categories Section (grouped by domain) -->
+    <section id="kategori" class="container mx-auto pb-24 px-4 max-w-5xl scroll-mt-20">
       <div v-for="group in groups" :key="group.domain" class="mt-10 first:mt-0">
         <h2 class="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground/70">
           {{ group.label }}
