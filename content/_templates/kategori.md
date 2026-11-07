@@ -2,7 +2,9 @@
 title: "Nama Kategori"
 description: "Satu kalimat: isi kategori ini untuk siapa."
 category: "nama-folder"
+domain: "utilitas"
 icon: "clapperboard"
+order: 99
 tags: ["contoh", "kategori"]
 updated: "2026-11-06"
 created: "2026-09-08"

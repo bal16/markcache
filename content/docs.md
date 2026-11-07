@@ -56,7 +56,10 @@ terstruktur dan mudah dicari.
 ## Aturan format (v1)
 
 Satu folder = satu kategori, `index.md` = halaman kategori. Frontmatter
-minimal: `title, description, category, tags, updated, draft, featured`.
+minimal: `title, description, category, domain, icon, order, tags, updated,
+draft, featured`. `domain` menentukan grup di landing dan sidebar (`hiburan`,
+`dev`, `utilitas`, `meta`), sedangkan `icon` dan `order` dipakai kartu
+kategori di landing.
 Dilarang memakai wikilink kurung-siku-ganda, embed seru-plus-siku, Dataview,
 atau komponen MDX di dalam `content/` supaya file tetap bisa dibuka enak di
 Obsidian.
