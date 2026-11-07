@@ -37,7 +37,7 @@ const hasToc = computed(() => Boolean(toc.value?.links?.length))
           :toc="toc"
           :show-title="false"
         />
-        <div class="mt-8 flex justify-start gap-2">
+        <div class="mt-8 flex justify-start  items-center gap-2">
           <ShareButton />
           <GoToTop />
         </div>
