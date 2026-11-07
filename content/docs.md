@@ -5,7 +5,7 @@ category: "meta"
 domain: meta
 icon: "book-open"
 tags: ["kontribusi", "meta"]
-updated: "2026-11-03"
+updated: "2026-11-07"
 created: "2025-12-19"
 draft: false
 featured: true
@@ -28,6 +28,14 @@ diprioritaskan.
 - Kategori kosong tidak pernah tampil: yang belum terisi diperlihatkan
   sebagai "segera hadir" di landing.
 
+## Lapor link mati
+
+Tidak perlu clone repo — buka [New issue](https://github.com/bal16/markcache/issues/new/choose)
+dan pilih formulir **Lapor Link Mati**: tulis URL-nya, halaman MarkCache di
+mana link itu berada, dan gejalanya. Alternatif aktif (bila Anda tahu) sangat
+membantu kurasi. Laporan lewat issue ini lebih cepat ditindak daripada lapor
+di mana pun, karena terstruktur dan mudah dicari.
+
 ## Cara kontribusi
 
 1. Buka repo di editor, atau `content/` langsung sebagai vault Obsidian
@@ -42,8 +50,8 @@ diprioritaskan.
    node scripts/contentlint.mjs --fix
    ```
 
-5. Kirim PR. Pemilik repo akan mereview sebelum merge (pola
-   solo-curated + open-contrib).
+5. Kirim PR — checklist format akan muncul otomatis. Pemilik repo akan
+   mereview sebelum merge (pola solo-curated + open-contrib).
 
 ## Aturan format (v1)
 

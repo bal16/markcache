@@ -1,0 +1,43 @@
+name: "🔗 Lapor Link Mati"
+description: "Laporkan tautan yang sudah tidak aktif, redirect, atau berubah isi"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Terima kasih sudah melapor — ini bantuan kurasi paling berharga.
+        Tidak perlu clone repo; cukup isi formulir di bawah.
+
+  - type: input
+    id: url
+    attributes:
+      label: "Tautan yang mati"
+      description: "URL lengkap yang Anda temukan bermasalah"
+      placeholder: "https://example.com/"
+    validations:
+      required: true
+
+  - type: input
+    id: halaman
+    attributes:
+      label: "Halaman MarkCache di mana link ini berada"
+      description: "Salin path-nya, mis. /streaming atau /reading"
+      placeholder: "/streaming"
+    validations:
+      required: true
+
+  - type: textarea
+    id: gejala
+    attributes:
+      label: "Gejala (opsional)"
+      description: "Domain tidak ada, redirect ke tempat lain, isinya berubah, kini butuh VPN, dsb."
+      placeholder: "Domain sudah dijual / berpindah ke URL lain"
+    validations:
+      required: false
+
+  - type: textarea
+    id: pengganti
+    attributes:
+      label: "Alternatif aktif (opsional)"
+      description: "URL pengganti atau mirror bila Anda tahu — sangat membantu kurasi"
+    validations:
+      required: false

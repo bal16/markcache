@@ -1,0 +1,47 @@
+name: "✨ Usulkan Link / Kategori"
+description: "Rekomendasi link baru, kategori baru, atau pengganti link lama"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Syarat kurasi (dari halaman Tentang & Kontribusi):
+        - domain aktif dan gratis untuk pengguna (ada tier gratis nyata)
+        - belum terdaftar di kategori terkait
+        - tidak scam/payload berbahaya
+
+  - type: input
+    id: link
+    attributes:
+      label: "Nama situs + URL"
+      placeholder: "NamaSitus — https://example.com/"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: jenis
+    attributes:
+      label: "Jenis usulan"
+      options:
+        - "Link baru untuk kategori yang sudah ada"
+        - "Kategori baru"
+        - "Pengganti link yang sudah mati"
+        - "Perbaikan deskripsi/metadata link"
+    validations:
+      required: true
+
+  - type: textarea
+    id: deskripsi
+    attributes:
+      label: "Deskripsi satu kalimat (Bahasa Indonesia)"
+      description: "Nanti ditulis ulang di halaman kategorinya; format: apa + untuk siapa"
+      placeholder: "Client YouTube Music lintas platform, ringan dan gratis."
+    validations:
+      required: true
+
+  - type: textarea
+    id: kategori
+    attributes:
+      label: "Kategori & subkategori yang cocok"
+      description: "Mis. Reading → Manga & Manhwa. Untuk kategori baru, jelaskan nama + 3-5 contoh link weekday."
+    validations:
+      required: false
