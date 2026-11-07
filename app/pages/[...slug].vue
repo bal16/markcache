@@ -156,7 +156,7 @@ watch(
           <!-- Aksi akhir bacaan, tersedia di semua breakpoint. Di tablet
                (md–xl) tidak ada aside ToC maupun drawer, jadi ini satu-satunya
                tombol kembali ke atas. -->
-          <div class="flex justify-center pt-8 md:justify-end">
+          <div class="flex justify-center pt-8 pb-8 md:justify-end">
             <GoToTop appearance="link" />
           </div>
           <Footer />
