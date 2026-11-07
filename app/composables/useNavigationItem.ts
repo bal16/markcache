@@ -25,11 +25,15 @@ export async function useNavigationItem() {
 
   // Grouping domain untuk sidebar: heading non-klik per domain,
   // semua link tetap flat (landing & sidebar konsep sama).
+  // `/directory` (Index) sudah tampil sebagai link tetap di atas sidebar,
+  // jadi jangan diduplikasi di grup Meta.
   const groups = computed(() => {
     return DOMAIN_ORDER.map((domain) => ({
       domain,
       label: DOMAIN_LABEL[domain] ?? domain,
-      items: normalized.value.filter((n) => (n.domain ?? 'utilitas') === domain),
+      items: normalized.value.filter(
+        (n) => n.path !== '/directory' && (n.domain ?? 'utilitas') === domain
+      ),
     })).filter((g) => g.items.length > 0)
   })
 

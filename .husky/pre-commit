@@ -1,1 +1,3 @@
+node scripts/gen-index.mjs
+git add content/directory.md
 pnpm exec lint-staged

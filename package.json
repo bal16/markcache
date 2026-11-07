@@ -3,9 +3,10 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxi generate",
+    "build": "node scripts/gen-index.mjs && nuxt build",
+    "dev": "node scripts/gen-index.mjs && nuxt dev",
+    "generate": "node scripts/gen-index.mjs && nuxi generate",
+    "gen:index": "node scripts/gen-index.mjs",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "oxlint",

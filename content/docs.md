@@ -61,6 +61,11 @@ Dilarang memakai wikilink kurung-siku-ganda, embed seru-plus-siku, Dataview,
 atau komponen MDX di dalam `content/` supaya file tetap bisa dibuka enak di
 Obsidian.
 
+Halaman `content/directory.md` (Index) **di-generate** oleh
+`node scripts/gen-index.mjs` dari frontmatter + H2 tiap kategori — jangan
+diedit manual. Script jalan otomatis saat `dev`/`build` dan di pre-commit,
+jadi index tidak pernah basi.
+
 ## Stack
 
 Nuxt 4 + `@nuxt/content`, prerender statis, search `⌘K` berbasis Fuse,
