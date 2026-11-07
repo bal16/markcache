@@ -30,7 +30,7 @@ function scrollToTop() {
     :class="[
       'inline-flex items-center text-sm font-medium text-muted-foreground hover:text-foreground',
       appearance === 'link' &&
-        'h-auto px-0 py-0 hover:bg-transparent hover:underline underline-offset-4',
+        'h-auto px-0 py-0 hover:bg-transparent dark:hover:bg-transparent hover:underline underline-offset-4',
     ]"
     @click.prevent="scrollToTop"
   >

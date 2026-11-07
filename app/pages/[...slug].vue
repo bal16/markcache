@@ -173,7 +173,7 @@ watch(
           </div>
           <div class="mt-6 border-t pt-4 space-y-2">
             <ShareButton class="w-full justify-start" />
-            <GoToTop />
+            <GoToTop class="w-full justify-start" />
           </div>
         </div>
       </aside>
