@@ -1,4 +1,5 @@
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
+import { defineSitemapSchema } from '@nuxtjs/sitemap/content'
 
 // Schema longgar per ADR-003: semua field baru opsional + default, mutu
 // ditegakkan oleh contentlint (scripts/contentlint.mjs), bukan validasi ketat.
@@ -24,6 +25,11 @@ export default defineContentConfig({
         draft: z.boolean().optional().default(false),
         featured: z.boolean().optional().default(false),
         order: z.number().optional(),
+        // Sitemap integration via @nuxtjs/sitemap
+        sitemap: defineSitemapSchema({
+          name: 'content',
+          filter: (entry) => !entry.draft && entry.featured,
+        }),
       }),
     }),
   },

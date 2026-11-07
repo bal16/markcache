@@ -23,6 +23,7 @@
     "@fontsource/outfit": "^5.3.0",
     "@lucide/vue": "^1.67.0",
     "@nuxt/content": "^3.16.2",
+    "@nuxtjs/sitemap": "^9.1.0",
     "@vueuse/core": "^15.0.0",
     "better-sqlite3": "^13.0.3",
     "class-variance-authority": "^0.7.1",

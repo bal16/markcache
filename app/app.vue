@@ -14,9 +14,9 @@ useSeoMeta({
   ogLocale: 'id_ID',
   ogImageWidth: 1200,
   ogImageHeight: 630,
-  ogImageAlt: 'MarkCache, direktori link terkurasi untuk pengguna Indonesia',
+  ogImageAlt: 'MarkCache, direktori tautan terkurasi untuk pengguna Indonesia',
   twitterCard: 'summary_large_image',
-  twitterImageAlt: 'MarkCache, direktori link terkurasi untuk pengguna Indonesia',
+  twitterImageAlt: 'MarkCache, direktori tautan terkurasi untuk pengguna Indonesia',
 })
 
 useHead({
@@ -38,7 +38,7 @@ useHead({
         url: `${siteUrl}/`,
         name: 'MarkCache',
         description:
-          'Direktori tautan gratis ala FMHY yang dikurasi manual untuk pengguna Indonesia.',
+          'MarkCache, direktori tautan gratis ala FMHY yang dikurasi manual untuk pengguna Indonesia. Dari streaming dan anime sampai dev tools.',
         inLanguage: 'id',
       }),
     },

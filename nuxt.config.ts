@@ -2,13 +2,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  nitro: {
-    preset: 'vercel',
-    static: true,
-    prerender: {
-      routes: ['/api/search.json'],
-    },
-  },
   compatibilityDate: '2025-07-15',
   ssr: true,
   app: {
@@ -39,6 +32,7 @@ export default defineNuxtConfig({
     },
   },
   modules: [
+    '@nuxtjs/sitemap',
     'shadcn-nuxt',
     '@nuxt/content',
     '@nuxtjs/color-mode',
@@ -88,6 +82,20 @@ export default defineNuxtConfig({
     url: 'https://markcache.vercel.app',
   },
 
+  sitemap: {
+    // Sitemap otomatis dari route static + content collection 'content'
+    // yang sudah dikonfigurasi dengan defineSitemapSchema di content.config.ts
+  },
+
+  // Pastikan sitemap.xml di-prerender saat build
+  nitro: {
+    preset: 'vercel',
+    static: true,
+    prerender: {
+      routes: ['/api/search.json', '/sitemap.xml'],
+    },
+  },
+
   ogImage: {
     zeroRuntime: true,
     defaults: {
@@ -102,9 +110,10 @@ export default defineNuxtConfig({
       installPrompt: true,
     },
     manifest: {
-      name: 'MarkCache — Direktori Kurasi Link',
+      name: 'MarkCache: Direktori Tautan Terkurasi',
       short_name: 'MarkCache',
-      description: 'Direktori kurasi link ala FMHY, ID-first: streaming, downloading, dan lainnya.',
+      description:
+        'Direktori tautan gratis ala FMHY, dikurasi manual untuk pengguna Indonesia: streaming, dev tools, hingga game.',
       lang: 'id',
       start_url: '/',
       scope: '/',
