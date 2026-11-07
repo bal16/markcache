@@ -1,6 +1,6 @@
 ---
 title: "Streaming"
-description: "Nonton film, series, anime, dan TV gratis — kurasi khusus pengguna Indonesia."
+description: "Situs streaming gratis untuk film, serial, anime, dan TV dengan subtitle Indonesia. Dipilih manual dari kurasi FMHY dan komunitas lokal."
 category: "streaming"
 domain: hiburan
 icon: "clapperboard"

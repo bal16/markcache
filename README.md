@@ -6,9 +6,9 @@ Indonesia diprioritaskan. Bukan docs-starter generik; setiap kategori adalah
 daftar link terkurasi yang bisa dijelajahi dari [landing](/) → halaman kategori
 → klik keluar, atau dicari dengan `⌘K`.
 
-Kategori aktif: **Streaming**, **Dev Tools**. Kategori lain (Downloading,
-Reading, Audio, Torrenting, AI Tools) menyusul — hanya tampil setelah benar-
-benar terisi (lihat ADR-001).
+Kategori aktif: **Streaming, Dev Tools, Dev Hub, Torrenting, Downloading,
+AI Tools, Reading, Audio, Agent & MCP, Gratis Mahasiswa, dan Games**. Kategori
+baru hanya tampil setelah benar-benar terisi (lihat ADR-001).
 
 ## Stack
 

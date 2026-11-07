@@ -1,6 +1,6 @@
 ---
 title: "Games"
-description: "Game browser, port & recomp, emulator retro, dan modding — kurasi untuk gamer Indonesia."
+description: "Main game di browser, coba port dan recomp klasik, pasang emulator retro, atau masuk ke dunia modding. Catatan soal file game asli disertakan."
 category: "games"
 domain: hiburan
 icon: "gamepad-2"

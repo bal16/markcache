@@ -1,6 +1,6 @@
 ---
 title: "Downloading"
-description: "Situs unduh software, buku, dan arsip — dari arsip legal sampai DDL."
+description: "Tempat mengunduh software, buku, dan arsip besar: dari perpustakaan legal sampai situs DDL. Ada pengingat scan VirusTotal."
 category: "downloading"
 domain: hiburan
 icon: "download"

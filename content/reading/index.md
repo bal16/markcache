@@ -1,6 +1,6 @@
 ---
 title: "Reading"
-description: "Komik, manga, light novel, dan buku gratis — kurasi untuk pembaca Indonesia."
+description: "Baca komik, manga, manhwa, light novel, dan e-book gratis. Sebagian besar punya koleksi bahasa Indonesia, dengan pengingat soal iklan."
 category: "reading"
 domain: hiburan
 icon: "library"

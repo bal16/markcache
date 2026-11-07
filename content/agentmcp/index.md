@@ -1,6 +1,6 @@
 ---
 title: "Agent & MCP"
-description: "Injeksi daging untuk coding agent: server MCP, skill, dan registry — kurasi perilaku, bukan hype."
+description: "Server MCP, koleksi skill, dan registry untuk coding agent. Dipilih dari alat yang benar-benar dipakai harian dan sudah dicoba sendiri."
 category: "agentmcp"
 domain: dev
 icon: "puzzle"
@@ -32,7 +32,7 @@ order: 9
 - [Browser Use](https://github.com/browser-use/browser-use) — kendalikan browser lewat agent: navigasi, form, scraping. `browser` ⭐
 - [Playwright MCP](https://github.com/microsoft/playwright-mcp) — automasi browser resmi Microsoft; testing & QA yang bisa diaudit. `browser`
 - [Firecrawl MCP](https://github.com/firecrawl/firecrawl-mcp-server) — crawl, scrape, dan extract data web terstruktur untuk agent. `scrape`
-- [Terse](https://github.com/inth3shadows/terse) — proxy kompresi output tool MCP; merapihkan konteks dari jawaban yang berjela-ela. `optimasi`
+- [Terse](https://github.com/inth3shadows/terse) — proxy kompresi output tool MCP; merapikan konteks dari keluaran tool yang panjang. `optimasi`
 
 ## Klien Agent
 

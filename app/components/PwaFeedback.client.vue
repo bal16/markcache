@@ -91,10 +91,10 @@ onMounted(() => {
     (show) => {
       if (!show) return
 
-      toast('Aplikasi bisa diinstall', {
+      toast('Aplikasi bisa dipasang', {
         description: 'Pasang MarkCache di perangkat untuk akses yang lebih cepat.',
         action: {
-          label: 'Install',
+          label: 'Pasang',
           onClick: () => {
             $pwa.install().catch(() => {
               toast.error('Gagal memasang aplikasi')

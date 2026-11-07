@@ -1,6 +1,6 @@
 ---
 title: "Dev Hub"
-description: "Indeks opini untuk memilih stack — framework, library, dan layanan developer."
+description: "Panduan memilih stack: 5 sampai 8 pilihan terkuat per slot, dari framework dan library sampai auth, database, serta deploy."
 category: "devhub"
 domain: dev
 icon: "blocks"
@@ -73,11 +73,11 @@ order: 3
 
 - [better-auth](https://better-auth.com/) — library auth TypeScript self-host, agnostik framework. `auth` ⭐
 - [Auth.js](https://authjs.dev/) — auth standar untuk Next.js dan ekosistem JS. `auth`
-- [Clerk](https://clerk.com/) — auth terkelola, cepat galak hingga skala besar. `saas`
+- [Clerk](https://clerk.com/) — auth terkelola yang tetap cepat saat aplikasi membesar. `saas`
 
 ## Data & State
 
-- [Zod](https://zod.dev) — validasi schema TypeScript, bepas dipakai lintas library. `validasi` ⭐
+- [Zod](https://zod.dev) — validasi schema TypeScript, bebas dipakai lintas library. `validasi` ⭐
 - [Pinia](https://pinia.vuejs.org) — store resmi Vue. `state`
 - [Zustand](https://zustand.docs.pmnd.rs) — store React paling minimalis. `state`
 
@@ -87,7 +87,7 @@ order: 3
 - [Cloudflare Workers](https://workers.cloudflare.com) — edge runtime, gratis hingga 100 ribu request/hari. `edge`
 - [Netlify](https://www.netlify.com/) — hosting statis dengan CICD bawaan. `deploy`
 
-> Banding lengkap kapasitas hosting gratis ada di bagian Hosting & Deploy di
+> Perbandingan lengkap kapasitas hosting gratis ada di bagian Hosting & Deploy di
 > [Dev Tools](/devtools#hosting-deploy).
 
 ## Python

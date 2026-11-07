@@ -1,6 +1,6 @@
 ---
 title: "Torrenting"
-description: "Situs, klien, dan layanan torrent — kurasi untuk pengguna Indonesia."
+description: "Indeks situs torrent, agregator, dan klien BitTorrent untuk pengguna Indonesia, plus catatan VPN sebelum mengunduh."
 category: "torrenting"
 domain: hiburan
 icon: "magnet"

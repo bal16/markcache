@@ -1,6 +1,6 @@
 ---
-title: "Student Deals"
-description: "Bundel, kredit, dan tool gratis untuk pelajar & mahasiswa — klaim semua yang aktif."
+title: "Gratis Mahasiswa"
+description: "Bundel, kredit cloud, dan tool gratis untuk pelajar dan mahasiswa. Panduan klaim plus pengingat agar manfaatnya tidak hangus setelah lulus."
 category: "mahasiswa"
 domain: utilitas
 icon: "graduation-cap"
@@ -37,5 +37,5 @@ order: 10
 ## Tips Klaim
 
 > Simpan email kampus kamu dengan rapi — hampir semua vendor mengirim link
-> verifikasi ke sana. Klaim satu-satu sebelum masa studi berakhir: paksa
-> sejumlah paket pasca-kuliah tidak bisa diperpanjang.
+> verifikasi ke sana. Klaim satu per satu sebelum masa studi berakhir.
+> Sejumlah paket pasca-kuliah tidak bisa diperpanjang.

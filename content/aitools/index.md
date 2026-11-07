@@ -1,6 +1,6 @@
 ---
 title: "AI Tools"
-description: "Alat AI gratis & open-source: chat, search, gambar, audio, dan local LLM."
+description: "Alat AI gratis dan open-source untuk chat, pencarian, gambar, audio, dan LLM lokal. Hanya layanan yang punya tier gratis nyata."
 category: "aitools"
 domain: utilitas
 icon: "bot"

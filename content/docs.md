@@ -1,6 +1,6 @@
 ---
 title: "Tentang & Kontribusi"
-description: "Apa itu MarkCache dan cara menambah link baru lewat vault Obsidian."
+description: "Kenapa MarkCache ada, prinsip kurasi yang dipakai, dan cara menambah atau melaporkan link lewat vault Obsidian maupun PR."
 category: "meta"
 domain: meta
 icon: "book-open"

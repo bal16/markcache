@@ -1,6 +1,6 @@
 ---
 title: "Audio"
-description: "Streaming musik gratis, radio, dan pengunduh audio — kurasi untuk pengguna Indonesia."
+description: "Dengar musik gratis lewat web streaming, aplikasi desktop, radio dunia, sampai pengunduh lossless. Dipilih yang minim iklan dan tanpa kartu kredit."
 category: "audio"
 domain: hiburan
 icon: "headphones"

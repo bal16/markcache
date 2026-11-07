@@ -1,6 +1,6 @@
 ---
 title: "Dev Tools"
-description: "Perangkat developer gratis dan open-source — git, docker, database, AI, hosting, security."
+description: "Alat developer gratis dan open-source untuk kerja harian: git, Docker, database, AI, hingga hosting dan keamanan."
 category: "devtools"
 domain: dev
 icon: "terminal"
@@ -54,7 +54,7 @@ order: 2
 
 - [ripgrep](https://github.com/BurntSushi/ripgrep) — pengganti grep, sangat cepat dan menghormati .gitignore. `cli` ⭐
 - [bat](https://github.com/sharkdp/bat) — `cat` dengan syntax highlight. `cli`
-- [zoxide](https://github.com/ajeetdsouza/zoxide) — `cd` pintar yang belajar rilis perpindahan. `cli`
+- [zoxide](https://github.com/ajeetdsouza/zoxide) — `cd` pintar yang belajar riwayat perpindahan. `cli`
 - [Atuin](https://atuin.sh/) — ribuan shell history tetap tersinkron dan bisa dicari. `cli`
 - [Oh My Posh](https://ohmyposh.dev/) — theming prompt terminal lintas shell. `cli`
 - [pueue](https://github.com/Nukesor/pueue) — antre perintah shell berjalan lama. `cli`
@@ -68,7 +68,7 @@ order: 2
 - [Google AI Studio](https://aistudio.google.com/app/apps) — playground + API Gemini, gratis. `ai`
 - [Qwen Chat](https://chat.qwen.ai/) — chat AI gratis dengan mode coding. `ai`
 - [v0](https://v0.app/) — teks ke UI React siap pakai. `ai`
-- [Bolt.new](https://bolt.new/) — AI membentuk dan menjalankan web app selesai di browser. `ai`
+- [Bolt.new](https://bolt.new/) — AI membangun dan menjalankan web app langsung di browser. `ai`
 - [Repomix](https://repomix.com/) — kumpul repo menjadi satu prompt siap LLM. `ai`
 - [CodeRabbit](https://www.coderabbit.ai/) — review PR otomatis oleh AI. `review`
 
@@ -93,7 +93,7 @@ order: 2
 - [Storj](https://www.storj.io/) — 25 GB storage + 25 GB egress/bulan gratis; tanpa kartu kredit. `s3` ⭐
 - [Backblaze B2](https://www.backblaze.com/cloud-storage) — 10 GB gratis selamanya; egress gratis melalui Cloudflare (Bandwidth Alliance). `s3`
 - [MinIO](https://min.io/) — object storage S3-compatible self-host, standar industri. `selfhost` ⭐
-- [Garage](https://garagehq.deuxfleurs.fr/) — object storage self-host ringan, tahan gejala jaringan. `selfhost`
+- [Garage](https://garagehq.deuxfleurs.fr/) — object storage self-host ringan, tahan gangguan jaringan. `selfhost`
 
 ## Security
 
