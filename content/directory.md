@@ -14,7 +14,7 @@ order: 99
 
 # Index
 
-Peta 11 kategori dan 348 link terkurasi, plus halaman meta — loncat langsung ke seksi yang dicari, tanpa buka halaman satu-satu.
+Peta 13 kategori dan 393 link terkurasi, plus halaman meta — loncat langsung ke seksi yang dicari, tanpa buka halaman satu-satu.
 
 ## Hiburan
 
@@ -35,6 +35,8 @@ Peta 11 kategori dan 348 link terkurasi, plus halaman meta — loncat langsung k
 
 - [AI Tools](/aitools) — 44 link · [Chat Gratis (Web)](/aitools#chat-gratis-web), [Multi-Model & Search AI](/aitools#multi-model-search-ai), [Local LLM (Desktop / WebUI)](/aitools#local-llm-desktop-webui), [Fine-Tuning & Self-Host Tools](/aitools#fine-tuning-self-host-tools), [Image Generation](/aitools#image-generation), [Audio & TTS](/aitools#audio-tts), [AI Coding (sudah di Dev Hub / Dev Tools)](/aitools#ai-coding-sudah-di-dev-hub-dev-tools), [Benchmark & Evaluasi](/aitools#benchmark-evaluasi)
 - [Student Deals](/mahasiswa) — 10 link · [Bundel & Klaim Utama](/mahasiswa#bundel-klaim-utama), [Learning Gratis](/mahasiswa#learning-gratis), [Tips Klaim](/mahasiswa#tips-klaim)
+- [Akses & Privasi](/akses-privasi) — 30 link · [Bypass & Akses](/akses-privasi#bypass-akses), [Adblock & DNS](/akses-privasi#adblock-dns), [Browser & Anti-Tracking](/akses-privasi#browser-anti-tracking), [VPN](/akses-privasi#vpn), [Password & 2FA](/akses-privasi#password-2fa), [Email & Alias](/akses-privasi#email-alias), [Enkripsi & Sandbox](/akses-privasi#enkripsi-sandbox), [Cek Kebocoran](/akses-privasi#cek-kebocoran)
+- [Komunitas](/komunitas) — 15 link · [Komunitas Indonesia](/komunitas#komunitas-indonesia), [Forum Global](/komunitas#forum-global), [Chat & Server](/komunitas#chat-server), [Dev & Open Source](/komunitas#dev-open-source)
 
 ## Meta
 

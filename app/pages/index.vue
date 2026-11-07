@@ -14,7 +14,9 @@ import {
   MoveUpRight,
   Puzzle,
   Search,
+  Shield,
   Terminal,
+  Users,
   Wrench,
 } from '@lucide/vue'
 import type { Component } from 'vue'
@@ -131,10 +133,13 @@ const iconMap: Record<string, Component> = {
   puzzle: Puzzle,
   'graduation-cap': GraduationCap,
   'gamepad-2': Gamepad2,
+  shield: Shield,
+  users: Users,
 }
 
 // Kategori belum terisi hanya label — tidak ada halaman kosong.
-const segeraHadir = ['Akses & Privasi', 'Komunitas']
+// Kosong berarti semua kategori sudah punya halaman.
+const segeraHadir: string[] = []
 
 // Statistik ringan dari body AST: hitung link eksternal terkurasi.
 // AST Nuxt Content bisa tampil sebagai objek (`{type, props, children}`)
@@ -301,7 +306,10 @@ function scrollToKategori() {
       </div>
 
       <!-- Segera hadir: kategori belum terisi, tidak ada halaman kosong -->
-      <div class="mt-10 flex flex-wrap items-center gap-3 justify-center">
+      <div
+        v-if="segeraHadir.length"
+        class="mt-10 flex flex-wrap items-center gap-3 justify-center"
+      >
         <span class="text-sm text-muted-foreground">Segera hadir:</span>
         <span
           v-for="soon in segeraHadir"
