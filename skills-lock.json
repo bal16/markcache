@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "skills": {
+    "humanizer-indonesia": {
+      "source": "adhiprib/humanizer-indonesia",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "71298eeb38415b822df4d6384e06a64f206b200a1cc52ef5d87d47d041dad812",
+      "installMode": "copy"
+    }
+  }
+}

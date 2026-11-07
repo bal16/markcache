@@ -39,6 +39,7 @@
     "public/**",
     ".vercel/**",
     "docs/superpowers/**",
+    ".agents/**",
     "content/.obsidian/**",
     "content/_templates/**",
     "content/attachments/**"
