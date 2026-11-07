@@ -9,7 +9,7 @@ defineProps<{
   toc: Toc
 }>()
 
-const open = ref(false)
+const open = ref(true)
 </script>
 
 <template>
