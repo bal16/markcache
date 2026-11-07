@@ -243,7 +243,7 @@ function scrollToKategori() {
         <NuxtLink
           to="/directory"
           class="text-muted-foreground transition-colors hover:text-primary"
-        >Indeks semua subkategori <ArrowRight class="inline h-3.5 w-3.5" /></NuxtLink>
+        >Index semua subkategori <ArrowRight class="inline h-3.5 w-3.5" /></NuxtLink>
       </p>
       <div v-for="group in groups" :key="group.domain" class="mt-10 first:mt-0">
         <h2 class="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground/70">

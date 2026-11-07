@@ -16,7 +16,7 @@ const { groups } = await useNavigationItem()
           active-class="border-l-2 border-primary bg-primary/10 text-primary font-medium hover:translate-x-0"
           class="block truncate rounded-md py-1.5 px-3 text-sm font-medium text-foreground transition-all duration-200 hover:bg-black/5 dark:hover:bg-white/5 hover:text-primary hover:translate-x-1"
         >
-          Indeks
+          Index
         </NuxtLink>
         <div class="h-px bg-border/40 my-3" />
         <template v-for="group in groups" :key="group.domain">

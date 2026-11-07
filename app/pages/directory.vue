@@ -6,12 +6,12 @@ definePageMeta({
 })
 
 useSeoMeta({
-  title: 'Indeks',
+  title: 'Index',
   description:
-    'Indeks semua kategori dan subkategori MarkCache — peta satu halaman untuk loncat langsung ke seksi yang dicari.',
-  ogTitle: 'Indeks — MarkCache',
+    'Index semua kategori dan subkategori MarkCache — peta satu halaman untuk loncat langsung ke seksi yang dicari.',
+  ogTitle: 'Index — MarkCache',
   ogDescription: 'Peta semua kategori dan subkategori dalam satu halaman.',
-  twitterTitle: 'Indeks — MarkCache',
+  twitterTitle: 'Index — MarkCache',
   twitterDescription: 'Peta semua kategori dan subkategori dalam satu halaman.',
 })
 
@@ -24,7 +24,7 @@ const DOMAIN_LABEL: Record<string, string> = {
   meta: 'Meta',
 }
 
-interface IndeksPage {
+interface IndexPage {
   path: string
   title: string
   description?: string
@@ -41,7 +41,7 @@ const { data: pages } = await useAsyncData('directory', () => {
 })
 
 const groups = computed(() => {
-  const cats = (pages.value ?? []) as IndeksPage[]
+  const cats = (pages.value ?? []) as IndexPage[]
   return DOMAIN_ORDER.map((domain) => ({
     domain,
     label: DOMAIN_LABEL[domain] ?? domain,
@@ -50,7 +50,7 @@ const groups = computed(() => {
 })
 
 // Subkategori (H2) dari toc — anchor id sama dengan heading di halaman.
-function subcategories(page: IndeksPage) {
+function subcategories(page: IndexPage) {
   return (page.body?.toc?.links ?? [])
     .filter((l) => l.depth === 2 && l.id && l.text)
     .map((l) => ({ id: l.id as string, text: l.text as string }))
@@ -60,7 +60,7 @@ function subcategories(page: IndeksPage) {
 <template>
   <div class="container max-w-3xl px-6 py-12 lg:py-16 relative">
     <article class="prose prose-sm dark:prose-invert max-w-none prose-headings:scroll-m-20">
-      <h1>Indeks</h1>
+      <h1>Index</h1>
       <div class="not-prose mb-8">
         <p class="lead text-xl text-muted-foreground m-0">
           Peta semua kategori dan subkategori MarkCache — loncat langsung ke
