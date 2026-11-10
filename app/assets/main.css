@@ -50,7 +50,11 @@
 }
 
 :root {
+  color-scheme: light;
   --radius: 0.625rem;
+  --scrollbar-thumb: oklch(0.7 0 0 / 45%);
+  --scrollbar-thumb-hover: oklch(0.5 0 0 / 70%);
+  --scrollbar-track: transparent;
   --background: oklch(0.98 0 0); /* Off-white for sleek light mode */
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -85,6 +89,10 @@
 }
 
 .dark {
+  color-scheme: dark;
+  --scrollbar-thumb: oklch(1 0 0 / 18%);
+  --scrollbar-thumb-hover: oklch(1 0 0 / 32%);
+  --scrollbar-track: transparent;
   --background: oklch(0.18 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
@@ -140,6 +148,34 @@
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
+  }
+
+  /* Custom scrollbar styling for both standard and WebKit browsers */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: transparent;
   }
 }
 
