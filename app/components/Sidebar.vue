@@ -2,7 +2,7 @@
 import SidebarItem from '~/components/SidebarItem.vue'
 import { ScrollArea } from '~/components/ui/scroll-area'
 
-const { groups } = await useNavigationItem()
+const { groups } = useNavigationItem()
 </script>
 
 <template>

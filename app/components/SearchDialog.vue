@@ -44,17 +44,7 @@ watch(
       placeholder="Cari link, kategori, atau perintah..."
     />
 
-    <CommandList>
-      <div
-        v-if="!search"
-        class="py-14 text-center text-sm text-muted-foreground"
-      >
-        <p>Ketik untuk mencari link dan kategori...</p>
-        <p class="mt-2 text-xs opacity-70">
-          Ketik <kbd class="px-1.5 py-0.5 rounded-md bg-muted border font-mono text-[10px]">&gt;</kbd> untuk perintah (tema gelap/terang)
-        </p>
-      </div>
-
+    <CommandList class="max-h-[360px] md:max-h-[420px]">
       <CommandEmpty
         v-if="search && commandGroups.length === 0 && isReady"
       >
@@ -67,7 +57,7 @@ watch(
           <CommandItem
             v-for="item in group.items"
             :key="item.id"
-            :value="item.title + item.description"
+            :value="item.id + ' ' + item.title + (item.description ? ' ' + item.description : '')"
             @select="handleSelect(item.execute)"
             class="cursor-pointer"
           >
@@ -89,7 +79,6 @@ watch(
           </CommandItem>
         </CommandGroup>
       </template>
-
     </CommandList>
 
     <div class="border-t border-border/50 bg-muted/30 p-3 flex items-center justify-between text-xs text-muted-foreground backdrop-blur-sm">
@@ -102,6 +91,10 @@ watch(
         <div class="flex items-center gap-1">
           <kbd class="flex h-5 px-1.5 items-center justify-center rounded border bg-background font-sans text-[10px] shadow-sm">Enter</kbd>
           <span class="ml-1">Pilih</span>
+        </div>
+        <div class="hidden sm:flex items-center gap-1 opacity-70">
+          <kbd class="flex h-5 w-5 items-center justify-center rounded border bg-background font-mono text-[10px] shadow-sm">&gt;</kbd>
+          <span class="ml-1">Perintah</span>
         </div>
       </div>
       <div class="flex items-center gap-1">

@@ -12,7 +12,7 @@ import {
   SheetTrigger,
 } from './ui/sheet'
 
-const { groups } = await useNavigationItem()
+const { groups } = useNavigationItem()
 </script>
 <template>
   <Sheet>

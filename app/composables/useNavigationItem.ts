@@ -1,8 +1,11 @@
-export async function useNavigationItem() {
-  const { data: navigation } = await useAsyncData('navigation', () => {
+export function useNavigationItem() {
+  const { data: navigation } = useAsyncData('navigation', () => {
     // Curation order via the `order` frontmatter field; `domain` is carried
     // along for sidebar grouping (ADR-006, presentation-only).
-    return queryCollectionNavigation('content', ['domain', 'order']).order('order', 'ASC')
+    return queryCollectionNavigation('content', ['domain', 'order', 'description', 'icon']).order(
+      'order',
+      'ASC'
+    )
   })
 
   // 1 folder = 1 category with index.md. Folders containing only index.md are
@@ -52,9 +55,11 @@ export const DOMAIN_LABEL: Record<string, string> = {
   meta: 'Meta',
 }
 
-interface NavNode {
+export interface NavNode {
   title: string
   path: string
   domain?: string
+  description?: string
+  icon?: string
   children?: NavNode[]
 }
