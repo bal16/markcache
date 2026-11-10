@@ -59,5 +59,4 @@ Keputusan arsitektur dicatat di [`docs/adr/`](docs/adr/):
 
 - [ADR-001 — Arah Produk: Direktori Kurasi ala FMHY, ID-First](docs/adr/001-product-direction-fmhy-id-first.md)
 - [ADR-002 — Konten Obsidian-Friendly, Pola Hybrid](docs/adr/002-obsidian-friendly-hybrid-content.md)
-- [ADR-003 — Arsitektur Directory MVP (Reuse, Bukan Rewrite)](docs/adr/003-directory-mvp-architecture.md)<|end|><|start|>-start to=edit<|channel|>analysis <|constrain|>xml<|message|><rfl:parameter name="path">
-/home/bal/workspace/project/markcache/README.md
+- [ADR-003 — Arsitektur Directory MVP (Reuse, Bukan Rewrite)](docs/adr/003-directory-mvp-architecture.md)
