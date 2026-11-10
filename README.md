@@ -1,10 +1,10 @@
-# MarkCache
+![MarkCache](https://shieldcn.dev/header/glow.svg?title=MarkCache&subtitle=Direktori+link+terkurasi+ala+FMHY%2C+fokus+ID-first&logo=lu:Bookmark&theme=emerald)
 
 ![Nuxt](https://shieldcn.dev/badge/Nuxt-4-00DC82.svg?logo=nuxt)
 ![Vue](https://shieldcn.dev/badge/Vue-3-4FC08D.svg?logo=vuedotjs)
 ![TypeScript](https://shieldcn.dev/badge/TypeScript-5-3178C6.svg?logo=typescript)
 ![Tailwind CSS](https://shieldcn.dev/badge/Tailwind-v4-06B6D4.svg?logo=tailwindcss)
-![shadcn/ui](https://shieldcn.dev/badge/shadcn%2Fui-000000.svg?logo=shadcnui)
+![shadcn/vue](https://shieldcn.dev/badge/shadcn%2Fvue-000000.svg?logo=shadcnui)
 
 **Direktori link terkurasi ala [FMHY](https://fmhy.net), dengan fokus ID-first.** Deskripsi ditulis dalam Bahasa Indonesia dan nama tool tetap global. Layanan serta
 komunitas Indonesia diprioritaskan. Bukan docs-starter generik: setiap kategori adalah daftar link
