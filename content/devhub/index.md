@@ -5,7 +5,7 @@ category: "devhub"
 domain: dev
 icon: "blocks"
 tags: ["developer", "framework", "library"]
-updated: "2026-11-03"
+updated: "2026-11-10"
 created: "2026-11-03"
 draft: false
 featured: true
@@ -44,8 +44,24 @@ order: 3
 
 - [Tailwind CSS](https://tailwindcss.com) — utility-first; dipakai situs ini. `css` ⭐
 - [shadcn/ui](https://ui.shadcn.com) — komponen Tailwind yang di-copy ke repo, bukan dependensi. `ui` ⭐
+- [shadcn-vue](https://www.shadcn-vue.com/) — adaptasi shadcn untuk Vue dan Nuxt berbasis primitif Reka UI. `ui` ⭐
+- [Solid UI](https://www.solid-ui.com/) — port komponen bergaya shadcn dan Tremor untuk ekosistem SolidJS. `ui`
 - [Reka UI](https://reka-ui.com/) — primitif a11y, fondasi shadcn untuk Vue. `ui`
 - [Pico.css](https://picocss.com/) — classless CSS untuk halaman yang tak butuh framework. `css`
+
+## UI Animasi & Interaksi
+
+- [Motion](https://motion.dev/) — engine animasi modern untuk JavaScript, React, dan Vue; penerus mandiri Framer Motion. `animasi` ⭐
+- [Animate UI](https://animate-ui.com/) — koleksi komponen beranimasi berbasis Tailwind dan Motion, dipasang melalui baris perintah shadcn. `ui` ⭐
+- [Smooth UI](https://smoothui.dev/) — komponen antarmuka interaktif dengan transisi berbasis fisika pegas dan sentuhan mikro. `ui`
+- [Magic UI](https://magicui.design/) — pustaka komponen visual dan efek latar bergerak untuk halaman depan produk web. `ui`
+- [Motion Primitives](https://motion-primitives.com/) — blok animasi siap pakai yang dapat disalin langsung ke dalam proyek Tailwind dan Motion. `komponen`
+
+## Ikon & Aset Grafis
+
+- [Lucide](https://lucide.dev/) — koleksi ikon vektor SVG dengan gaya visual seragam, menjadi standar bawaan pustaka shadcn. `ikon` ⭐
+- [Iconify](https://iconify.design/) — satu kerangka kerja komponen untuk mengakses ratusan paket ikon terbuka lintas framework. `ikon` ⭐
+- [svgl](https://svgl.app/) — katalog logo vektor SVG terkurasi untuk berbagai perangkat lunak dan layanan teknologi. `svg`
 
 ## Keluarga TanStack
 
