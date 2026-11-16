@@ -116,12 +116,29 @@ export default defineNuxtConfig({
       description:
         'Direktori tautan gratis ala FMHY, dikurasi manual untuk pengguna Indonesia: streaming, dev tools, hingga game.',
       lang: 'id',
+      dir: 'ltr',
       start_url: '/',
       scope: '/',
       display: 'standalone',
+      display_override: ['standalone', 'minimal-ui', 'browser'],
       orientation: 'any',
       background_color: '#0b1020',
       theme_color: '#0b1020',
+      categories: ['education', 'reference', 'utilities'],
+      shortcuts: [
+        {
+          name: 'Beranda',
+          short_name: 'Beranda',
+          url: '/',
+          description: 'Buka halaman utama MarkCache',
+        },
+        {
+          name: 'Direktori',
+          short_name: 'Direktori',
+          url: '/directory',
+          description: 'Lihat indeks semua kategori dan subkategori',
+        },
+      ],
       icons: [
         {
           src: '/pwa-192x192.png',
