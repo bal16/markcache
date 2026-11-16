@@ -110,6 +110,7 @@ export default defineNuxtConfig({
       installPrompt: true,
     },
     manifest: {
+      id: '/',
       name: 'MarkCache: Direktori Tautan Terkurasi',
       short_name: 'MarkCache',
       description:
@@ -118,6 +119,7 @@ export default defineNuxtConfig({
       start_url: '/',
       scope: '/',
       display: 'standalone',
+      orientation: 'any',
       background_color: '#0b1020',
       theme_color: '#0b1020',
       icons: [
