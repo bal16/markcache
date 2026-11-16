@@ -142,6 +142,22 @@ export default defineNuxtConfig({
           purpose: 'maskable',
         },
       ],
+      screenshots: [
+        {
+          src: '/screenshots/home-wide.png',
+          sizes: '1280x720',
+          type: 'image/png',
+          form_factor: 'wide',
+          label: 'Beranda MarkCache di desktop',
+        },
+        {
+          src: '/screenshots/home-narrow.png',
+          sizes: '750x1334',
+          type: 'image/png',
+          form_factor: 'narrow',
+          label: 'Beranda MarkCache di ponsel',
+        },
+      ],
     },
     experimental: {
       // Nuxt SSG fetch _payload.json dengan query param; handler ini
