@@ -128,12 +128,40 @@ export default defineNuxtConfig({
       shortcuts: [
         {
           name: 'Beranda',
+          icons: [
+            {
+              src: '/shortcuts/home-96x96.png',
+              sizes: '96x96',
+              type: 'image/png',
+              purpose: 'any',
+            },
+            {
+              src: '/shortcuts/home-192x192.png',
+              sizes: '192x192',
+              type: 'image/png',
+              purpose: 'any',
+            },
+          ],
           short_name: 'Beranda',
           url: '/',
           description: 'Buka halaman utama MarkCache',
         },
         {
           name: 'Direktori',
+          icons: [
+            {
+              src: '/shortcuts/directory-96x96.png',
+              sizes: '96x96',
+              type: 'image/png',
+              purpose: 'any',
+            },
+            {
+              src: '/shortcuts/directory-192x192.png',
+              sizes: '192x192',
+              type: 'image/png',
+              purpose: 'any',
+            },
+          ],
           short_name: 'Direktori',
           url: '/directory',
           description: 'Lihat indeks semua kategori dan subkategori',
