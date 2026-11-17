@@ -5,7 +5,7 @@ category: "meta"
 domain: meta
 icon: "list"
 tags: ["index", "meta"]
-updated: "2026-11-10"
+updated: "2026-11-18"
 created: "2026-11-07"
 draft: false
 featured: false
@@ -14,7 +14,7 @@ order: 99
 
 # Index
 
-Peta 13 kategori dan 403 link terkurasi, plus halaman meta — loncat langsung ke seksi yang dicari, tanpa buka halaman satu-satu.
+Peta 14 kategori dan 427 link terkurasi, plus halaman meta — loncat langsung ke seksi yang dicari, tanpa buka halaman satu-satu.
 
 ## Hiburan
 
@@ -37,6 +37,7 @@ Peta 13 kategori dan 403 link terkurasi, plus halaman meta — loncat langsung k
 - [Student Deals](/mahasiswa) — 10 link · [Bundel & Klaim Utama](/mahasiswa#bundel-klaim-utama), [Learning Gratis](/mahasiswa#learning-gratis), [Tips Klaim](/mahasiswa#tips-klaim)
 - [Akses & Privasi](/akses-privasi) — 30 link · [Bypass & Akses](/akses-privasi#bypass-akses), [Adblock & DNS](/akses-privasi#adblock-dns), [Browser & Anti-Tracking](/akses-privasi#browser-anti-tracking), [VPN](/akses-privasi#vpn), [Password & 2FA](/akses-privasi#password-2fa), [Email & Alias](/akses-privasi#email-alias), [Enkripsi & Sandbox](/akses-privasi#enkripsi-sandbox), [Cek Kebocoran](/akses-privasi#cek-kebocoran)
 - [Komunitas](/komunitas) — 15 link · [Komunitas Indonesia](/komunitas#komunitas-indonesia), [Forum Global](/komunitas#forum-global), [Chat & Server](/komunitas#chat-server), [Dev & Open Source](/komunitas#dev-open-source)
+- [Self-Hosted](/selfhosted) — 24 link · [Catatan & Dokumen](/selfhosted#catatan-dokumen), [Foto & Media](/selfhosted#foto-media), [Dashboard & Homelab](/selfhosted#dashboard-homelab), [Monitoring & Ops](/selfhosted#monitoring-ops), [Keamanan & Akses](/selfhosted#keamanan-akses), [Dev & Git](/selfhosted#dev-git), [Sinkronisasi](/selfhosted#sinkronisasi)
 
 ## Meta
 

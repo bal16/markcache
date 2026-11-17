@@ -14,6 +14,7 @@ import {
   MoveUpRight,
   Puzzle,
   Search,
+  Server,
   Shield,
   Terminal,
   Users,
@@ -134,6 +135,7 @@ const iconMap: Record<string, Component> = {
   'graduation-cap': GraduationCap,
   'gamepad-2': Gamepad2,
   shield: Shield,
+  server: Server,
   users: Users,
 }
 
