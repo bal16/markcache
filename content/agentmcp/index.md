@@ -38,6 +38,8 @@ order: 9
 ## Klien Agent
 
 - [OpenCode](https://opencode.ai/) — coding agent open-source: CLI/TUI lintas provider, bukan terkunci di satu vendor. `agent` ⭐
+- [Oh My Pi](https://github.com/can1357/oh-my-pi) — coding agent terminal dengan LSP terintegrasi, *hash-anchored patching*, subagent paralel di worktree, dan REPL multi-bahasa. `agent` ⭐
+- [Antigravity CLI (agy)](https://github.com/google-antigravity/antigravity-cli) — CLI/TUI coding agent Google Antigravity dengan orkestrasi multi-step dan subagent, ringan untuk sesi SSH. `agent` ⭐
 
 ## Skills
 
