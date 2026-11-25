@@ -5,7 +5,7 @@ category: "agentmcp"
 domain: dev
 icon: "puzzle"
 tags: ["mcp", "agent", "ai"]
-updated: "2026-11-06"
+updated: "2026-11-25"
 created: "2026-11-06"
 draft: false
 featured: true
@@ -52,6 +52,9 @@ order: 9
 - [vercel-labs/skills](https://github.com/vercel-labs/skills) — CLI terbuka (`npx skills`) untuk mencari dan memasang skill lintas agent. `tooling`
 - [supabase/agent-skills](https://github.com/supabase/agent-skills) — best practice resmi Postgres, desain skema, dan SQL aman untuk Supabase. `database`
 - [cloudflare/skills](https://github.com/cloudflare/skills) — skill resmi untuk membangun di Cloudflare Workers & Agents SDK. `infra`
+- [awesome-gamedev-agent-skills](https://github.com/gamedev-skills/awesome-gamedev-agent-skills) — koleksi skill gamedev lintas engine (Godot, Unity, Three.js, Phaser) dan QA aset 2D. `gamedev` ⭐
+- [agent-skill-pixel-art](https://github.com/ervareza/agent-skill-pixel-art) — generate & audit pixel art *engine-ready* (grid, palet retro, sprite sheet). `gamedev` `pixel-art`
+- [pixel-art (ARIS)](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/tree/main/skills/pixel-art) — buat ilustrasi pixel art berbasis vektor SVG murni tanpa API eksternal. `svg` `pixel-art`
 
 ## Server Resmi (modelcontextprotocol)
 
