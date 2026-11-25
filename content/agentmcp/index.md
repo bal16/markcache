@@ -44,6 +44,11 @@ order: 9
 - [Superpowers](https://github.com/obra/superpowers) — metodologi dev lengkap untuk agent: TDD, debugging, git worktree, penyelesaian konflik merge. `skill` ⭐
 - [anthropics/skills](https://github.com/anthropics/skills) — skill resmi Anthropic: dokumen, komponen, hingga otomasi kantor. `skill` ⭐
 - [agentskills.io](https://agentskills.io/) — standar terbuka Agent Skills; format yang dibaca Claude Code dan OpenCode. `standar`
+- [rossark-motion-skill](https://github.com/rossark0/rossark-motion-skill) — ubah SVG statis jadi animasi 60 fps yang natural untuk React Native & SwiftUI. `animasi` ⭐
+- [bahasa-skills](https://github.com/alvinindra/bahasa-skills) — panduan menulis bahasa Indonesia sesuai EYD V & KBBI, bebas gaya AI kaku. `menulis` ⭐
+- [emilkowalski/skills](https://github.com/emilkowalski/skills) — panduan *design engineering* & mikro-animasi UI agar komponen tidak terasa generik. `ui` ⭐
+- [blader/humanizer](https://github.com/blader/humanizer) — bersihkan pola tulisan khas AI agar teks bahasa Inggris terdengar natural. `menulis`
+- [marketingskills](https://github.com/coreyhaines31/marketingskills) — playbook SEO teknis, CRO, dan *copywriting* siap pakai untuk agent. `marketing`
 
 ## Server Resmi (modelcontextprotocol)
 
