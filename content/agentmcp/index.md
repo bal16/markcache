@@ -57,6 +57,10 @@ order: 9
 - [oil-ui](https://github.com/oil-oil/oil-ui) — dorong agent mengeksplorasi beberapa arah visual UI secara paralel dan menyempurnakannya lewat inspeksi visual. `ui` `desain`
 - [ux-ui-agent-skills](https://github.com/plugin87/ux-ui-agent-skills) — skill *design system* dengan token DTCG dan standar aksesibilitas WCAG 2.2 (AA–AAA). `ui` `a11y`
 - [uxuiprinciples/agent-skills](https://github.com/uxuiprinciples/agent-skills) — prinsip UX fundamental, protokol evaluasi, dan checklist audit antarmuka dalam format `SKILL.md`. `ux` `desain`
+- [figma/mcp-server-guide](https://github.com/figma/mcp-server-guide) — panduan & skill resmi Figma MCP (`design-to-code`, `generate-design`); alurnya mudah diporting ke Figcraft MCP. `figma` `desain`
+- [openai/skills](https://github.com/openai/skills) — katalog skill terstruktur (`figma-generate-design`, `figma-generate-library`) untuk variabel desain, library komponen, dan verifikasi visual. `figma` `desain`
+- [figma-console-mcp-skills](https://github.com/southleft/figma-console-mcp-skills) — kumpulan `SKILL.md` untuk ekspor token, audit aksesibilitas, dan analisis komponen berbasis MCP. `figma` `ui`
+- [figma-to-code-skill](https://github.com/applyagency/figma-to-code-skill) — konversi desain ke kode dengan loop validasi visual berulang hingga presisi piksel. `figma` `ui`
 - [blader/humanizer](https://github.com/blader/humanizer) — bersihkan pola tulisan khas AI agar teks bahasa Inggris terdengar natural. `menulis`
 - [theclaymethod/unslop](https://github.com/theclaymethod/unslop) — audit & tulis ulang teks buatan AI agar terdengar manusiawi, lengkap dengan profil gaya tulisan sendiri. `menulis` ⭐
 - [heydamir/unslop](https://github.com/heydamir/unslop) — rapikan UI hasil *vibecoding* (gradasi ungu generik, spacing berantakan, label emoji) secara bertahap. `ui` ⭐
