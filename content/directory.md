@@ -14,7 +14,7 @@ order: 99
 
 # Index
 
-Peta 14 kategori dan 446 link terkurasi, plus halaman meta — loncat langsung ke seksi yang dicari, tanpa buka halaman satu-satu.
+Peta 14 kategori dan 447 link terkurasi, plus halaman meta — loncat langsung ke seksi yang dicari, tanpa buka halaman satu-satu.
 
 ## Hiburan
 
@@ -29,7 +29,7 @@ Peta 14 kategori dan 446 link terkurasi, plus halaman meta — loncat langsung k
 
 - [Dev Tools](/devtools) — 63 link · [Git & GitHub](/devtools#git-github), [Docker & Container](/devtools#docker-container), [Database & API](/devtools#database-api), [Terminal & CLI](/devtools#terminal-cli), [AI & Machine Learning](/devtools#ai-machine-learning), [Hosting & Deploy](/devtools#hosting-deploy), [Object Storage (S3-Compatible)](/devtools#object-storage-s3-compatible), [Security](/devtools#security)
 - [Dev Hub](/devhub) — 57 link · [Meta-Framework](/devhub#meta-framework), [PHP Framework](/devhub#php-framework), [UI Framework](/devhub#ui-framework), [CSS & Komponen UI](/devhub#css-komponen-ui), [UI Animasi & Interaksi](/devhub#ui-animasi-interaksi), [Ikon & Aset Grafis](/devhub#ikon-aset-grafis), [Keluarga TanStack](/devhub#keluarga-tanstack), [Backend & API](/devhub#backend-api), [Database & BaaS](/devhub#database-baas), [Auth](/devhub#auth), [Data & State](/devhub#data-state), [Deploy](/devhub#deploy), [Python](/devhub#python), [Belajar & Referensi](/devhub#belajar-referensi)
-- [Agent & MCP](/agentmcp) — 40 link · [Registry & Direktori](/agentmcp#registry-direktori), [MCP Harian](/agentmcp#mcp-harian), [Klien Agent](/agentmcp#klien-agent), [Skills](/agentmcp#skills), [Server Resmi (modelcontextprotocol)](/agentmcp#server-resmi-modelcontextprotocol), [Komunitas](/agentmcp#komunitas)
+- [Agent & MCP](/agentmcp) — 41 link · [Registry & Direktori](/agentmcp#registry-direktori), [MCP Harian](/agentmcp#mcp-harian), [Klien Agent](/agentmcp#klien-agent), [Skills](/agentmcp#skills), [Server Resmi (modelcontextprotocol)](/agentmcp#server-resmi-modelcontextprotocol), [Komunitas](/agentmcp#komunitas)
 
 ## Utilitas
 

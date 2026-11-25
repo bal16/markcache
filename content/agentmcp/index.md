@@ -34,6 +34,7 @@ order: 9
 - [Playwright MCP](https://github.com/microsoft/playwright-mcp) — automasi browser resmi Microsoft; testing & QA yang bisa diaudit. `browser`
 - [Firecrawl MCP](https://github.com/firecrawl/firecrawl-mcp-server) — crawl, scrape, dan extract data web terstruktur untuk agent. `scrape`
 - [Terse](https://github.com/inth3shadows/terse) — proxy kompresi output tool MCP; merapikan konteks dari keluaran tool yang panjang. `optimasi`
+- [FigCraft](https://github.com/storytold/figcraft) — aplikasi desain UI open-source berbasis Rust dengan MCP server bawaan untuk manipulasi canvas, auto-layout, dan komponen lokal. `desain` `mcp` ⭐
 
 ## Klien Agent
 
