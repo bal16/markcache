@@ -75,6 +75,16 @@ order: 9
 - [agent-skill-pixel-art](https://github.com/ervareza/agent-skill-pixel-art) — generate & audit pixel art *engine-ready* (grid, palet retro, sprite sheet). `gamedev` `pixel-art`
 - [pixel-art (ARIS)](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/tree/main/skills/pixel-art) — buat ilustrasi pixel art berbasis vektor SVG murni tanpa API eksternal. `svg` `pixel-art`
 
+## Ekosistem & Subagent
+
+- [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) — kurasi lengkap ekosistem Claude Code: hooks, slash-command, status line, plugin, dan orchestrator. `kurasi` `claude-code` ⭐
+- [awesome-claude-code-subagents](https://github.com/VoltAgent/awesome-claude-code-subagents) — 100+ subagent spesialis siap pakai untuk Claude Code (arsitektur, keamanan, debugging, infra). `subagent` `claude-code` ⭐
+- [awesome-cursorrules](https://github.com/PatrickJS/awesome-cursorrules) — koleksi file `.cursorrules` per bahasa dan framework untuk mengarahkan perilaku coding agent. `rules` `cursor` ⭐
+- [awesome-opencode](https://github.com/awesome-opencode/awesome-opencode) — daftar kurasi resmi komunitas untuk OpenCode: plugin, tema, agent, dan integrasi. `kurasi` `opencode` ⭐
+- [awesome-opencode-subagents](https://github.com/ankitmundada/awesome-opencode-subagents) — koleksi 100+ definisi subagent siap pakai khusus untuk OpenCode CLI. `subagent` `opencode`
+- [awesome-agy-subagents](https://github.com/Cid-oe/awesome-agy-subagents) — agregasi 4.250 subagent tervalidasi (Markdown + YAML frontmatter) untuk Antigravity CLI (`.gemini/agents/`). `subagent` `agy`
+- [awesome-gemini-cli](https://github.com/Piebald-AI/awesome-gemini-cli) — daftar kurasi ekstensi, tool, dan antarmuka tambahan untuk Gemini CLI. `kurasi` `gemini-cli`
+
 ## Server Resmi (modelcontextprotocol)
 
 Repositori resmi proyek protokol MCP, titik awal sebelum mencari server dari komunitas.
