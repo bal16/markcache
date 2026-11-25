@@ -50,6 +50,13 @@ order: 9
 - [rossark-motion-skill](https://github.com/rossark0/rossark-motion-skill) — ubah SVG statis jadi animasi 60 fps yang natural untuk React Native & SwiftUI. `animasi` ⭐
 - [bahasa-skills](https://github.com/alvinindra/bahasa-skills) — panduan menulis bahasa Indonesia sesuai EYD V & KBBI, bebas gaya AI kaku. `menulis` ⭐
 - [emilkowalski/skills](https://github.com/emilkowalski/skills) — panduan *design engineering* & mikro-animasi UI agar komponen tidak terasa generik. `ui` ⭐
+- [impeccable](https://github.com/pbakaus/impeccable) — panduan tipografi, kosakata desain, dan detektor *AI slop* agar UI tidak terlihat generik. `ui` `desain` ⭐
+- [ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) — koleksi *design intelligence* lokal (palet warna, pasangan font, layout, chart) untuk agent UI/UX. `ui` `ux` ⭐
+- [taste-skill](https://github.com/Leonxlnx/taste-skill) — kerangka *anti-slop* untuk frontend dengan variasi gaya visual dan *gate* verifikasi hasil. `ui` `desain`
+- [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) — kumpulan skill resmi Vercel termasuk *Web Design Guidelines* (100+ aturan UX & pola komponen). `ui` `ux` ⭐
+- [oil-ui](https://github.com/oil-oil/oil-ui) — dorong agent mengeksplorasi beberapa arah visual UI secara paralel dan menyempurnakannya lewat inspeksi visual. `ui` `desain`
+- [ux-ui-agent-skills](https://github.com/plugin87/ux-ui-agent-skills) — skill *design system* dengan token DTCG dan standar aksesibilitas WCAG 2.2 (AA–AAA). `ui` `a11y`
+- [uxuiprinciples/agent-skills](https://github.com/uxuiprinciples/agent-skills) — prinsip UX fundamental, protokol evaluasi, dan checklist audit antarmuka dalam format `SKILL.md`. `ux` `desain`
 - [blader/humanizer](https://github.com/blader/humanizer) — bersihkan pola tulisan khas AI agar teks bahasa Inggris terdengar natural. `menulis`
 - [theclaymethod/unslop](https://github.com/theclaymethod/unslop) — audit & tulis ulang teks buatan AI agar terdengar manusiawi, lengkap dengan profil gaya tulisan sendiri. `menulis` ⭐
 - [heydamir/unslop](https://github.com/heydamir/unslop) — rapikan UI hasil *vibecoding* (gradasi ungu generik, spacing berantakan, label emoji) secara bertahap. `ui` ⭐
