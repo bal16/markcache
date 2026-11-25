@@ -23,6 +23,7 @@ order: 9
 - [MCP Registry Resmi](https://registry.modelcontextprotocol.io/) — registry resmi protokol MCP; sumber kebenaran siapa server siapa. `mcp` ⭐
 - [awesome-mcp-clients](https://github.com/punkpeye/awesome-mcp-clients/) — daftar client MCP untuk beragam host agent. `mcp`
 - [awesome-claude-skills](https://github.com/travisvn/awesome-claude-skills) — direktori skill agent terkurasi, dibagi per topik. `skill` ⭐
+- [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) — direktori skill agent terbesar (1.000+ skill) dari tim dev resmi maupun komunitas, kompatibel lintas agent. `skill` ⭐
 - [glama.ai MCP Directory](https://glama.ai/mcp/servers) — indeks MCP dengan rating dan status pemasangan. `mcp`
 
 ## MCP Harian
