@@ -50,6 +50,11 @@ order: 9
 - [bahasa-skills](https://github.com/alvinindra/bahasa-skills) — panduan menulis bahasa Indonesia sesuai EYD V & KBBI, bebas gaya AI kaku. `menulis` ⭐
 - [emilkowalski/skills](https://github.com/emilkowalski/skills) — panduan *design engineering* & mikro-animasi UI agar komponen tidak terasa generik. `ui` ⭐
 - [blader/humanizer](https://github.com/blader/humanizer) — bersihkan pola tulisan khas AI agar teks bahasa Inggris terdengar natural. `menulis`
+- [theclaymethod/unslop](https://github.com/theclaymethod/unslop) — audit & tulis ulang teks buatan AI agar terdengar manusiawi, lengkap dengan profil gaya tulisan sendiri. `menulis` ⭐
+- [heydamir/unslop](https://github.com/heydamir/unslop) — rapikan UI hasil *vibecoding* (gradasi ungu generik, spacing berantakan, label emoji) secara bertahap. `ui` ⭐
+- [peteromallet/desloppify](https://github.com/peteromallet/desloppify) — scanner & skill refactoring untuk membersihkan *dead code*, duplikasi, dan *bloat* di repo hasil AI. `kode` ⭐
+- [nutlope/hallmark](https://github.com/nutlope/hallmark) — skill review desain anti-slop dengan pengecekan lintas *viewport* dan perbandingan *before/after*. `ui`
+- [dharmawan-id/anti-ai-slop](https://github.com/dharmawan-id/anti-ai-slop) — standar anti-slop dwibahasa (Inggris & Indonesia) dalam format skill, CLI, dan server MCP. `menulis`
 - [marketingskills](https://github.com/coreyhaines31/marketingskills) — playbook SEO teknis, CRO, dan *copywriting* siap pakai untuk agent. `marketing`
 - [vercel-labs/skills](https://github.com/vercel-labs/skills) — CLI terbuka (`npx skills`) untuk mencari dan memasang skill lintas agent. `tooling`
 - [supabase/agent-skills](https://github.com/supabase/agent-skills) — best practice resmi Postgres, desain skema, dan SQL aman untuk Supabase. `database`
