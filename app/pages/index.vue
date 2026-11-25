@@ -96,14 +96,17 @@ const groups = computed(() => {
   })).filter((g) => g.items.length > 0)
 })
 
-// Metadata kesegaran: label "Diperbarui" dihitung pada build time (prerender).
-// Tulis ulang manual per deploy; jangan komputasi ulang di client (hindari
-// hydration mismatch lintas hari).
+// Metadata kesegaran: label "Diperbarui" dan pill "Baru" dihitung pada build time
+// (prerender) via useState agar client hydration memakai timestamp yang sama
+// dan tidak terjadi hydration mismatch lintas hari.
+const buildNow = useState('landing-build-now', () => Date.now())
+const NEW_CATEGORY_MAX_AGE_DAYS = 21
+
 function relativeDays(iso?: string): string | null {
   if (!iso) return null
   const t = Date.parse(iso)
   if (Number.isNaN(t)) return null
-  const days = Math.round((Date.now() - t) / 86_400_000)
+  const days = Math.round((buildNow.value - t) / 86_400_000)
   if (days >= 365) {
     return new Intl.RelativeTimeFormat('id', { numeric: 'auto' }).format(
       -Math.round(days / 365),
@@ -113,12 +116,13 @@ function relativeDays(iso?: string): string | null {
   return new Intl.RelativeTimeFormat('id', { numeric: 'auto' }).format(-days, 'day')
 }
 
-// Kategori baru (created ≤ 21 hari) dapat pill "Baru" di kartu.
+// Kategori baru (0 ≤ usia ≤ NEW_CATEGORY_MAX_AGE_DAYS) dapat pill "Baru" di kartu.
 function isNewCategory(iso?: string): boolean {
   if (!iso) return false
   const t = Date.parse(iso)
   if (Number.isNaN(t)) return false
-  return Date.now() - t <= 21 * 86_400_000
+  const diff = buildNow.value - t
+  return diff >= 0 && diff <= NEW_CATEGORY_MAX_AGE_DAYS * 86_400_000
 }
 
 const iconMap: Record<string, Component> = {
@@ -269,21 +273,22 @@ function scrollToKategori() {
             <div class="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
 
             <div class="relative z-10 flex flex-col h-full">
-              <div class="flex items-start justify-between">
+              <div class="flex items-start justify-between gap-2">
                 <div class="flex items-center gap-2">
                   <component
                     :is="iconMap[cat.icon ?? ''] ?? Wrench"
-                    class="h-8 w-8 text-primary transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-110"
+                    class="h-8 w-8 shrink-0 text-primary transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-110"
                   />
                   <span
                     v-if="isNewCategory(cat.created)"
-                    class="text-[10px] px-1.5 py-0.5 rounded-full bg-primary/15 text-primary font-medium"
+                    aria-label="Kategori baru"
+                    class="shrink-0 text-[10px] px-1.5 py-0.5 rounded-full bg-primary/15 text-primary font-medium"
                     >Baru</span
                   >
                 </div>
                 <span
                   v-if="linkCount[cat.path]"
-                  class="text-xs text-muted-foreground tabular-nums px-2 py-1 rounded-full border border-border/60"
+                  class="shrink-0 text-xs text-muted-foreground tabular-nums px-2 py-1 rounded-full border border-border/60"
                 >
                   {{ linkCount[cat.path] }} link
                 </span>
