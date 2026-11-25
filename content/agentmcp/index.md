@@ -49,6 +49,9 @@ order: 9
 - [emilkowalski/skills](https://github.com/emilkowalski/skills) — panduan *design engineering* & mikro-animasi UI agar komponen tidak terasa generik. `ui` ⭐
 - [blader/humanizer](https://github.com/blader/humanizer) — bersihkan pola tulisan khas AI agar teks bahasa Inggris terdengar natural. `menulis`
 - [marketingskills](https://github.com/coreyhaines31/marketingskills) — playbook SEO teknis, CRO, dan *copywriting* siap pakai untuk agent. `marketing`
+- [vercel-labs/skills](https://github.com/vercel-labs/skills) — CLI terbuka (`npx skills`) untuk mencari dan memasang skill lintas agent. `tooling`
+- [supabase/agent-skills](https://github.com/supabase/agent-skills) — best practice resmi Postgres, desain skema, dan SQL aman untuk Supabase. `database`
+- [cloudflare/skills](https://github.com/cloudflare/skills) — skill resmi untuk membangun di Cloudflare Workers & Agents SDK. `infra`
 
 ## Server Resmi (modelcontextprotocol)
 
