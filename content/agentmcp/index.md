@@ -33,7 +33,6 @@ order: 9
 - [Browser Use](https://github.com/browser-use/browser-use) — kendalikan browser lewat agent: navigasi, form, scraping. `browser` ⭐
 - [Playwright MCP](https://github.com/microsoft/playwright-mcp) — automasi browser resmi Microsoft; testing & QA yang bisa diaudit. `browser`
 - [Firecrawl MCP](https://github.com/firecrawl/firecrawl-mcp-server) — crawl, scrape, dan extract data web terstruktur untuk agent. `scrape`
-- [Terse](https://github.com/inth3shadows/terse) — proxy kompresi output tool MCP; merapikan konteks dari keluaran tool yang panjang. `optimasi`
 - [FigCraft](https://github.com/storytold/figcraft) — aplikasi desain UI open-source berbasis Rust dengan MCP server bawaan untuk manipulasi canvas, auto-layout, dan komponen lokal. `desain` `mcp` ⭐
 
 ## Klien Agent
@@ -84,6 +83,18 @@ order: 9
 - [awesome-opencode-subagents](https://github.com/ankitmundada/awesome-opencode-subagents) — koleksi 100+ definisi subagent siap pakai khusus untuk OpenCode CLI. `subagent` `opencode`
 - [awesome-agy-subagents](https://github.com/Cid-oe/awesome-agy-subagents) — agregasi 4.250 subagent tervalidasi (Markdown + YAML frontmatter) untuk Antigravity CLI (`.gemini/agents/`). `subagent` `agy`
 - [awesome-gemini-cli](https://github.com/Piebald-AI/awesome-gemini-cli) — daftar kurasi ekstensi, tool, dan antarmuka tambahan untuk Gemini CLI. `kurasi` `gemini-cli`
+
+## Optimasi Token & Konteks
+
+- [ponytail](https://github.com/DietrichGebert/ponytail) — ruleset & skill anti *over-engineering* ("the best code is the code you never wrote"); memangkas boilerplate dan output kode berlebih. `optimasi` `skill` ⭐
+- [caveman](https://github.com/JuliusBrussee/caveman) — skill & proxy lokal gaya bahasa ultra-ringkas untuk memangkas token output tanpa mengubah blok kode, path, dan error. `optimasi` `skill` ⭐
+- [rtk](https://github.com/rtk-ai/rtk) — proxy CLI berbasis Rust tanpa dependensi yang meringkas output perintah terminal (`git`, `cargo`, `npm`, `docker`) hingga 60–90% sebelum masuk ke konteks LLM. `optimasi` `cli` ⭐
+- [headroom](https://github.com/headroomlabs-ai/headroom) — lapisan kompresi (CLI wrapper, proxy, SDK, MCP) untuk mengecilkan tool output, JSON, log, dan RAG dengan mekanisme ambil-ulang payload asli berbasis hash. `optimasi` `proxy` ⭐
+- [context-mode](https://github.com/mksglu/context-mode) — plugin & MCP lokal yang menahan tool output besar di sandbox dan indeks SQLite FTS5 agar context window tidak cepat penuh. `optimasi` `mcp` ⭐
+- [repomix](https://github.com/yamadashy/repomix) — kemas seluruh repo jadi satu file ramah-LLM lengkap dengan penghitung token dan kompresi kode berbasis Tree-sitter. `optimasi` `cli` `mcp` ⭐
+- [token-optimizer](https://github.com/alexgreensh/token-optimizer) — toolkit & hooks untuk mendeteksi *ghost tokens*, menjaga konteks tetap tajam setelah *compaction*, dan mencegah penurunan kualitas sesi panjang. `optimasi` `plugin`
+- [jCodeMunch MCP](https://github.com/jgravelle/jcodemunch-mcp) — server MCP berbasis Tree-sitter untuk mengambil kode per simbol (fungsi/class) alih-alih membaca satu file penuh; gratis untuk non-komersial. `optimasi` `mcp`
+- [Terse](https://github.com/inth3shadows/terse) — proxy kompresi output tool MCP; merapikan konteks dari keluaran tool yang panjang. `optimasi` `mcp`
 
 ## Server Resmi (modelcontextprotocol)
 
