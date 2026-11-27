@@ -9,6 +9,12 @@ export default defineNuxtConfig({
       // titleTemplate '%s — MarkCache' (perbaiki `MarkCache${title}` tanpa spasi)
       titleTemplate: '%s — MarkCache',
       htmlAttrs: { lang: 'id' },
+      meta: [
+        {
+          name: 'google-site-verification',
+          content: '_8yYa7KYYQgP4bVxXP4bdprWFaSpFUUcF4VroA-sV-Y',
+        },
+      ],
     },
   },
   devtools: { enabled: true },
